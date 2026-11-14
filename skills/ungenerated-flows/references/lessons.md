@@ -202,3 +202,19 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **A one-time offer is a moment.** It lands with confetti and particles, the character arrives and stays put (a loop
   drifting across the sky reads as weird), and the free time is large. "I was expecting some confetti ... crazy
   particles. Our character looks so weird, it's like floating." (Comma, Nov 2026)
+
+- **Setup before the account, the paywall last.** Let people set the app up (share, reminders, widget, voice) before
+  asking for an account, keep everything on the phone and sync it at sign-in, then end the onboarding on the paywall.
+  "Shift the whole setup stuff on top of ... account ... we probably ask them paywall at the end." (Comma, Nov 2026)
+- **"I already have an account" is a paywall door.** Signing in from the opening must check the subscription and land a
+  non-paying account on the paywall, or a hard paywall has a free way in for anyone who ever made an account. (Comma, Nov 2026)
+- **How-to steps show one actual phone, the same way every time.** Sharing, the widget, reminders and connecting each play
+  on the same device frame, with a finger, a tap and Done; no step list or small notes around it. "I like the phone stuff,
+  honestly. Tap done and all that nicer stuff." (Comma, Nov 2026)
+- **No bold accent subtitle under a heading.** If a line is truly needed it is quiet ink, regular weight; usually it goes.
+  "Why is this orange stuff?" (Comma, Nov 2026)
+- **An optional "teach it your voice" step says what happens and why at a glance**: one plain question, tap to talk,
+  transcribed on the phone, Skip. "Want drafts that sound like you" alone left the owner confused. (Comma, Nov 2026)
+- **A "use it inside your AI" setup step is honest about the tap.** Claude and ChatGPT can't add a connector from a link
+  yet: copy the address, open the connector settings, say where to paste; show the step only to accounts that can really
+  connect. (Comma, Nov 2026)
