@@ -97,3 +97,7 @@ Lessons from building AI into Comma (an iOS app that helps people write short vi
 **40. An agent with web access reads only inside its own folders.** A fetched page can tell it to send a secret out. CutRoom, Nov 2026.
 
 **41. When a conversation restarts, carry a summary of what was decided into the new one.** CutRoom, Nov 2026.
+- **Admin AI work runs on the owner's own Claude, not the app's API key.** Content work only the owner does (breaking
+  down media for a library, processing a queue) can be a skill in the owner's Claude Code: scripts do the mechanical
+  half (download, frames, transcript, upload, checks), the owner's subscription does the thinking, and the app's API
+  budget stays for users. Publish only through a script that checks the result first. (Comma, Nov 2026)
