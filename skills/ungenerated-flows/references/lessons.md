@@ -218,3 +218,8 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **A "use it inside your AI" setup step is honest about the tap.** Claude and ChatGPT can't add a connector from a link
   yet: copy the address, open the connector settings, say where to paste; show the step only to accounts that can really
   connect. (Comma, Nov 2026)
+- **"One tap to connect your AI" has to really add it.** A screen that copies an address and opens settings reads as
+  broken ("I see nothing"). Use whatever really pre-fills the target app's add-connector box (check what exists today;
+  for Claude a `customize/connectors?modal=add-custom-connector&connectorName=…&connectorUrl=…` link opens it filled in,
+  undocumented), let the app icons themselves be the buttons, and say only the one step left there ("tap Add, then
+  Connect"). Then check it where the person looks: install it on their machine before saying it works. (Comma, Nov 2026)

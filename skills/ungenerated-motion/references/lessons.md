@@ -135,3 +135,10 @@ are examples only.
   (pinned, the count climbing), ending at a generous size. An endless auto-scrolling loop of tiles reads as filler.
   "Every reel has a shape ... should be really nicely translating to that library that grows ... it's just moving like
   vertically ... an endless loop." (Comma, Nov 2026)
+- **A mascot acts out the screen's job: entrance, job, exit.** It drops in and lands with its own sound move (a slate's
+  clack), says one line, tries each option for size (a hop onto each, a wink), waits between them; on the pick it leaps
+  into the chosen app's icon, which pops and keeps a small badge of it. One leap, not a jump-then-dive: two arcs back to
+  back read as a double bounce on a frame-by-frame jitter check. "Make more of his animation, be creative." (Comma, Nov 2026)
+- **Swapping the footer's buttons must not move the page.** Later and Continue share one grid cell (or a fixed-height
+  slot); hiding one and showing the other with `hidden` changes the footer's height and shifts everything above it.
+  (Comma, Nov 2026)
