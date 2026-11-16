@@ -63,3 +63,5 @@ Lessons from launching Comma (iOS, AI writing), Flamely (Mac/Windows/iOS), Pip (
 **25. The app's tracking switch can promise less than the vendor collects.** Check the vendor's own enrichment (GeoIP on ingestion, IP storage, session replay defaults) in its project settings and in stored events, not just the SDK call in the code. Flamely, Nov 2026.
 
 **26. A public feedback board is user content.** Posts are shown publicly once approved, so it needs the takedown contact and, in the US, a registered DMCA agent like any upload feature. Flamely, Nov 2026.
+
+**27. Before launch, read every sentence of the policy and terms against what ships now.** A site round can quietly make a line false: a form that now asks for a name, a demo that no longer asks for the microphone, a connection to the person's own AI assistant (say who handles what they share there: the assistant's maker, under their own agreement), an introductory offer the terms never mention. Fix them in the same round. Comma, Nov 2026.
