@@ -147,14 +147,14 @@ exact looks are examples only; the rule is what transfers.
 
 ## The app's website
 
-- **One phone that follows the page, not a phone in every section.** A mobile app's landing page shows
-  the app on one phone that pins beside the steps and changes screen as each step scrolls past (on a
-  narrow screen it pins under the bar and the steps scroll up beneath it). Sections that explain
-  themselves (a card, a playing reel, a before and after) get no phone. A phone per section was called
-  "tons and tons of phone is never what I meant". (Comma, Nov 2026)
-- **Play the selling point as it happens.** When the app plugs into an AI assistant, show the phone with
-  the chat or a coding session: the command typed, the tool working, the results landing in the app,
-  then the app with them waiting. Name only what really works in each assistant (a slash command in
-  one, picking the app from a menu in another). (Comma, Nov 2026)
+- **A phone only where it shows something nothing else can.** A phone in every section was called "tons
+  and tons of phone is never what I meant". Sections that explain themselves (a card, a playing reel, a
+  before and after) get none. (Comma, Nov 2026)
+- **An integration is one section, never the page's story.** When the app also works inside an AI
+  assistant (a connector, a plugin), give it one section late in the page, its phone playing the chat as
+  it happens (the command typed, the tool working, the results landing in the app). Spread over several
+  steps, or in the hero, it made the app look like "an extension of ChatGPT or Claude, which is not what it
+  is". Name only what really works in each assistant (a slash command in one, picking the app from a
+  menu in another). (Comma, Nov 2026)
 - **Rebuild from the round the owner liked.** After a rejected round, start again from the last version
   they praised and add only what they asked for. (Comma, Nov 2026)
