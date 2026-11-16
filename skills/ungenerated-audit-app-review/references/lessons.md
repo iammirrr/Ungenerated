@@ -55,3 +55,14 @@ Lessons from preparing Comma (iOS), Flamely (Mac/Windows/iOS), Pip (iOS) and Cut
 **19. Ask before personal data goes to a third-party AI, in the app's own sheet, and say what goes where.** It is guideline 5.1.2(i) as well as trust. Comma, Nov 2026.
 
 **20. Show no tracking prompt the app doesn't need.** Why: "MAKE SURE IT DOESN'T ASK ANY WEIRD POPUP TRACKING". Comma, Nov 2026.
+
+## From developers who ship
+
+**21. Checklists from people who get approved go into the audit as rows, each checked against Apple's own text before it's trusted.** A rating screen in onboarding, "soon" labels, a cancel gauntlet, remote paywalls, legal pages that aren't plain pages, a copied or generated look, an untested iPad. Why: "he tells like tons of lists that ... the app store won't approve ... you probably want to be like monitoring that". Comma, Nov 2026.
+
+**22. A custom "how's it going" stars screen is a custom review prompt even when 4–5 stars lead to Apple's sheet.** 5.6.1 says Apple will "disallow custom review prompts"; ask only with the system API, after a real success, never in onboarding. Comma, Nov 2026.
+
+**23. A test-only compile flag must never be on in the Release configuration.** TestFlight and the App Store get the same binary, so a flag on in Release ships test wording, removes rate limits on prompts and mislabels analytics; check test builds at runtime (sandbox receipt) instead. Comma, Nov 2026.
+
+**24. The marketing version is part of the release plan.** A store version 1.0 can only take builds whose version string is 1.0; months of 0.1.0 TestFlight builds can't be attached. Set it before the build you mean to submit. Comma, Nov 2026.
+

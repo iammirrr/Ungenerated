@@ -37,6 +37,12 @@ OTHER
 Contact during review: <name>, <phone or email the owner chose>.
 ```
 
+## Help the reviewer, and get help back
+
+- **Attach a short screen recording** (1–3 minutes, from the build being submitted): launch, onboarding, sign-in, the paywall, a sandbox purchase, the main feature, account deletion. Link it in the notes or attach it in App Review Information. 2.3.1(a) asks for changes "described with specificity in the Notes for Review section ... (generic descriptions will be rejected)".
+- **Expedited review** is for a critical bug fix or a time-critical event (developer.apple.com/contact/app-store/?topic=expedite); Apple: "seeking expedited review only when you truly need it." Say exactly what breaks for people, or what launch date is fixed.
+- **After a rejection**, answer in App Store Connect, not with a resubmission alone: ask what exactly to change, and ask for a phone call with App Review if the reason is unclear (developers report it's offered on request; re-verify). Disagree with the outcome? Appeal (topic=appeal).
+
 ## Before pasting
 
 - Every step above was done on the build being submitted, from a fresh install, by you.
