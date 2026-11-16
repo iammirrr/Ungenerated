@@ -124,3 +124,80 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
     you have to update in the skill." (Comma, Nov 2026)
 51. **Never ask the owner to pick something he can't see; show every option at full size.** (Comma, Oct–Nov 2026)
 52. **Never test the editor on the owner's real edits; use a copy.** Edits are his work. (Comma, Nov 2026)
+
+## Screenshots: the set and the checks
+
+53. **One or two screenshots may continue across two frames as one picture; never the whole set.** A pair works as a
+    panorama, one picture cut at the seam with something crossing it. "one or two screenshots can be continued
+    screenshots" (Comma, Nov 2026)
+54. **Review every screenshot as App Review will before upload, and hold back one that fails.** One frame showed a
+    real video with a wine bottle (screenshots must suit 4+ even when the app is rated higher, 2.3.8) and a share
+    sheet's row of other companies' app icons (5.2.1); it waited until the video was swapped and only the app's own
+    icon was drawn. (Comma, Nov 2026)
+55. **Load each web font family in its own request, asking only for weights it has.** One combined request named a
+    weight one family lacks, the whole request failed, and the translated screenshots fell back to a system font with
+    faked bold that spilled out of its box. (Comma, Nov 2026)
+
+## Video: render, encode, licence
+
+56. **Render motion made in a browser frame by frame on a clock you control, never by real-time screen capture.**
+    Capturing on the GPU dropped the video layers of a page's clips; stepping the timers, animation frames, the page
+    clock and every CSS animation together for each frame drops nothing (step only some and animations freeze mid-way)
+    and allows real motion blur. (Comma, Oct 2026)
+57. **Export marketing video in TV range with BT.709 colour, converted from the browser's full range, or light brand
+    colours play as white.** A cream ground turned white in players until the render was converted; the trailer's
+    encoder does it, so any other export path must too. (Comma, Oct 2026)
+58. **Run a frame-difference pass over the whole render; every spike must be a planned cut.** The trailer's check
+    listed every frame-to-frame change above a threshold, and the only ones allowed were the planned cuts and two
+    push-through exits, none mid-scene. (Comma, Nov 2026)
+59. **Read the soundtrack licence's exclusions against every place the film will run.** The free stock licence used
+    allows online ads and social with no attribution but excludes TV and radio broadcast, games and music-only
+    remixes: fine for the App Store preview, not for a TV spot. (Comma, Nov 2026)
+60. **Check a preview built from design-board screens against the build you submit, screen by screen.** The film used
+    the board's screens, not captures of the shipping build; Apple wants previews to show the app, so swap in a
+    simulator capture wherever they differ. (Comma, Nov 2026)
+
+## Search words and the listing
+
+61. **Score each candidate listing by the relevant researched phrases its three fields cover together, against the
+    live listing, and never ship the optimizer's keyword salad.** The draft covered 24 phrases and the first proposal
+    44; on one run the tool's salad (a name and subtitle strung from keywords) scored 3–7 points higher and was still
+    rejected, and iterating found a readable listing that matched or beat it on every number. "MAKE A DETIAL ASO UNTIL
+    IT SCORE IT REALLY GOOD" (Comma, Nov 2026)
+62. **Keep the name and subtitle true to what the app is; a high-scoring word that contradicts it goes only in the
+    hidden keyword field.** "Script generator" scored well but said the app writes for you when the person is the
+    author, so the listing calls the app a writer and keeps "generator" in the keyword field. (Comma, Nov 2026)
+63. **Order the fields by the product's own feature order: the lead feature in the name and subtitle, a secondary one
+    only in the keyword field, aimed at its long tail.** The secondary feature's head word was held by apps with tens
+    of thousands of ratings and ten years of updates, so the listing went for "script prompter" and "teleprompter ai"
+    first. "WE ARE SECONDARY TELEPROMPTER" (Comma, Nov 2026)
+64. **Read a word's top apps for their audience as well as their size.** Screenwriting apps held "script writer" but
+    serve film and TV writers, so the creators who search it leave them, which makes the spot worth climbing once
+    there are ratings; most hook and reel words were held by apps with almost no ratings, winnable with a few dozen
+    good ones. (Comma, Nov 2026)
+65. **Check a keyword tool's popularity estimate against the store's own autocomplete.** The estimate ranked "script
+    generator" and "reel ideas" high, but Apple's autocomplete offered "script writer", "script writing" and
+    "teleprompter" and neither of those; until Apple's own popularity is connected, treat words autocomplete never
+    offers as smaller than estimated. (Comma, Nov 2026)
+66. **Translate the listing only when the app speaks the language, and start where the lead feature is searched in a
+    script English can't match.** Across 14 languages English demand matched or beat local demand and many stores
+    searched English phrases, so the English listing already reached them; the clear gaps were Japanese and Korean
+    script-writing searches (台本, 대본), then German, Brazilian Portuguese and French. (Comma, Nov 2026)
+67. **Ship every localization's fields together with the next update; don't stagger them.** An AI-drafted plan
+    released the listings country by country over weeks, but the fields change only with an app version, so staggering
+    gains nothing and delays indexing. (Comma, Nov 2026)
+68. **Keep the platforms the app makes content for out of every field, not only competitors.** TikTok, Instagram and
+    YouTube are other companies' names, which Apple rejects in metadata, so the listing says "short videos" and the
+    keyword pass marked every platform-name phrase not relevant. (Comma, Nov 2026)
+69. **The listing says "free" only for what is really free, and names the plan that has the trial.** A draft
+    description said "free to try" for an app behind a hard paywall where only the yearly plan has a short trial; the
+    pre-submission audit flagged it, and the fix says a subscription is needed and which plan starts with a trial for
+    eligible new subscribers. (Comma, Nov 2026)
+
+## Posts
+
+70. **Posts that go out show no other creators' faces or footage.** Use the app's own illustrations and screens: a
+    creator's frame in a post uses their likeness to sell your app. (Comma, Oct 2026)
+71. **A series of posts mixes formats; the signature one goes on a few, not all.** The ruler-and-fix process went on
+    the paywall and a few screens; the rest showed the opening built up from wireframes, flows of several screens and
+    the character before and after. "I don't want like every screen to have that" (Comma, Nov 2026)

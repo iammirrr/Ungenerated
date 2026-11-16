@@ -19,6 +19,9 @@ are examples only.
   never shifts layout.** "All the text across the app should have that nice animation, the blurred
   one." The first helper's side padding shipped every centred title 8 pt off centre. Ordinary app
   screens still don't move in as a whole. (Comma, Oct–Nov 2026)
+- **A heading that holds a live part (a counting number, nested pieces) rises as one block; only plain
+  headings split into lines.** A line-by-line entrance rebuilds the heading's text, which would
+  replace a number the screen is still counting. (Comma, Oct 2026)
 
 ## Continuity
 
@@ -34,6 +37,12 @@ are examples only.
 - **After recording, the camera view settles into the player in one move, no cut.** (Comma, Oct 2026)
 - **Keep the frame still and move only the content.** "What reads as polished is a frame that never
   moves"; the owner approved that direction from research into his desktop app. (Flamely, Oct 2026)
+- **After a transition, nothing from the last screen stays hanging on top.** A leftover emblem
+  floating over the next screen was the first thing the owner flagged. "on top, we do not want this
+  freaking thing going on" (Comma, Oct 2026)
+- **Never crossfade between grounds of very different tone; cut under a whip or a push.** In a film,
+  blending near-black into cream passed through a muddy grey and near-black into orange through brown,
+  so every tone change became a clean cut hidden under a move. (Comma, Nov 2026)
 
 ## Feel
 
@@ -58,8 +67,10 @@ are examples only.
 - **Zero layout jitter: nothing resizes or re-flows while something animates or is dragged; test at the
   smallest size.** "It still jitters at a small size"; header text jittered while a slider moved.
   (Flamely, Oct 2026)
-- **Offset the phases of looping illustrations so a grid never pulses in unison;** animate only the
-  picked ones in a busy grid. (Comma, Oct 2026)
+- **Offset the phases of looping illustrations so a grid never pulses in unison, and in a picker let
+  every tile play, picked or not;** picking adds the ring and the check. This replaces "animate only
+  the picked ones": still tiles read as broken in a real build. "keep these animaton but play the
+  animation" (Comma, Oct 2026)
 - **Anything that animates on a tap survives taps faster than its animation.** "If I click every week
   and move promptly, it breaks; it shows grey stuff." Set targets declaratively; one cancellable
   animation per element. (Comma, Oct 2026)
@@ -78,6 +89,12 @@ are examples only.
   reading, the original visible first, then the new words written in. No glow, no spinner, no dark
   trail, no second card behind; every card it reads gets the effect. "I like it, I want that in the
   app." (Comma, Nov 2026)
+- **Cap the AI's writing animation: one line at a time at a readable pace (about 2.3 s a line), faster
+  when many lines change, under about 8 s in all.** It stays a signature, never a wait on top of the
+  model's own time. (Comma, Nov 2026)
+- **A gradient that fades out ends on its own colour at zero opacity, never on clear.** Clear is
+  transparent black, so the AI light's trail faded through a dark band in the app until each stop
+  ended on its own colour at opacity 0. "I don't like the black trail that it has" (Comma, Nov 2026)
 
 ## Gestures
 
@@ -93,6 +110,25 @@ are examples only.
   (Comma, Nov 2026)
 - **A tap hurries an animation and never skips it.** "It should bring the animation to the end, but not
   skip it"; Continue appears at once, a second tap moves on. (Comma, Oct 2026)
+- **Build hold-to-lift as a short long press (about 0.3 s, 8 pt of slack) sequenced before the drag
+  and attached to the whole item as a simultaneous gesture.** Then a swipe still scrolls and only a
+  hold lifts; switch it off on the line being typed, heard or rewritten, where a hold already means
+  something else. (Comma, Nov 2026)
+- **Keep a hold or a lift in gesture state, which resets when the system takes the touch away.** A
+  cancelled touch (an alert, a call) never runs the end handler, so a hold kept in a flag set on
+  change and cleared on end was left running; read the press through the gesture's own state
+  (`@GestureState` in SwiftUI) and time the hold on the clock. (Comma, Oct–Nov 2026)
+- **Save a reorder only after the lifted item has settled, with animation off; while it is up, the
+  list scrolls only at its edges and only the way the finger is going.** Saved while things still
+  move, the list jumps on drop, one of the things the owner ruled out. (Comma, Nov 2026)
+- **A drop target's hit area is its visible shape and the edge below it, and never overlaps the band
+  that auto-scrolls the list.** A padded delete zone swallowed drops meant for the last rows and
+  covered the edge-scroll band; a debug-only position log caught it before it shipped.
+  (Comma, Nov 2026)
+- **A scroll-based picker takes its value only from the finger.** When layout or code scrolls it (on
+  appear, after a resize) it returns to its value: `scrollTo` ignored a padded edge margin, the extra
+  scroll on appear moved a time ruler, and the ruler saved that as its value. Build edge margins as
+  views, not padding. (Comma, Oct 2026)
 
 ## Pacing
 
@@ -108,6 +144,9 @@ are examples only.
 - **Motion graphics over video cut in and out sharply; only the motion inside them is smooth.** "Fade-in
   effects suck ... sharp jumps, and motion within them should be smooth." This is for overlays on video,
   not for app UI. (CutRoom, Oct 2026)
+- **Proof belongs on the item from its first frame, not at the end of a sequence.** Likes and hearts
+  that arrived on a reel only at the end read as an afterthought. "the first frame is supposed to show
+  the heart, like sign, not the end frame" (Comma, Oct 2026)
 
 ## The character
 
@@ -120,6 +159,9 @@ are examples only.
 - **Big enough to read, with moods and roaming eyes; no soft blush.** He asked for about 45% bigger
   across the board. (Comma, Oct 2026)
 - **The identity mark is used whole, with nothing glowing behind it.** (Flamely, Oct 2026)
+- **A character walking a short distance slows down so it still takes steps.** At its normal pace
+  (about 340 pt a second) a 60 pt walk is one step and reads as a slide, so the pace comes from the
+  distance. (Comma, Oct 2026)
 
 ## Reduce Motion and shipping
 
@@ -142,3 +184,12 @@ are examples only.
 - **Swapping the footer's buttons must not move the page.** Later and Continue share one grid cell (or a fixed-height
   slot); hiding one and showing the other with `hidden` changes the footer's height and shifts everything above it.
   (Comma, Nov 2026)
+- **When porting, pose before position: scale, rotate and blur first, then offset or position.**
+  SwiftUI scales and rotates about the layout frame, which an earlier offset doesn't move, so the
+  first native AI pencil turned about its middle instead of its tip and wrote half its size away from
+  the words; a frame-by-frame recording beside the board found it. "THE ANIATMATON YOU DIDNT ADDED
+  PROERPELY at all" (Comma, Oct–Nov 2026)
+- **When a value gets a second move, schedule it at its own time; never start it now with a delay.**
+  On the web two animations on one property stack, so a delayed one waits its turn; a native engine
+  that keeps one track per value replaces the running move at once, so a press with a delayed lift
+  would lose the press. (Comma, Oct 2026)

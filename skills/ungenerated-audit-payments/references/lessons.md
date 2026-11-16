@@ -110,3 +110,31 @@ These came from running the whole subscription life against the real server with
 2.4002400…, 38 digits) it returns 0, so a one-time offer said "0 weeks free" on TestFlight. Convert through
 `doubleValue` and round, floor any "free time" at 1, and test the label with the store's real prices, not a Debug
 fallback string. (Comma, Nov 2026)
+
+## The store's own setup
+
+**43. Start the store's business paperwork the week you start the app, and give every contact role a person.** The paid-apps agreement took nearly three weeks from the first ask to Active, and no purchase could be tested in between; Apple keeps it Pending until Senior Management, Finance, Technical, Legal and Marketing each name someone, so a solo developer takes all five. Comma, Nov 2026.
+
+**44. Change introductory offers through the App Store Connect API, never by hand.** A free trial is an introductory offer stored once per territory that can't be edited after it is made, so moving the trial to the yearly plan only meant deleting the monthly plan's 175 territory offers, which the API did in one run. Why: "Trial on yearly only". Comma, Nov 2026.
+
+## Launch day
+
+**45. A beta's "everyone is paid" switches live on the server, top the launch-day list, and a brand-new account proves they're off.** The beta ran on two flags (every account on the paid plan, and the paid AI allowance) that every paid surface read, the assistant connector included; left on, they give every real customer the product free, nothing in the app shows it, and every gate answers "paid" without reading the webhook's entitlements. So after turning them off, a fresh account must meet the paywall and the free limits, then buy in the sandbox and use a paid server feature at once. Comma, Nov 2026.
+
+## The server's copy of who paid
+
+**46. A server gate fed by webhooks needs a refresh path, so nobody who just paid is refused.** The app learns of a purchase from the payments SDK at once, but the server's entitlement row waits for a webhook that can be late, repeated or out of order; the plan was a refresh call right after buying and a check with the billing service before refusing a paid action, neither was built, and the beta's everyone-paid switch hid the gap. Comma, Nov 2026.
+
+**47. The billing webhook finds the account by the app user id, then the original app user id, then any alias that is an account, and stores the events it can't match.** Events carry whichever id the purchase was made under; a stored "no user" event is how a payer who was never unlocked gets found and repaired, where a dropped one leaves no trace. Comma, Oct 2026.
+
+**48. Gate paid features on one entitlement checked by its real identifier, never on "any active entitlement".** Every plan and offer product unlocks the same entitlement, so a new offer needs no code; the launch check found the live entitlement still under the app's old, misspelled working name, and payers got in only because the app accepted any active entitlement, a check that hands the top tier to anyone holding a lesser one the day a second tier exists. Comma, Nov 2026.
+
+**49. Every surface that delivers paid value checks the same server entitlement on every call, with the same paid states.** The assistant connector's save tool skipped the check its other tools made, so a cancelled account could have kept saving; now every call reads the plan in the database (trial, active, grace, or cancelled but not yet expired), a free account gets one fixed "subscription required" answer, and the fix was proven with a cancelled account. Why: "always check if this person is still subscribed". Comma, Nov 2026.
+
+## What the app reads from the store
+
+**50. Make a once-only offer re-testable in test builds while the store build keeps it once.** On a sandbox receipt (TestFlight and Xcode builds) the offer's start lives in ordinary app storage, so deleting the app gives a tester a fresh hour; App Store builds keep it in the Keychain, where a reinstall can't reset it. Why: "LETS TEST IN NEW TEST BUILDS PLUS WHERE CAN I ... EXPERIENCE THE DISOCUNT". Comma, Nov 2026.
+
+**51. The first value of a subscription stream is the launch snapshot, not a change.** RevenueCat's customer-info stream opens with what it knew at launch, and letting that value move the entitlement overwrote a subscription bought since; skip the first value and let only later updates change it, as StoreKit's own updates stream does. Comma, Oct 2026.
+
+**52. A pending purchase (Ask to Buy, a parent's approval) is neither paid nor failed.** Say it is waiting for approval and unlock when the store confirms; the plan said exactly that, but the shipped purchase code had no pending state, so a purchase waiting on a parent showed as a closed sheet or as a failure that asks them to try again, inviting a second request. Comma, Nov 2026.

@@ -21,6 +21,10 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   2026)
 - **Log the result, not the tap.** Closing the store's sheet returns no plan, and it was logged as
   "subscribed". Record trial, active, closed or failed. (Comma, Nov 2026)
+- **Promise a turnaround only once something works the queue every day.** The owner's own first
+  request sat queued with nothing processing it while the app promised a time; change the copy only
+  when the processor keeps the promise, have a person look at anything past about two-thirds of it,
+  and let a missed promise apologise and give a request back. (Comma, Oct–Nov 2026)
 
 ## The board
 
@@ -43,6 +47,27 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   event): the owner loved it: "I really like this as a skill." (Comma, Oct 2026)
 - **Work on the board the owner opens.** Not a published copy that goes stale: "that is where you
   need to update stuff." (Flamely, Oct 2026)
+- **Split the board in two once the app grows: one page for the onboarding, one for the app.** One
+  board buried the app under the onboarding; both pages load the same engine and screens, show
+  different rows and number their cards separately, so numbers never clash. "create a serpaet board
+  for the app and onboarding" (Comma, Oct 2026)
+- **Once the app exists, the board mirrors it both ways.** Every screen and state the app shows is
+  on it (the AI working, the leaving and offer flows, a journey that crosses sections in one row of
+  its own), nothing else is, explored variations come off once one is built, and words and numbers
+  come from the build; feedback had been landing on screens the phone no longer matched. The board
+  stays the spec only for screens not built yet. "I want to see the things that are currently in the
+  app" (Comma, Nov 2026)
+- **A picked design gets its whole flow built, each screen as good as the first.** A strong first
+  screen led into rough follow-on screens (the item opened, its detail, the next step), and the
+  whole pick read as bad. "if I click, like, make a full flow" (Comma, Oct 2026)
+- **Every item opens its own content.** Carry the item's id with the tap so each card opens its own
+  page; a library where many tiles opened one sample screen looked fake and hid the real flow. "a
+  lot of these are like pointing towards a single reel" (Comma, Oct 2026)
+- **Judge a list or home layout under a realistic workload, behind a review switch.** Overload
+  across stages was the home's real problem, and an empty list hides it; the options were compared
+  on a dozen clearly labelled review items in every stage, from a separate store checked to leave
+  the person's own writing untouched, while the board's normal view stays on real data. (Comma, Nov
+  2026)
 
 ## Onboarding order and questions
 
@@ -70,6 +95,25 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   doing it once on the real path.** A screen that told them to copy a link and paste it back was
   removed; the share sheet and the widget gallery are shown step by step, then done for real:
   "make it actually functional." (Comma, Oct 2026)
+- **Teach a system path as the current OS shows it, and notice when they come back.** A widget guide
+  written from memory said to tap a + that iOS 18 removed, and no API adds a widget for the person:
+  read the steps off a simulator with a UI test. A reminder follows them out only if notifications
+  are already allowed, and on return the app checks that the widget is really there (WidgetKit's
+  current configurations), then moves on or shows the steps again. (Comma, Oct 2026)
+- **When a guide shows another app's or the system's screens, draw only what every phone has.** The
+  share sheet differs from phone to phone, so draw it plainly, name only the control they tap and
+  show both places the app can be (the end of the row, or under More); finding it took the owner a
+  while on a real phone. (Comma, Oct 2026)
+- **An answer scale reaches as far as the outcomes you show.** A results question that stopped well
+  below what the app's own examples reach looked capped; the options went up to the millions. "when
+  I show them they can reach millions, why do we stop here?" (Comma, Oct 2026)
+- **Say each thing once in the onboarding, and when a step is cut, cut every mention of it.** A
+  feature pitched in the story and again in the demo lost its second place; after the demo's lessons
+  were removed, the account screen still listed one among what they had made. (Comma, Oct 2026)
+- **Teach the by-hand path as clearly as the AI one.** The onboarding sold the AI and the templates
+  and never showed that people can write every word themselves (a later setup step for it was cut
+  for its small text, not its purpose). "another thing that we failed to market is the manual script
+  writer" (Comma, Oct–Nov 2026)
 
 ## Opening, story and plan
 
@@ -82,6 +126,17 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   (Comma, Oct 2026)
 - **The plan is earned from their answers.** Never show details they didn't give. (Flamely, Oct
   2026)
+- **The screens after the opening are held to its standard:** one connected stage, real things,
+  motion that tells the story. Plainer story and plan screens after a strong opening made the whole
+  onboarding drop. "the aura of opening screen is just losing" (Comma, Oct 2026)
+- **The story's honest part answers what they told you, against a real benchmark.** Someone already
+  doing well hears that it's working and what to do next, never the warning meant for someone
+  struggling; a comparison with others uses a published study or your own measured data, with the
+  source beside the copy in the code rather than as small print under the chart. "what if they're
+  getting good views?" (Comma, Oct–Nov 2026)
+- **When a question moves later, the story's default never claims they said it.** Moving a question
+  into setup left the story on a default value; the copy says what that amount comes to, never "you
+  told us". (Comma, Oct 2026)
 
 ## Sign-in, consent and AI permission
 
@@ -95,6 +150,19 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   root and from inside sheets, because a sheet can't show the root's sheet. (Comma, Nov 2026)
 - **Ask each permission where it is first used,** unless the plan depends on it: a permissions
   screen for a camera nobody needs yet was removed. (Comma, Oct 2026)
+- **One signal per success: when the character is on screen, it says it alone.** A bigger, happy
+  character jumping says "you're in"; a tick beside it was one signal too many. This replaces the
+  tick in "The success moment lands" wherever the character is there. "I don't need tick section
+  here, simply because the corrector is happy" (Comma, Nov 2026)
+- **The tap that asks for a permission still does its job.** After Allow, the recording (or whatever
+  was tapped) starts by itself; a first tap that only brought up the system prompt read as a mic
+  that didn't work. Guard start and stop so they can't overlap or finish after the person has left
+  the screen. (Comma, Nov 2026)
+- **Ask for exactly the permissions a capture uses, one after another, before it starts.** Camera,
+  then microphone, then speech recognition only when a transcript is used, each input added once
+  it's allowed: a microphone added unasked to a running camera put its prompt mid-take and could
+  leave the audio silent, and a recorder that asks for speech recognition with the microphone fails
+  for anyone who says no to transcripts. (Comma, Oct–Nov 2026)
 
 ## Paywall and the offer
 
@@ -113,6 +181,15 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **The paywall is defined and never cheap.** One headline, the value, the trial timeline, every
   price, one button, no top bar: "it looks scammy now ... you make it look cheap." (Flamely and
   Comma, Oct 2026)
+- **The paywall shows the product working and names everything they get.** Show what goes in and
+  what comes out as a picture (a video, its beats, their script) instead of decorative side videos,
+  and name every feature plainly with its own icon and room; when many concrete tools are the reason
+  to pay, list them all (Comma's paywall has ten, in two columns) rather than three abstract lines.
+  "show them a lot more features like what they're gonna get" (Comma, Oct–Nov 2026)
+- **A reminder promised before notifications are allowed stays owed.** The paywall promised a
+  reminder before the trial ends but scheduled it only if notifications were already on, and they
+  were asked later in setup, so nobody got it; schedule it the moment permission is given. (Comma,
+  Oct 2026)
 
 ## Cancel, deletion, feedback
 
@@ -135,6 +212,11 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **A public feedback board; cancel feedback private.** Votes and statuses in public, reasons in a
   private list the owner actually reads; analytics get the answer, never the words. (Comma, Nov
   2026)
+- **Every step of the cancel flow has a direct way to the store's own cancel sheet; the questions
+  are optional and the offer shows once.** A pre-submission audit read four or five screens with two
+  required answers before Apple's sheet as an App Review 5.6 risk (manipulative practices). This
+  replaces the gated order in "Cancel goes all the way": the steps stay, beside the way out, never
+  in front of it. (Comma, Nov 2026)
 
 ## The app's own screens and AI writing
 
@@ -165,6 +247,75 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **Delete is always visible, with Undo.** "I CAN'T DELETE DRAFTS." (Comma, Nov 2026)
 - **Screens after onboarding are for using, not watching.** Make the core actions really work:
   "I can't even add the entry in my calendar." (Flamely, Oct 2026)
+- **Typing never hides the tab bar, and every keyboard has an obvious way out that keeps the
+  words.** A focus flag hid the whole tab bar the moment a field took focus, even with no keyboard
+  up, and the idea composer's keyboard couldn't be closed; tab-bar visibility follows navigation
+  depth (shown at a tab's root), the composer sits clear of the tabs, and switching tabs dismisses
+  the keyboard and keeps the unsent words. "the keyboard is not closing on the ideas" (Comma, Nov
+  2026)
+- **A document editor may hide its navigation bar while typing, with one labelled Done right above
+  the keyboard.** The first focus mode hid the bar with no obvious way back; Done clears every focus
+  at once (a line and a heading can each hold it), works from a hardware keyboard, brings the bar
+  back and shows no save popup, because words save as they're typed. "THE DONE PLACMENT IS SOO
+  FREAKING WERIRID" (Comma, Nov 2026)
+- **A writing screen is the page itself, edge to edge.** A rounded card floating on a patterned
+  ground was rejected; the page fills the screen even when the text is short, its margin runs to the
+  bottom, and the pattern stays off every writing screen (editor, free writer, AI draft). "MAKE THE
+  SCRIPT WRITING SCNREE FULL PAPPER PLEASE" (Comma, Nov 2026)
+- **A page's actions are small, labelled and on one line.** AI actions say what they do in words
+  ("Refine with AI") beside the text, also while editing, because bare icons went unnoticed; a big
+  "ready" checklist row became a small reversible toggle at the top, which never moves filmed or
+  posted work back to writing. "THE WRIITNG OR REFEIREN WITH AI SHOULD BE OBVIOUS" (Comma, Nov 2026)
+- **Never lock the editor while AI rewrites it.** Apply the result only to text unchanged since the
+  request was sent, never to the line being typed, and let Undo bring the old text back without
+  losing newer words. Locking manual writing during a refine was proposed and rejected, because the
+  revision-checked merge already keeps newer words; a test types during a deliberately slowed refine
+  to prove it. (Comma, Nov 2026)
+- **When AI adapts a reference, the person can show the reference's line beside each new line,**
+  part by part and even after a line is filled, with their own idea and context at the top. The
+  match couldn't be judged until the original could be shown beat by beat. "clearly match line beat
+  by beat" (Comma, Nov 2026)
+- **Point at what to edit with a drawn hand, and let an empty new line clean itself up.** A "tap
+  anywhere to change" caption wasn't enough; a drawn hand points at the line, tutorial style. A new
+  empty line shows what to type and removes itself when left empty, a beat after focus leaves, so
+  the tap that moved focus to the tool beside it still lands. "is there any way we can just use a
+  hand icon" (Comma, Oct–Nov 2026)
+- **A count on a button is a notification circle that appears only when there is something.** Posted
+  showed a "0" in a different style from Drafts' red badge; both became real buttons in one style,
+  the count shown only when it isn't zero. "posted are showing like zero" (Comma, Nov 2026)
+- **Coming back to a list finds it as it was left, and a new item opens the group it lands in.** The
+  open group, the search text and the filter survive Back (a rewrite lost the open group until it
+  was restored), and capture opens the new item's group so it's seen arriving, not filed out of
+  sight. (Comma, Nov 2026)
+- **Finding ideas starts from a topic; a personal story is optional, never the gate.** Six fixed
+  life-story prompts couldn't fit different lives, and someone without a story got nothing;
+  topic-first angles (four shown, more on request, each opening to a short brief, kept once) work
+  for anyone. "I need ideas from the niches that I worked in" (Comma, Nov 2026)
+- **Capturing an idea asks for nothing but the thought.** No required title, category, format or
+  date; organising comes later, in categories the person names when they want to. "add the
+  categories if I want to, manually" (Comma, Nov 2026)
+- **When the app can't do a step itself, hand over a list they can copy.** The app runs no live
+  research, so after the AI's questions a specific research checklist can be ticked as already done
+  and copied in one tap as a brief for their own assistant; the rest travels with the draft. "I want
+  this list to be copyable" (Comma, Nov 2026)
+- **Using an item never duplicates it;** it stays one and shows how many times it was used. Building
+  from one idea once split it into several copies. "you use this idea one time, so probably show a
+  number" (Comma, Oct 2026)
+- **A step that needs another tab's content opens it as a sheet over the flow.** Borrowing from the
+  library while working on an idea jumped to the Library tab and lost the place. "library should be
+  open like directly here because we are following the flow" (Comma, Nov 2026)
+- **A count opens what it counts.** An idea that said it had made four scripts didn't show them; it
+  now lists each one, tappable. (Comma, Nov 2026)
+- **Media at the top of a detail page introduces it; the title and tabs still show on the first
+  screen.** A tall video header filled the first screen and hid the page, so it went square across
+  the page. "TOP REEL CAN BE LITTLE SMMALER IN MY EYES" (Comma, Nov 2026)
+- **A setting that changes an onboarding answer reuses that onboarding screen,** in an app frame,
+  without the tab bar; settings had grown their own forms for the same answers. "the screens that we
+  are confirming on the onboarding" (Comma, Nov 2026)
+- **A share extension says what happened and gets every share to the account.** Sent at once when
+  signed in, otherwise the moment the app opens, and a failure says why; a share that silently never
+  reached the server read as a feature that didn't work. "I think Instagram sharing stuff is not
+  working properly at the moment" (Comma, Oct 2026)
 
 ## Porting to native
 
@@ -188,6 +339,35 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **A board that was built is not a board that works.** Ship the backend with the page, then post,
   approve, vote and unvote from the real page, and delete the test rows; an undeployed board on a
   live site just says "Could not connect". (Comma, Nov 2026)
+- **In SwiftUI, a context menu on a whole row takes the long press from any drag inside it.** Give
+  each hold its own target: a row-wide menu swallowed the reorder gesture in the first native check,
+  so the menu moved to the heading, and once holding the item meant "move", delete became a drop
+  zone at the bottom with Undo. (Comma, Nov 2026)
+- **An in-app drag carries a private type only the app accepts.** Otherwise text dragged in from
+  another app can reorder the document, and the app's own drag payload can be dropped into a text
+  field. (Comma, Nov 2026)
+- **A collapsible group's open state belongs to the screen that owns the list, not to the row.**
+  State kept in the row dies with it when its last item is deleted, so Undo brought the item back
+  into a closed group; owned by the parent, delete then Undo leaves it open. (Comma, Nov 2026)
+- **Fast taps never land on two screens.** Ignore a move asked by a screen that is no longer
+  showing, let the screen fading out take no taps, and drop a second move within about 280 ms unless
+  it is one intended double step; without this, a quick double tap moved two screens at once.
+  (Comma, Oct 2026)
+- **Port the font weight the browser drew, not the number in the CSS.** The browser snaps a weight
+  to the cuts it loaded: 650 rendered as Bold and 900 fell to ExtraBold because only 400–800 were
+  loaded, so the app uses those same static cuts. (Comma, Oct 2026)
+- **Keep a video's poster under the player until its first frame is drawn, and drive its rate from
+  the scene clock.** The poster covers the empty layer while the clip loads, and a rate of 0 when
+  the scene pauses lets the test bar's pause and slow motion hold the video too. (Comma, Oct 2026)
+- **Decoration never takes a tap or sits over a control.** A section's glow reached over the search
+  field above it and swallowed its taps, the paywall's hero covered its close button, and a flying
+  character had to be kept clear of "No thanks"; turn hit-testing off for anything that only
+  decorates, and tap every control in the played flow after placing decoration. (Comma, Nov 2026)
+- **Use the platform's real glass on floating controls only, one control at a time.** Content keeps
+  the app's own surfaces, older OS versions get a material fallback and Reduce Transparency a solid
+  surface; interactive glass on the tab container let a tab tap reach the content underneath, so
+  each control keeps its own glass and hit region. "include the actual liquid glass integration into
+  the app" (Comma, Nov 2026)
 
 - **The opening's problem includes the AI shortcut.** If the app helps people write, the pain isn't only the blank page:
   many already ask a chatbot and get the lines everyone says. Show both on the same page, one after the other, so the
@@ -200,8 +380,9 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   topic, then the screen becomes only its parts (or a strip you swipe with the pick shown large). "These tabs don't look
   good ... it's too much going on in this screen." (Comma, Nov 2026)
 - **A one-time offer is a moment.** It lands with confetti and particles, the character arrives and stays put (a loop
-  drifting across the sky reads as weird), and the free time is large. "I was expecting some confetti ... crazy
-  particles. Our character looks so weird, it's like floating." (Comma, Nov 2026)
+  drifting across the sky reads as weird), and the price billed is the largest number on it ("free" only for a real
+  trial, never for a discount). "I was expecting some confetti ... crazy particles. Our character looks so weird, it's
+  like floating." (Comma, Nov 2026)
 
 - **Setup before the account, the paywall last.** Let people set the app up (share, reminders, widget, voice) before
   asking for an account, keep everything on the phone and sync it at sign-in, then end the onboarding on the paywall.
@@ -223,3 +404,57 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   for Claude a `customize/connectors?modal=add-custom-connector&connectorName=…&connectorUrl=…` link opens it filled in,
   undocumented), let the app icons themselves be the buttons, and say only the one step left there ("tap Add, then
   Connect"). Then check it where the person looks: install it on their machine before saying it works. (Comma, Nov 2026)
+
+## Voice and recording
+
+- **Talking is tap to start and tap to keep, never hold to talk, and a pause never ends it.**
+  Holding a button while thinking aloud was awkward, and a step that moved on when the voice stopped
+  felt rushed. When they stop, wait for the recogniser's last words (up to a second behind; cap the
+  wait near 1.5 s): judging at the instant the finger lifted, the first build said "Didn't catch
+  that" to someone who had just spoken. "it should be click, and I can just speak at the bar"
+  (Comma, Oct–Nov 2026)
+- **Speech recognition uses the phone's own language variant, never a hard-coded one.** Pick the
+  device's English (UK, India and so on) or US English, on the device when that variant can run
+  there and over the network otherwise; fixed to on-device US English, every mic worked in the
+  simulator and fell back to typing on a phone set to another English. "microphone is generally not
+  working at all" (Comma, Oct 2026)
+- **When voice can't work, say which thing is in the way and offer typing.** Name it (microphone
+  off, speech recognition off, the system's Dictation off under Settings › General › Keyboard, no
+  recogniser for the language, no sound for three seconds) with Settings one tap away and typing
+  always there, and stop retrying once the recogniser ends three times in a row at once. Every mic
+  screen in the first phone build failed quietly. (Comma, Oct 2026)
+- **A voice-following prompter moves on heard words, never on a timer, and never waits on a missed
+  word.** The next script word moves it on; it jumps ahead only on stronger evidence (a long word,
+  or the next heard word agreeing), far only when several words in a row agree, and never back by
+  itself; numbers match spelled out ("8" and "eight"), contractions count as one word and common
+  homophones match. The first one waited on a missed word until it was said again. "it's supposed to
+  follow by words, not like automatically do them" (Comma, Oct 2026)
+- **Keep the screen awake while someone reads or records from it, and only then.** The prompter
+  dimmed and locked mid-take until the idle timer was switched off for as long as it is up. "the
+  screen keep dimming off" (Comma, Oct 2026)
+- **A recording is saved exactly as filmed.** The app's own words (script, captions, transcript)
+  help while filming and are never burned in or laid over the playback. "That transcription is only
+  for us." (Comma, Oct 2026)
+
+## Learning and practice
+
+- **A learning tab makes people do the skill, not study facts about it.** The first course taught
+  how videos are built and nobody said a word; it became speaking practice (a one-minute topic
+  roulette, a story from three words, explain it simply), where every lesson has them speak.
+  "actually helping them to speak out speak better, articulate better" (Comma, Oct–Nov 2026)
+- **A learning path is only as good as the practice inside each step.** The path was rebuilt while
+  its lessons stayed the same, and a prompt plus a timer wasn't enough either; each step needs
+  several attempts with one named change per retry, and a dozen sessions that teach beat a long road
+  of empty nodes. "It is just simply not giving enough practices" (Comma, Nov 2026)
+- **Practice stays practice.** Every speaking exercise can be filmed with the app's real camera and
+  saved only when asked; a practice take never becomes a draft, and carrying its text into real work
+  is an explicit action. "there's always a film button" (Comma, Oct–Nov 2026)
+- **Practice feedback claims only what the app really measured.** The one-minute timer pauses when
+  the app goes to the background and says so; there is no score and no claim about what was heard; a
+  refused microphone is never shown as a failed skill; and a filler-word count waits until the
+  phone's transcription is known to keep "um" and "uh". (Comma, Nov 2026)
+- **Gamification stays calm.** Points only for real milestones (a take, a post, a lesson, a practice
+  round), none for writing, catching ideas or opening a page, and writing keeps the streak quietly;
+  a league, if there is one, lives on a profile-type screen off the main pages and never shows
+  made-up people as real, which a pre-submission audit flagged as an App Review risk. "it's giving
+  me XPs for writing" (Comma, Oct–Nov 2026)

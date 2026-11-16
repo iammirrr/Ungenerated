@@ -32,7 +32,7 @@ Lessons from Comma (iOS, with a speech-following teleprompter), CutRoom (a Mac v
 
 **12. Animate backgrounds and camera moves with transforms on the compositor**, so they cost nothing per frame. Comma, Oct 2026.
 
-**13. In a grid of animated illustrations, keep most still and animate only the picked ones.** Comma, Oct 2026.
+**13. In a grid of small looping illustrations, let every tile play, phases offset, and keep each loop small and in place.** Animating only the picked ones made the still tiles read as broken in a real build, so that rule was reversed. Why: "keep these animaton but play the animation". Comma, Oct 2026.
 
 **14. A SwiftUI `Canvas` that reads the clock inside its drawing never redraws; drive it from a `TimelineView` or a changing input**, and stop that timeline when nothing moves. Comma, Oct 2026.
 
@@ -51,3 +51,21 @@ Lessons from Comma (iOS, with a speech-following teleprompter), CutRoom (a Mac v
 **19. Keep only the latest build; clean old simulators, derived data and builds as you go, and say what takes the space.** Why: "only keep latest build please"; "TELL ME WHAT IS TAKING TOO MUCH SPACE". Flamely, Oct–Nov 2026; Pip, Oct 2026.
 
 **20. One simulator, tests one after another.** Why: "PLEASE ONLY USE 1 simulator". Comma, Nov 2026.
+
+## Disk and build caches
+
+**21. When a build, link, install or signing step fails, check free disk before debugging the code, and free only what a build can recreate.** "No space left" and errno 28 surfaced as test failures, a link error and a signing failure, and each frozen release copy left about 4 GB of build data behind; archives, test results and logs stay, because an archive's dSYMs decoded a launch crash. Comma, Nov 2026.
+
+**22. Point every build folder at one shared package checkout, and resume a build with the same compiler flags.** Each fresh build folder downloaded every Swift package again (about 3.7 GB) and ran the disk out mid-build, and a cold build with the analytics, crash and payments SDKs passed a tool's ten-minute call limit under load; `-clonedSourcePackagesDirPath` reuses the checkouts, and changed flags throw the incremental build away. Comma, Nov 2026.
+
+## Serving shared content
+
+**23. Publish what is the same for everyone as a static file on a CDN, rebuilt at each publish, not as a sync between databases or a query per person.** The library moved from a database-to-database sync job to one published file that the app and the assistant connector both read, so new items appear without an app update and cost no database reads; the database keeps only what is personal. Comma, Oct–Nov 2026.
+
+**24. Make every image once, at its size, when you publish, under a key that never changes.** Frames at 360 px wide and quality 45 average 12.6 KB (about 0.28 MB a video) with nothing to resize on request, and a redone frame gets a new versioned key instead of overwriting, so phones and the CDN can cache every file for a year as immutable. Comma, Oct 2026.
+
+**25. Serve shared media from object storage with free egress behind a CDN, on your own domain; never from a shared web host, the bucket's development URL or the source platform's links.** A library visit plays about ten short clips (about 5 MB), so 1,000 daily users would pull up to about 150 GB a month from one shared server; Cloudflare's r2.dev address is rate-limited and meant for testing, a custom domain needs its DNS on Cloudflare, and platform links such as avatars expire, so copy the media in. Comma, Oct 2026.
+
+## Long text
+
+**26. A row's preview renders a bounded prefix of a long text, never the whole field.** A very long field laid out in full inside a compact row spilled over the controls beside it; the full words stay stored and open in the editor. Comma, Nov 2026.

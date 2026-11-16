@@ -73,3 +73,21 @@ Lessons from wiring analytics into Comma (iOS, PostHog and RevenueCat), Flamely 
 **29. Product analytics can't tell you age or gender.** Google Analytics gets them from Google's ad tracking, which needs a cookie banner and sends visitors' data to Google. Ad platforms show the age and gender of people who clicked in their own reports; asking in onboarding is a design decision. Why: "if we can get their age groups, like even the Google analytics give better stats". Flamely, Nov 2026.
 
 **30. Chart events the code sends even before anyone has sent them.** An event nobody triggered yet is missing from the tool's event list; build its chart from the verified name in the code so it fills when data arrives, and say it is empty until then. Flamely, Nov 2026.
+
+## Crash reports
+
+**31. Every build that leaves the machine uploads its debug symbols, the reporter's token is checked before the upload starts, and the archive is kept until the symbols are in.** The upload script skipped symbols with one printed line when the token was missing, so builds went to testers for weeks with none; a shipped launch crash could be read only because the kept archive's dSYM matched the crashing binary and was symbolicated by hand. Comma, Nov 2026.
+
+**32. A watchdog termination reported on the launch after a forced restart describes the previous process: keep it open, and recheck if it recurs.** Installing a fix over the running app produced one while the new process stayed alive and the owner confirmed it stayed open; nothing was resolved or filtered out just to tidy the issue list, handled network cancellations included. Comma, Nov 2026.
+
+## Context in the events
+
+**33. Send the device settings that change what people see, such as Reduce Motion and Low Power Mode, with the app-open event.** The app's animated character stood still on the owner's phone, and whether Reduce Motion or a bug caused it was guesswork until the setting arrived with each app open; the share of people with either on also tells you who sees the reduced version. Comma, Oct 2026.
+
+**34. App extensions write every attempt to the shared app-group container, and the app reports them the next time it comes to the front.** Shares from a social app reached nothing on a real phone and left no trace; recording what the extension was handed and the outcome, then sending that as an event (outcome, types, the link's host) and failures to the crash reporter, showed what the source app actually passes. Comma, Oct 2026.
+
+## Alerts and access
+
+**35. Before launch, alert on what breaks a promise or costs money, not only on crashes.** The first real request sat in a queue with no processor for over a week against a 72-hour promise, and nothing said so; alert on the oldest waiting request against the promised time, AI spend against its seven-day average, function errors, webhook failure streaks, push failures and the crash-free rate. Comma, Oct–Nov 2026.
+
+**36. Before reading or changing anything through an analytics connector, check which project it points at.** The connector served two apps and defaulted to the sibling app's project, so a query would have read the wrong app's events and the paywall and cancel dashboard would have landed in the wrong place; switch first and confirm by the project's name, because a number from the wrong project looks perfectly valid. Comma, Nov 2026.

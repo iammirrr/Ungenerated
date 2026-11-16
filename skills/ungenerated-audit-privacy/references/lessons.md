@@ -65,3 +65,31 @@ Lessons from launching Comma (iOS, AI writing), Flamely (Mac/Windows/iOS), Pip (
 **26. A public feedback board is user content.** Posts are shown publicly once approved, so it needs the takedown contact and, in the US, a registered DMCA agent like any upload feature. Flamely, Nov 2026.
 
 **27. Before launch, read every sentence of the policy and terms against what ships now.** A site round can quietly make a line false: a form that now asks for a name, a demo that no longer asks for the microphone, a connection to the person's own AI assistant (say who handles what they share there: the assistant's maker, under their own agreement), an introductory offer the terms never mention. Fix them in the same round. Comma, Nov 2026.
+
+## Sign in with Apple's own duties
+
+**28. Sign in with Apple leaves two jobs your auth service may not do: revoking Apple's token when the account is deleted, and acting on Apple's account notifications.** Supabase Auth keeps no Apple refresh token and ignores Apple's server-to-server notices (forwarding turned off, consent revoked, Apple account deleted), so you need your own function that exchanges the authorization code at sign-in and calls Apple's revoke endpoint at deletion, plus an endpoint for the notices; flagged in the first plan, the revoke was still recorded as not built at the pre-submission audit. Comma, Oct–Nov 2026.
+
+**29. Email to people who hid their address with Apple needs your sending domain registered with Apple's relay and signed (SPF and DKIM), and every address check must accept both relay domains.** The domain's mail records allowed only the web host, so the welcome email would have gone to spam, and to relay addresses it would never have arrived; relay addresses end in privaterelay.appleid.com and, since Apple's change in 2026, also private.icloud.com. Comma, Oct–Nov 2026.
+
+## Deletion, sign-out and retention
+
+**30. Deleting an account is one job with a recorded step for every place the person's data lives, inside the database and out.** Personal tables cascade from the user, shared things they made keep the content and lose their id, and the job's own row (no foreign key, the id only) outlives the deletion as proof; Comma's first job did the database half and left the billing customer, the analytics person, the email contact and Apple's token for later. Comma, Oct–Nov 2026.
+
+**31. Every outside connection to the person's data (an AI assistant, an OAuth grant) is listed in settings with what it may do and a Disconnect, and account deletion revokes them first.** Comma revokes assistant grants in the same transaction that queues the deletion, and every connector tool refuses an account with a deletion pending, so nothing writes into data being erased; disconnecting stops future access and keeps what was already saved. Comma, Nov 2026.
+
+**32. A push token belongs to whoever is signed in on that phone now: sign-out removes it, and registering it moves it from any other account.** Without both, a shared or handed-down phone keeps getting the previous person's notifications. Comma, Oct 2026.
+
+**33. A retention period needs the job that enforces it.** Comma's data plan gave every table a period and a reason (AI usage 13 months for cost and abuse history, billing events 25 months for the refund window, the push outbox 30 days, deletion records two years with the id only), but no scheduled job prunes any of them, so each period, and any policy line built on one, is only a promise. Comma, Nov 2026.
+
+## Forms and public pages
+
+**34. A waitlist answers the same whether the address is new or already on it.** Otherwise the form tells anyone whether a given person signed up; keep each address once, lower-cased, and rate-limit by a salted hash of the network address, never the address itself. Comma, Nov 2026.
+
+**35. Keep the owner's personal details (a home city, a "made by" line) off the app's public pages unless a law requires them.** The website's footer named the owner's home city; it came off every page the round the owner saw it, and the privacy policy and terms name the operator and the governing country without it. Comma, Nov 2026.
+
+## Other people's work in the product
+
+**36. Show other creators' work only as small frames and short excerpts beside your own analysis, each with a linked handle and a link to the original, never their video or audio.** Small frames used to teach are the lowest risk (transformative; the EU quotation exception also needs the source and the author's name), a full transcript is riskier, and hosted music is a near-complete copy: the old pipeline's music fallback on a public URL was the biggest copyright risk in the system. Why: "it's supposed to also show the creators profile". Comma, Oct 2026.
+
+**37. Before launch, give creators one takedown path that removes their items everywhere and keeps them out, and don't count on the DMCA safe harbour for a library you curate.** The safe harbour covers material stored at a user's direction, not what you choose and publish, so register a DMCA agent, remove a taken-down item from the library and from every save (never the person's own writing built on it) and block the creator from future publishing and requests; Comma's terms gave a takedown email, but the blocklist that makes a takedown stick was still a proposal. Comma, Oct–Nov 2026.

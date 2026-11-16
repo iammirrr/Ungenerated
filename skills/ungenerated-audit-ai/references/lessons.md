@@ -101,3 +101,45 @@ Lessons from building AI into Comma (an iOS app that helps people write short vi
   down media for a library, processing a queue) can be a skill in the owner's Claude Code: scripts do the mechanical
   half (download, frames, transcript, upload, checks), the owner's subscription does the thinking, and the app's API
   budget stays for users. Publish only through a script that checks the result first. (Comma, Nov 2026)
+
+## Ceilings that hold
+
+**42. When the usage gate can't be read, refuse the AI call.** The first AI function counted usage through a database schema the API didn't expose, so every count failed quietly, read as zero and capped nobody; it now answers "unavailable" whenever the gate, the budget reservation or the model's price can't be read. Comma, Oct–Nov 2026.
+
+**43. Reserve each call's worst-case cost before sending, with the SDK's automatic retries and any model fallback off, and never release a reservation early.** SDKs retry by default, so one timeout can become a second billable call nobody reserved, and a request that timed out may still be billed, so an interrupted call keeps its reservation; usage rows carry the reservation id so nothing counts twice. Comma, Nov 2026.
+
+**44. Size each job's effort and output cap from measured runs, and check that no answer hit the cap.** At low effort a whole script came back in about 300 tokens of thin lines, so the job runs at medium; its cap is twice the most any script has used, which halved the worst a call can cost, and the cost run confirmed no answer was cut off. Comma, Oct–Nov 2026.
+
+**45. Keep the AI kill switch, the model id, every limit and every exemption in server config, and test the limits from an ordinary account.** The model moved to the smallest one with a config edit and no app release, and the code's default matches the config; but the owner's account is exempt and a beta flag lifted everyone's allowance, so the owner's own testing never met the trial's or the free plan's limits. Comma, Nov 2026.
+
+**46. Every route to free AI must cost an abuser something: no email or anonymous sign-up, fixed jobs only, and a pre-sign-in demo that takes nothing but an id and the person's short input.** The first AI function let anonymous sessions through, so each phone could have become many accounts with fresh allowances; the demo reads its source from the server's own copy, never from the request, and is capped per install, per network (a keyed hash of the IP) and in total, so neither endpoint works as a free general-purpose model. Comma, Oct 2026.
+
+**47. When you add an AI task, add it to the usage log's allowed kinds in the same change.** Two new tasks were logged under an old task's name because the log's check didn't allow them yet, so their cost per task couldn't be told apart. Comma, Nov 2026.
+
+**48. Measure the client's real request timeout against a deliberately slow server before sizing AI jobs.** A build's configured 12-second limit turned out to be 60 seconds in practice, the only reason a 25-second script survived; a number in config is a guess until it is measured. Comma, Oct 2026.
+
+**49. Before an expensive AI job, run the cheap checks that can make it unnecessary.** An item already processed answers at once, ten people asking for the same item make one job, and a cheap qualification check (the video's views against its creator's recent median) runs before the breakdown, with a refusal that doesn't use the person's allowance. Why: "if that is not even an outlier, then why would you even do that?" Comma, Oct–Nov 2026.
+
+**50. Don't plan to cut AI cost by moving real jobs to the phone's own model.** Apple's on-device model had 4,096 tokens for input and output together and wasn't on older phones (the owner's included), while the smallest cloud model wrote a script for about a third of a cent. Why: "should be also opt for a local model". Comma, Oct 2026.
+
+## Prompts that keep the person's subject
+
+**51. Borrow a template's mechanics, never what it was selling, and keep a reference with a sponsor plug in the eval set.** A "comment a word and I'll send the link" ending, a numbered count or a callback stays, with the person's own word or a blank like [WORD]; the source's sponsor, product and link kept leaking into unrelated scripts until the prompt forbade them, and five paid live runs on a reference ending in a product plug then showed no source brand in the spoken lines. Comma, Nov 2026.
+
+**52. Label generated structure from a small fixed set of familiar roles, and let the person rename them.** Labels the model invented per script came back vague and repeated; six fixed roles (Hook, Context, Problem, Turn, Payoff, Call to action), written exactly and shareable by two parts, read the same on every surface. Why: "there are two proof, there are demo, free part". Comma, Nov 2026.
+
+**53. On thin input the model stays on the person's exact subject and writes a visible blank for any fact they didn't give.** It drifted to a nearby topic that was easier to fit (a game featuring slime became a recipe for real slime) and added mechanics, timings and results nobody gave, and asking it to match a source's length tempted it to pad lines with invented facts; a short blank like [how many] or [the result] keeps the line true and shows what to fill in. Comma, Nov 2026.
+
+## Media in, published content out
+
+**54. Separate the voice from the music before transcribing, and distrust a transcript of a video nobody speaks in.** Song lyrics landed in the library as spoken lines, and a "Please subscribe" phrase appeared on a video with no voice at all; transcribe the vocal stem only, and leave the lines empty when nobody talks. Comma, Nov 2026.
+
+**55. Show a vision model every frame, as labelled contact sheets, never a hand-picked few.** Frames taken every half second and set in grids, each tile stamped with its time, fit a minute of video's 60–150 frames into a few images, so cuts, reveals and text changes aren't missed and image tokens stay low. Why: "NOT 18 ... ALMOST ALL ... I WANT CLIPPING FRAME WHERE NEED". Comma, Nov 2026.
+
+**56. AI output that goes live to everyone passes coded checks, is retried once with the failures quoted, and then waits for a person until it has earned automatic publishing.** A scan found 46 of 79 live library items broken (parts with no job, talking videos with no lines, song lyrics stored as speech); the gate checks transcript coverage (99% of the words, in order, in whole sentences), lengths and required fields, and the owner reads every item the first week, then one in ten plus everything flagged. Why: "FULL COMPLETE SENTENCES, 100% coverage". Comma, Nov 2026.
+
+## Assistant connectors
+
+**57. Serve an assistant connector's working rules from the server, as MCP instructions and a guide tool, not only from a plugin's skills.** A phone gets the connector without the plugin, so rules kept only in the plugin left it with tools and no guidance; once the server sent the same uses as instructions and a guide tool returned the app's own writing rules from the prompt file the app uses, the phone behaved like the desktop. Comma, Nov 2026.
+
+**58. An assistant writing into the app saves only when the person asks, keeps their decisions apart from its own suggestions, and reports a save only on the tool's receipt.** Brainstorming is not a save request; a request the tools can't do (schedule, edit a script) is offered plainly as what they can do, "saved" is never claimed as "on your phone" before the phone refreshes, and when the tools are missing it says so and keeps the content in the chat, never falling back to direct database access that would skip the plan check, the limits and the idempotency. Comma, Nov 2026.

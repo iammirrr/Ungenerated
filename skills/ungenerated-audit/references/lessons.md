@@ -55,3 +55,11 @@ How an audit should run, from the owner's reactions while launching Comma (iOS),
 **22. Apply a fix exactly where it was aimed.** Over-correcting one rule across the whole app made it worse. Flamely, Oct 2026.
 
 **23. Spend from the funding source the owner names, and stop when the job is done.** Why: "ONCE DONE PLEASE STOP OK?? DONT WASTE MY TOKENS". CutRoom, Oct 2026; Comma, Nov 2026.
+
+## Before a first submission
+
+**24. Before a first submission, treat every risk as a fail: fix each one in the app, the server and the listing, and re-check it with proof.** The pre-submission audit found six likely rejections, nine risks and an empty listing, and every rejection round costs days. Why: "one shot this one in the review process". Comma, Nov 2026.
+
+## Probes
+
+**25. Prove a setup you can't use for real with a harmless request built to fail informatively, and say what it still doesn't prove.** A made-up authorization code sent to Apple came back "invalid_grant", not "invalid_client", which proves the client and secret are accepted; a tokenless push to Apple's sandbox came back 403 MissingProviderToken, which proves the server reaches it; unsigned, forged and browser-origin calls to a signed endpoint must get 401. None of these is a real person signing in, so the report lists that as untested. Comma, Oct–Nov 2026.

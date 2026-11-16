@@ -107,3 +107,30 @@ it came from. Comma's own look (its palette, its clapperboard character) appears
     (Comma, Oct–Nov 2026)
 37. **Every icon approved on the board lands in the app in the same round.** The importer writes both, so they can't
     drift. (Comma, Nov 2026)
+
+## Painted scenery
+
+38. **Brief hero scenery (sky, clouds, sun) to the image model as separate layers that replace the code-drawn ones one
+    for one.** Each layer gets the exact box it fills, is wider than the screen by its drift so no edge shows, keeps a
+    flat spot where the character stands, and stays crisp and small (no glow, under about 40 KB); the sky gradient
+    stays in code, one set serves every screen, and the code-drawn version stays as the fallback until the owner
+    picks. "we can make them a lot more attractive using, like a codex image generation" (Comma, Nov 2026)
+
+## Partners and the paywall
+
+39. **An icon for an integration shows the idea, never the partner's logo drawn into your art.** Working inside an AI
+    assistant became a plug clicking into a chat bubble: brands don't allow their marks redrawn inside someone else's
+    artwork, and where the brand itself must show, it is its original artwork. (Comma, Nov 2026)
+40. **The paywall's feature list gets illustrated icons, even where ordinary rows keep line icons.** The perks were
+    first left as small line icons like the other rows; on the screen that sells the app the owner asked for custom
+    ones, lifted. "lift them up a little bit and make a little bit of custom icons using codecs" (Comma, Nov 2026)
+
+## The brief and the count
+
+41. **When an approved exception breaks the house style, name it in the brief with its own reference and change only
+    the mark.** Stamps keep a bevelled rim although bevels were rejected for every other icon; new stamps get the
+    approved stamp as a third reference, with the same rim, size and depth, and only the mark is new.
+    (Comma, Nov 2026)
+42. **Count what is left to make from the files on disk, never from an earlier list.** Notes disagreed (67 left, or
+    102) while most were already made; checking every folder took the list to 9, and a week later a job list still
+    told the image model 33 were open when only 2 were. (Comma, Nov 2026)

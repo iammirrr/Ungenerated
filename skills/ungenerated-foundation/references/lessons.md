@@ -18,6 +18,10 @@ exact looks are examples only; the rule is what transfers.
   that I chose". If a pick isn't recorded, say what you assumed. (Comma, Oct 2026)
 - **Work the kit out back and forth, two or three options at a time, and lock each pick.** He chose by
   seeing, not by reading descriptions. (Comma, Flamely, Oct 2026)
+- **A new app built on another app's engine gets its own look: reuse the engine, never the look.**
+  Question screens made with a sibling app's board engine came out looking like that app and were
+  rejected; the new app got its own progress bar, question layout and answer cards. "it looks
+  identical to Flamely, I don't want a clone" (Comma, Oct 2026)
 
 ## Colour, grounds and surfaces
 
@@ -48,6 +52,16 @@ exact looks are examples only; the rule is what transfers.
   meant two kinds of text, so a highlighter selection confused them. (Comma, Oct 2026)
 - **Follow the phone's light or dark setting unless the owner sets a default.** Design both by hand.
   (Flamely, Oct–Nov 2026)
+- **Build the ground as one layer: sky, grain, pattern and any filter or fade together, and check it
+  in every state.** A sky band that ended in a hard line, a pattern that started only below the sky,
+  and a grey filter that reached some layers and not others each left a visible seam. "these little
+  things really matter to me" (Comma, Oct 2026)
+- **Borrow a game's loop, not its toy look.** Gamification stays subtle (a path, stamps, ticks, a
+  streak): the owner asked for "more gamified, like Duolingo", then rejected a round of chunky 3D
+  pressable buttons and tiles: "moving into gamey territory, doesn't feel good". (Comma, Oct 2026)
+- **What opens over the app blurs what's behind it; never a flat dim.** A menu opening over the home
+  screen on a plain dark scrim was asked to blur the content instead. "I do want like the things to be
+  more blurry" (Comma, Nov 2026)
 
 ## Type
 
@@ -70,6 +84,9 @@ exact looks are examples only; the rule is what transfers.
   blob. (Comma, Oct 2026)
 - **Words never leak out of their shape.** A label crossing a line or pattern sits on a small pill.
   (Comma, Oct 2026)
+- **A group of options wraps into even rows of equal-width options, never a ragged last row, and
+  anything in columns lines up exactly.** A second row of uneven choices and a calendar's weekday
+  letters sitting off their day columns were both sent back as alignment bugs. (Comma, Oct 2026)
 
 ## One job per screen
 
@@ -93,6 +110,10 @@ exact looks are examples only; the rule is what transfers.
 - **Never type into a system alert inside a flow; type in place.** (Comma, Nov 2026)
 - **Ship the smallest version that does the core job.** "Decrease the bloat as much as possible."
   When a scope fails, cut back to what works. (CutRoom, Oct–Nov 2026)
+- **Give each feature one meaning, and never blend two features into one screen or step.** A request
+  to add a video to the library (something you wait for) once also asked for the person's own take on
+  it (something instant); the owner stopped the round to pull them apart. "the library feature is
+  totally separate from angle feature" (Comma, Oct 2026)
 
 ## State and icons
 
@@ -128,6 +149,13 @@ exact looks are examples only; the rule is what transfers.
   maths honest; the person's own numbers beat template stats. (Flamely, Comma, Oct–Nov 2026)
 - **No demo data. Run on a real day one and live content.** "The demo data is ruining the quality of
   everything." (Comma, Oct 2026)
+- **Give each product word one meaning, and lint the copy for its wrong use.** "Shape" already meant a
+  story's beats, so calling formats "shapes" confused the owner, and genre labels (POV, skit,
+  listicle) described formats wrongly; a format became how a video is made (face or not, voice or not,
+  what the footage is, how many people). "I don't know what you mean by shapes" (Comma, Oct 2026)
+- **Name an option by what the person gets, not by how the app makes it.** A choice labelled with its
+  mechanism (the AI writes three drafts) confused the owner; it became the kind of video they want,
+  and the several takes appear after. (Comma, Nov 2026)
 
 ## Research
 
@@ -144,6 +172,18 @@ exact looks are examples only; the rule is what transfers.
 
 - **Pick a short one-word or character name, check the domain, and confirm before any rename.** He
   changed his mind on a rename within the hour. (Comma, Oct 2026)
+- **Before anyone uses a name, the mascot's included, check the App Store in several countries, the
+  trademark register (software classes 9 and 42) and the domains, and keep platform marks out of it.**
+  The working name had a live trademark application for mobile software and two products in its niche,
+  two mascot candidates were a rival AI teleprompter and a video app's registered mark, and "Reels" is
+  Meta's registered mark. (Comma, Oct 2026)
+- **If the person does the work, name their craft; a name ending in "-ify" or carrying "AI" says the
+  machine does it.** Both "-ify" names in the niche generated scripts with AI, and of 137 script apps
+  51 pitched AI (27 in the name), so the name moved toward the person writing (ink, draft, take).
+  (Comma, Oct 2026)
+- **Keep every word the app shows in one copy file, so a rename is one edit, and lint for the old name
+  with any whitespace between its words.** A rename by hand touched about 70 files, and leftovers of
+  the old name still showed later, one in a title split over two lines. (Comma, Oct 2026)
 
 ## The app's website
 
@@ -158,3 +198,83 @@ exact looks are examples only; the rule is what transfers.
   menu in another). (Comma, Nov 2026)
 - **Rebuild from the round the owner liked.** After a rejected round, start again from the last version
   they praised and add only what they asked for. (Comma, Nov 2026)
+- **Lay the website out zoomed out and calm, with a hero small enough to fit a laptop's first
+  screen.** Phones and type at a calm size with room round them, like a premium product page; a page
+  blown up to fill the screen was rejected, and the hero's headline, lede, phone and fields shrank
+  until it showed whole without scrolling. "this landing page is too zoomed in" (Comma, Nov 2026)
+- **Give the website a navigation bar (logo, sections, the main call to action) and a hero that shows
+  the promise working in real motion.** A headline beside a still phone, with no navigation, didn't
+  read as a real app's page. "there's no navigation, so add navigation bar, obviously"
+  (Comma, Nov 2026)
+- **Sections show the real app, never explanatory widgets, mock cards or framed boxes.** Sections
+  built as diagrams inside frames were rejected as not a landing page. "the showcasing doesn't look
+  good at all" (Comma, Nov 2026)
+- **Build the website from the app's approved pieces, and make it move at least as well as the
+  onboarding.** The screenshots' type and colours, real content looping as video, the character and
+  the onboarding's own animations: a first site that moved less than the app's onboarding was called
+  worse than it. "The reels should like looped out" (Comma, Nov 2026)
+- **A before-to-after transformation plays by itself when it comes into view; the reader never scrubs
+  it with the scroll.** The idea-to-script section first moved only as you scrolled and was asked to
+  play on its own. (Comma, Nov 2026)
+- **A website demo never asks for a device permission; it plays by itself and still answers drags.**
+  The voice-following demo was rebuilt to play the wave and type each sentence on its own, and the
+  privacy policy says the site never asks for the microphone. "I do not want them to kind of like ask
+  for their permission for Mike" (Comma, Nov 2026)
+
+## Images
+
+- **Size images for the largest place they show, in device pixels.** A 320 px frame in a half-width
+  tile on a 3× iPhone is stretched 1.7× (3.7× across the screen): fine as a thumbnail, visibly soft in
+  a tile meant to show the content, so the tiles got a 720 px set. (Comma, Oct 2026)
+
+## Concept and planning
+
+- **Help with the step before the core one.** A writing app rests on idea, script and film, but people
+  arrive without an idea; with only catching and keeping ideas built, helping people find them (their
+  own story, a topic, others' work) became work of its own. "ideas ... from their own brain, copying
+  others, Reddit" (Comma, Nov 2026)
+- **Before "connect your account" goes in the plan, check what each platform's API can read, and offer
+  it only where it can.** Instagram's API reads only Business and Creator accounts (personal accounts
+  have had none since the Basic Display API ended in December 2024) after Meta's app review, and
+  TikTok and YouTube each need their own review; the connect step left the onboarding, and results are
+  logged by hand until a real connection exists. (Comma, Oct 2026)
+- **Before promising a turnaround that a person or a pipeline delivers, do the capacity maths against
+  the real pace.** The manual process had made 5 breakdowns in 28 days (about 10 a week at best) while
+  requests at 1,000 users would need about 49 a week, so processing had to be automated before launch;
+  for weeks the app promised an answer "within 72 hours" with nothing processing the queue. "they
+  request, I process it." (Comma, Oct–Nov 2026)
+- **Do the riskiest unknowns first, each as a short spike with a named fallback, and finish the
+  list.** Direct push to Apple was ranked first (an hour to test, a push service as the fallback) and
+  shipped first try; Sign in with Apple token revocation, fourth on the list, was left for later and
+  was still missing at the pre-submission audit. (Comma, Oct–Nov 2026)
+- **Keep one diagram-led architecture document in the repo, with a numbered decisions page that
+  changes first.** Each decision has its status, who made it, the date and the chapter it changes, all
+  in the same commit; open questions carry a yes-or-no recommendation and replaced decisions are
+  struck through, never deleted, so a later session on another machine builds without the chat. "this
+  is where we will make changes, we will discuss ideas" (Comma, Oct 2026)
+
+## Working with the owner
+
+- **Follow a plan or wireframes with styled screens quickly; a plan alone reads as no design.** A
+  board of lo-fi wireframes got one answer the same day. "where is the design?" (Comma, Oct 2026)
+- **Ask for the why behind the owner's decisions in one numbered list, and log each answer against its
+  rule.** He answers by voice, down the list, without saying the numbers (and his dictation tool
+  numbers sentences on its own), so match answers by topic; a rule that knows its reason is applied
+  rightly to cases it never named. "all the little decisions I made, you can ask me why"
+  (Comma, Oct 2026)
+- **"It depends" is an answer: log the rule as a default, not a never.** Logged as a hard rule, it
+  makes the next round refuse cases the owner would have allowed. (Comma, Oct 2026)
+- **Read swearing as emphasis about the work, not anger at you.** Answer with what is approved, what
+  is left and the one next step, then fix it; no apology and no long explanation. "What do I do now?
+  Should I quit? Tell me." (Comma, Oct 2026)
+- **Never guess the end of an unfinished sentence.** Dictated messages often stop mid-thought and the
+  next message usually finishes it: wait for it, then ask, quoting the fragment. (Comma, Oct 2026)
+- **Keep the owner's taste as a keyed log that generates the rules file, praise included.** Every note
+  gets a stable key, so a newer note replaces the older rule and repeats are counted (938 notes became
+  751 rules in force); the rules, their lint checks and a list of golden references (what he loved,
+  studied before designing) are rebuilt from the log each round, never edited by hand. "improve these
+  skills and automated learning mechanism for these AI slop stuff" (Comma, Oct 2026)
+- **When a choice can't be put into words, hand the owner the exported screens to edit in his own
+  tool, then build from his edit.** His edited picture carries what he can't describe, one step at a
+  time, back and forth. "so I can edit them in the Photoshop ... and give it back to you"
+  (Comma, Nov 2026)
