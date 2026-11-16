@@ -21,7 +21,7 @@ The goal has two halves, and both count: **nobody gets paid access without payin
 - Providers: grep for `stripe`, `paddle`, `lemonsqueezy`, `revenuecat`/`Purchases`, `StoreKit`, `BillingClient`, webhook routes, price ids, env names (`*_PRICE_*`, `*_WEBHOOK_SECRET`).
 - Read the project's own docs on pricing and billing, and its AGENTS.md / CLAUDE.md rules.
 
-Read `references/loopholes.md` (the full catalogue, the things nobody tests), `references/providers.md` (per-provider facts: events, signatures, test tools, time travel) and `references/lessons.md` (mistakes that shipped in real apps, and why each rule exists) before Phase 2. Laws on renewals and cancellation belong to the `ungenerated-audit-privacy` skill; secrets and API security to `ungenerated-audit-security`. Run them alongside when the scope touches them.
+Read `references/loopholes.md` (the full catalogue, the things nobody tests), `references/providers.md` (per-provider facts: events, signatures, test tools, time travel) and `references/lessons.md` (mistakes that shipped in real apps, and why each rule exists) before Phase 2; for Apple, also `references/apple-subscriptions.md` (Apple's own rules in its words, with the date read). Laws on renewals and cancellation belong to the `ungenerated-audit-privacy` skill; secrets and API security to `ungenerated-audit-security`. Run them alongside when the scope touches them.
 
 ## Hard rules
 
@@ -86,3 +86,12 @@ The store's paid agreement Active and bank/tax in; the billing service holding t
 ## The report (for a non-developer owner)
 
 Result first, plain words, short sentences. The App profile in five lines. Coverage ("42 of 42 loopholes checked, 14 invariants"). Then a table: case · result (✅ passed live / ✅ tested / ⚠️ suspected / ❌ open / N/A) · money at risk · fix. Then the **numbered fix list** for approval, and "what only you can do" (dashboards, keys). Stop there until the owner answers. Name what was not checked. Write the findings into the project's own docs (bug log, payments plan) so they outlive the conversation.
+
+## Read when
+
+| You are… | Read |
+|---|---|
+| Hunting loopholes (Phase 2) | `references/loopholes.md` |
+| Driving a provider's sandbox: events, signatures, test tools, time travel | `references/providers.md` |
+| Checking Apple subscriptions: the disclosure Schedule 2 asks for, offers and who is eligible, manage, cancel and refund, grace period and billing retry, server notifications, sandbox and TestFlight | `references/apple-subscriptions.md` |
+| Wanting the why behind each rule | `references/lessons.md` |

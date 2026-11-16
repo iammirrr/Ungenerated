@@ -7,11 +7,18 @@ App Store Connect › the version › App Review Information has a sign-in secti
 - User name: `<test account email>` (a test account made for review, with realistic sample content; never a real person's)
 - Password: `<password>`
 - If sign-in is Sign in with Apple only: say so in the notes, and that the reviewer can use their own Apple Account.
+- For subscriptions, a second account whose subscription has expired (or never started), so the reviewer reaches the paywall and buys in the sandbox; its credentials go in the Notes. Apple: "If your app offers auto-renewable subscriptions, provide a demo account with an expired subscription to enable review of the entire purchase flow."
+- Any one-time sign-in code goes in the Notes in advance; otherwise App Review has to call, "typically completed within three to five business days".
 
 ## Notes (paste and edit)
 
 ```
 <App name> helps <who> <do what>, in one sentence.
+
+BUSINESS MODEL: <free with a subscription: plan names and lengths>. AUDIENCE: <who it's for>.
+TESTED ON: <iPhone model, iOS version>; <iPad model, iPadOS version>.
+SERVICES: sign-in <provider>; payments Apple In-App Purchase<, through a billing service>; AI <provider> for <feature>; backend <host>.
+REGIONS: <works the same in every region / the differences, including purchases limited by storefront>.
 
 HOW TO TEST
 1. Launch and go through onboarding (<N> short questions).
@@ -41,7 +48,8 @@ Contact during review: <name>, <phone or email the owner chose>.
 
 - **Attach a short screen recording** (1–3 minutes, from the build being submitted): launch, onboarding, sign-in, the paywall, a sandbox purchase, the main feature, account deletion. Link it in the notes or attach it in App Review Information. 2.3.1(a) asks for changes "described with specificity in the Notes for Review section ... (generic descriptions will be rejected)".
 - **Expedited review** is for a critical bug fix or a time-critical event (developer.apple.com/contact/app-store/?topic=expedite); Apple: "seeking expedited review only when you truly need it." Say exactly what breaks for people, or what launch date is fixed.
-- **After a rejection**, answer in App Store Connect, not with a resubmission alone: ask what exactly to change, and ask for a phone call with App Review if the reason is unclear (developers report it's offered on request; re-verify). Disagree with the outcome? Appeal (topic=appeal).
+- **After a rejection**, answer in App Store Connect (Reply to App Review); don't resubmit when the fix is metadata, a demo account or a server change: "Resubmitting starts a new review, after which App Review can no longer reply to your previous message." Ask what exactly to change; from the same window you can "request a call with an Apple representative", giving your time zone. Disagree with the outcome? Reply first, then appeal to the App Review Board (topic=appeal): one appeal per app, citing the guideline point by point. Details and dates: `apple-docs.md` §11.
+- **Before a first submission**, a 30-minute App Review appointment (Meet with Apple, Tuesdays and Thursdays) can settle how a guideline applies; it is informational and pre-approves nothing.
 
 ## Before pasting
 

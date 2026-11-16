@@ -63,3 +63,11 @@ Then update the disclosures so they match the code exactly, one source of truth,
 ## The report (for a non-developer owner)
 
 Result first, plain words. The App profile in five lines. Coverage ("31 of 31 traps checked, 3 found beyond the list"). A risk register: risk · where · what could happen (with the "per" basis) · fix · status (❌/⚠️/✅/N/A) · needs a lawyer? Then the **numbered fix list** for approval (and stop there), and after fixing: what I fixed, what only you can do (registrations, dashboards, a lawyer's review), and the sources with dates. Save it into the project's docs (legal or privacy doc) so the next audit starts from it.
+
+## Read when
+
+| You are… | Read |
+|---|---|
+| Going through the trap catalogue (Phase 1–3) | `references/traps.md` |
+| Checking Apple's privacy rules in its words: privacy manifests, every required-reason code, the SDK list, label data types and purposes, tracking and ATT, third-party AI, age assurance | `references/apple-privacy.md` |
+| Wanting the why behind each rule | `references/lessons.md` |

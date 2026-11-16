@@ -47,7 +47,7 @@ Overlaps are settled once, in the audit that owns them, and the others point to 
 
 For a non-developer owner, plain words, result first, short sentences:
 1. The App profile (five to eight lines).
-2. Coverage per audit, e.g. "security 58/58, payments 42/42 + 14 invariants, privacy 35/35, AI 56/56, analytics 30/30, App Review 52/52 (6 can't tell), code 28/28, performance 26/26 on a real device, 3 found beyond the lists".
+2. Coverage per audit, e.g. "security 58/58, payments 42/42 + 14 invariants, privacy 35/35, AI 56/56, analytics 30/30, App Review 94/94 (6 can't tell), code 28/28, performance 26/26 on a real device, 3 found beyond the lists".
 3. **The top risks across all eight, ranked by what could actually happen:** a rejection or a crash at launch, money lost, data exposed, fines that apply **per** visitor/session/email, a runaway AI bill, numbers the business would decide on wrongly. Each with its proof.
 4. One **numbered fix list** across all areas, each with: what it fixes, what it touches (code, server, a published text, a provider or store setting, a registration), effort, and "needs a lawyer" where true.
 5. What only the owner can do (dashboards behind their login, key rotation, registrations, a real device in their hand, a lawyer's review), as exact click-by-click steps.

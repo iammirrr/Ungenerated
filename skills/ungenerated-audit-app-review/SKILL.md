@@ -7,7 +7,7 @@ description: Check whether Apple (and Google Play) will approve an app by testin
 
 For: catching a rejection before Apple (or Google) does, by checking the real build, its metadata and its store setup against every guideline that applies, and handing the owner ready-to-paste review notes.
 
-Guidelines change several times a year. The numbers and wording in `references/checklist.md` were checked against Apple's App Review Guidelines in November 2026; **re-read the current page before each run** (developer.apple.com/app-store/review/guidelines) and the Upcoming Requirements page (developer.apple.com/news/upcoming-requirements), and write the date in the report. Never warn about a rejection without quoting the guideline number and its words.
+Guidelines change several times a year. The numbers and wording in `references/checklist.md` were checked against Apple's own documents on 16 Nov 2026 (`references/apple-docs.md` has every quote with its page and date); **re-read the current page before each run** (developer.apple.com/app-store/review/guidelines) and the Upcoming Requirements page (developer.apple.com/news/upcoming-requirements), and write the date in the report. Never warn about a rejection without quoting the guideline number and its words.
 
 ## Steps
 
@@ -15,7 +15,7 @@ Guidelines change several times a year. The numbers and wording in `references/c
 2. **Get the real build and its metadata.** Use the archive or the last uploaded build, not only the source: Info.plist, entitlements of the app and every extension, `PrivacyInfo.xcprivacy` files (app and SDKs), the Release build configuration, strings in the binary. Read the store metadata through the App Store Connect API when a key exists (read-only), or from the owner. Commands in `references/checklist.md` §0.
 3. **Check every applicable item.** Each row of `references/checklist.md` gets **pass** (proof: file:line, a screenshot, a command's output), **fail** (file:line and the guideline's words), **can't tell from the code** (what would settle it: a screen on device, a field in App Store Connect), or N/A (why). Walk the main flows on a device or simulator from a fresh install (signed out, no purchases) the way a reviewer does: launch, sign up, the paywall, buy in the sandbox, restore, every permission, delete the account.
 4. **Check the common rejections.** The list in `references/checklist.md` §9 is what most first submissions fail on; check each against this build even if a section above passed.
-5. **Report and stop.** Result first: "likely to pass", "likely to be rejected for N reasons", or "can't tell until X". Then each fail with its guideline number, quoted words, file:line and the fix; the can't-tells with how to settle them; coverage ("60 of 60 checked, 9 N/A"); and a **numbered fix list** (what it fixes, what it touches: code, a store setting, a web page, metadata). Change nothing until the owner answers with numbers, "all" or "none".
+5. **Report and stop.** Result first: "likely to pass", "likely to be rejected for N reasons", or "can't tell until X". Then each fail with its guideline number, quoted words, file:line and the fix; the can't-tells with how to settle them; coverage ("94 of 94 checked, 14 N/A"); and a **numbered fix list** (what it fixes, what it touches: code, a store setting, a web page, metadata). Change nothing until the owner answers with numbers, "all" or "none".
 6. **Fix only what was approved, then write the review notes.** Fix in the app, the website or the metadata as approved; re-check each fixed item with the same proof. Then draft the App Review notes and the demo account section from `references/review-notes.md` for the owner to paste into App Store Connect. Never submit for review yourself.
 
 ## Never
@@ -33,6 +33,8 @@ Guidelines change several times a year. The numbers and wording in `references/c
 | You are… | Read |
 |---|---|
 | Checking the build and metadata | `references/checklist.md` |
+| Quoting Apple's exact words, page and date for a rule (guidelines, Schedule 2, offers, accounts, manifests, labels, ratings, listing, age ratings, after submitting) | `references/apple-docs.md` |
+| Looking up a rejection: what triggers it and how to fix it | `references/rejections.md` |
 | Writing the notes for App Store Connect | `references/review-notes.md` |
 | Wanting the why behind each rule | `references/lessons.md` |
 
