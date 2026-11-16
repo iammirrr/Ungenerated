@@ -144,3 +144,17 @@ exact looks are examples only; the rule is what transfers.
 
 - **Pick a short one-word or character name, check the domain, and confirm before any rename.** He
   changed his mind on a rename within the hour. (Comma, Oct 2026)
+
+## The app's website
+
+- **One phone that follows the page, not a phone in every section.** A mobile app's landing page shows
+  the app on one phone that pins beside the steps and changes screen as each step scrolls past (on a
+  narrow screen it pins under the bar and the steps scroll up beneath it). Sections that explain
+  themselves (a card, a playing reel, a before and after) get no phone. A phone per section was called
+  "tons and tons of phone is never what I meant". (Comma, Nov 2026)
+- **Play the selling point as it happens.** When the app plugs into an AI assistant, show the phone with
+  the chat or a coding session: the command typed, the tool working, the results landing in the app,
+  then the app with them waiting. Name only what really works in each assistant (a slash command in
+  one, picking the app from a menu in another). (Comma, Nov 2026)
+- **Rebuild from the round the owner liked.** After a rejected round, start again from the last version
+  they praised and add only what they asked for. (Comma, Nov 2026)
