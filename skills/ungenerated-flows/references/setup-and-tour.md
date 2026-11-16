@@ -1,23 +1,26 @@
 <!-- Part of ungenerated-flows. Was the `setup-and-tour` skill. -->
-> **When:** Design the first-run setup and tour - personal setup (how their day goes, permissions) before the price, work admin and the widget after it; start straight at the first useful entity (clients, projects, a goal), let people add several or skip, then a short tour of coach marks on the real app screens. Use for "set up your account", "add your first X", workspace setup, product tours or coach marks.
+> **When:** Design the first-run setup and tour - personal setup (how their day goes, permissions, sharing, reminders, the widget) before the account and the paywall, which comes last, and work admin after it; start straight at the first useful entity (clients, projects, a goal), let people add several or skip, then a short tour of coach marks on the real app screens. Use for "set up your account", "add your first X", workspace setup, product tours or coach marks.
 
 # Setup and tour
 
-## The order: personal before the price, admin after it
+## The order: personal setup before the account, the paywall last, work admin after it
 
 The top-earning screen-time apps (studied 2026) all run the *personal* setup before the paywall and
 none run work admin there. Split setup in two:
 
-1. **Make it yours, before the plan:** how their day goes, the permissions, the things that pull
-   them away, closed by the account that saves it ([account-signup.md](account-signup.md)). They build something of
-   their own, the plan can use it, and leaving now costs more. Give these screens the same
-   progress bar and answer rows as the questions, so it reads as one journey.
-2. Then the plan, right before the paywall, then the paywall.
-3. **After they commit** (paid, or closed the paywall): the workspace first (its name, and who it
-   is for: just me or my team, the team option marked Soon if teams aren't live, pre-picked from
-   the team-size question), then the entities (clients, projects), reminders, the widget, then the
-   tour. Show the workspace live as the app's switcher will. By now it feels like unpacking, not a hurdle. A long
-   hands-on setup after paying doesn't hurt; one before the price does.
+1. **Make it yours, before the account:** how their day goes, the permissions, the things that
+   pull them away, and the light setup that makes the app theirs (sharing into it, reminders, the
+   widget, their voice), all kept on the phone. The account that saves it closes this part and
+   syncs it at sign-in ([account-signup.md](account-signup.md)). They build something of their
+   own, the plan can use it, and leaving now costs more. Give these screens the same progress bar
+   and answer rows as the questions, so it reads as one journey. (Reminders and the widget moved
+   here from after the paywall: flows lessons, "Setup before the account, the paywall last".)
+2. Then the plan, and the onboarding ends on the paywall.
+3. **After the paywall** (paid, or past a soft paywall): work admin, the workspace first (its
+   name, and who it is for: just me or my team, the team option marked Soon if teams aren't live,
+   pre-picked from the team-size question), then the entities (clients, projects), then the
+   tour. Show the workspace live as the app's switcher will. By now it feels like unpacking, not a
+   hurdle. A long hands-on setup after paying doesn't hurt; work admin before the price does.
 
 ## Setup
 
@@ -27,7 +30,9 @@ none run work admin there. Split setup in two:
    Each added item appears as a row with its own colour and its key detail.
 3. **One entity per screen**, in dependency order (clients before projects).
 4. A live preview of where the entity will appear in the app (a calendar block in its colour).
-5. Consent comes first after the paywall ([consent-and-permissions.md](consent-and-permissions.md)).
+5. The terms were accepted at sign-in, in one line under the button; nothing in setup asks for
+   them again. A "does and never does" promise, if the app has one, comes first after the paywall
+   and asks for nothing ([consent-and-permissions.md](consent-and-permissions.md)).
 
 - **No step counters.** "Step 2 of 4" adds reading and makes setup feel like paperwork. The
   progress is the screens getting shorter.
@@ -43,15 +48,20 @@ none run work admin there. Split setup in two:
   and moves on. The pick sets the numbers,
   said in plain words underneath ("90-minute blocks and 20-minute breaks"). No method names, and
   pre-pick from anything they already answered.
-- **The widget ask:** after paying, the widgets at real size on a home-screen ground, the three
-  steps to add one, Done and Later. iOS can't add a widget for the person, so never pretend to.
+- **The widget ask:** in the personal setup, the widgets at real size on a home-screen ground, the
+  three steps to add one, Done and Later. iOS can't add a widget for the person, so never pretend
+  to. (No system alert follows, so Later is fine here.)
 - **Containerless.** Don't wrap setup content in cards. Switches are plain rows; real surfaces
   (a notification, a widget) stand on the ground by themselves, drawn as the platform draws them.
 - **The project screen is the form, cleanly:** name, colour, client, then billing as one control
   (Not billed · Hourly · Fixed price) and one large amount line with the currency. A fake
   "tracking now" preview on top only adds noise.
 - **Reminders as rows that own their notification.** Each row is the switch, with the notification
-  it sends right under it; switching off folds the notification away.
+  it sends right under it; switching off folds the notification away. The step's only button is
+  Continue, which brings the system's notifications alert if it hasn't been asked: no "Not now" on
+  a screen before a system alert (HIG; checklist row 47 in `ungenerated-audit-app-review`).
+  Whatever they answer, setup goes on, and the reminders are scheduled the moment notifications
+  are allowed ([consent-and-permissions.md](consent-and-permissions.md)).
 - **The widget ask is the platform's own widget gallery, without the card:** the app's icon, the
   widget's name and one line, the widget at real size on the ground; the sizes slide past with page dots, each
   coming alive. The how-to is three small steps in one row.

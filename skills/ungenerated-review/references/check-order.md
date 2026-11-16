@@ -51,6 +51,8 @@ A test counts only if it fails on any failure it prints and shows that its targe
 
 ## Before a build goes out
 
+- The owner asked for this build. Until they do, rounds end in the simulator ([lessons.md](lessons.md),
+  Builds).
 - The build contains every change, including other agents' work, and matches what runs in the
   simulator.
 - The installed version and build number are the newest.

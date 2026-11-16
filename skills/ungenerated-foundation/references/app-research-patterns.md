@@ -13,7 +13,8 @@ Distilled notes, not screenshots. Each line is a mechanic worth borrowing; the l
 - One question per screen, a thin progress bar, the answer is the button (Brainrot).
 - Vary the format: rows, tiles, a slider, a swipe deck, an app grid. Ten identical lists tire people.
 - Questions earn the plan: each answer visibly shows up again later.
-- No login before value. The account comes after the plan, before or after the paywall.
+- No login before value. The account comes after the plan and before the paywall, so the
+  purchase belongs to the account (`ungenerated-flows` › sign-in, references/sign-in.md).
 
 ## Story
 - A profile from the answers ("Your rhythm"), then the honest cost, then the good news.
@@ -31,6 +32,9 @@ Distilled notes, not screenshots. Each line is a mechanic worth borrowing; the l
 - Calm, bright, one colour field; no laurels, fake reviews or countdowns.
 
 ## Permissions and setup
-- Explain in one line, then show the system sheet with a pointer to the button (Screen Time asks).
+- Explain in one line on a screen whose one button, Continue, opens the system alert; no "Not now"
+  (Apple's HIG; `ungenerated-flows` › consent-and-permissions, references/consent-and-permissions.md).
+  Some screen-time apps point at the alert's button; never do it for the tracking prompt, where
+  annotating the screen behind the alert is a named rejection cause.
 - Ask in context, never all at once at launch.
 - Straight into doing after sign-up: the first action, not a tour of text (Duolingo's first lesson).

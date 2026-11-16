@@ -49,9 +49,12 @@ use them as a starting point, then measure your own.
   lapsed ones. A free trial cannot be extended; cancelling during it normally keeps access until it ends
   (trust the expiration date StoreKit reports).
 - **App Store, more:** Apple runs a billing grace period and retries for failed payments (show
-  the update-payment sheet, never the cancel flow). Apple has also added ways to speak inside its
-  own cancel path (a retention message or offer configured in App Store Connect); check what your
-  account and region support before designing around it.
+  the update-payment sheet, never the cancel flow). Since 4 Nov 2026 Apple shows a retention
+  message inside its own cancel path, after "Cancel Subscription": text, images and optionally a
+  promotional offer, set in App Store Connect (up to 10 per app, one per subscription at a time,
+  with eligibility and the wait between offers). Its header and body can't mention offers,
+  discounts or prices, and must not coerce or promise unverifiable outcomes; the rules are in
+  [cancel-flow.md](cancel-flow.md) and `ungenerated-audit-app-review` › rejections.md R51.
 - **Google Play:** subscriptions can be paused (one week to three months) and offers can target
   existing subscribers; Play asks its own short cancellation survey, so don't ask the same
   question twice.

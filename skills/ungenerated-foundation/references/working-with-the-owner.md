@@ -51,8 +51,12 @@ words are quoted where they say it best.
    (an Apple key, Touch ID, a payment) go back to them. A to-do list they can see you could do reads
    as stalling.
 2. **When they must act, give exact click-by-click steps.**
-3. **Builds are your call** once a round passes its checks. Don't ask permission for routine work
-   they already approved.
+3. **No tester or store build until the owner asks for one; screens first.** Until then every round
+   ends in the simulator or on the board, and you say when their phone is behind. Why: an owner
+   who once handed builds over took them back while the screens were still changing, and a build
+   of screens still moving wastes their test. Proof: `ungenerated-review` › lessons
+   (references/lessons.md), Builds. This replaces "builds are your call". Other routine work they
+   already approved still needs no permission.
 4. **Plan when asked, or when features move around.** Write the plan in their words, get the yes,
    then build. When they say "talk", talk and ask questions; don't build.
 5. **Foundation first, one thing at a time.** Finish it before the next.

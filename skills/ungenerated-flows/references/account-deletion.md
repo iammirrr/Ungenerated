@@ -20,6 +20,9 @@ action that can't be undone, so it is slow on purpose and honest about what it d
 - **Server first, then the phone.** Delete on the server, revoke Sign in with Apple's token (Apple
   requires it), log the payment SDK and analytics out, then clear the phone.
 - **A grace period only if the server keeps it** ("Undo within 10 days"). Otherwise say it's now.
+  Either way, say how long it takes and confirm when it's done; a deletion scheduled for the
+  subscription's end also offers "Delete now" (Apple's account-deletion page in
+  `ungenerated-audit-app-review/references/apple-docs.md` §4; checklist rows 38, 39).
 - **Web steps too:** a page that says how to delete without the app (Google Play requires a web
   link; it helps everyone else).
 - **After:** a short goodbye, then the opening, signed out.
@@ -27,6 +30,9 @@ action that can't be undone, so it is slow on purpose and honest about what it d
 ## Where it lives
 
 - Settings › Account › Delete account.
+- On a hard paywall, from the paywall too: an account made before paying can be deleted without
+  paying ([paywall.md](paywall.md)). Apple: "Make the account deletion option easy to find in your
+  app."
 - A public web page with the same steps.
 
 ## Events

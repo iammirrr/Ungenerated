@@ -42,11 +42,16 @@ these screens are checked by `ungenerated-audit-ai`.
   closely to follow it (a closeness slider).
 - **Show the AI working on the thing it's changing,** in place (its motion is in
   `ungenerated-motion`), and show one result once, never a first answer that gets replaced.
+- **Every AI output can be reported from the screen that shows it.** Guideline 1.2 now names "AI
+  content creation apps" among those that need a way "to report offensive content and timely
+  responses to concerns", plus filtering and published contact; an AI writing app without one
+  failed its pre-submission audit (`ungenerated-audit-app-review` › checklist row 80;
+  rejections.md R2).
 
 ## Where it lives
 
 - The create sheet (name → tell it about this → questions → how to write it).
-- The editor (refine, write another way, versions, show original).
+- The editor (refine, write another way, versions, show original, report).
 - Every text box with a mic.
 
 ## Events

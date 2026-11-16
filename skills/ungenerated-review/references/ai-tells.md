@@ -59,7 +59,7 @@ it and note why.
 | # | Tell | What it looks like | Instead |
 |---|---|---|---|
 | T33 | Fake stats | "10,000+ creators", "Save 5 hours a week" with no source | The person's own numbers, with the maths checkable |
-| T34 | Fake reviews and laurels | Stars, quotes and awards that don't exist | Real reviews after they exist, or nothing |
+| T34 | Fake reviews and laurels | Stars, quotes and awards that don't exist | Real reviews quoted only with the reviewer's permission, the rating as it is now, or nothing (Apple: "Customer reviews may be used in marketing materials only if permission from the reviewer is granted", `ungenerated-audit-app-review/references/apple-docs.md` §8) |
 | T35 | Demo data | Lorem ipsum, John Doe, Acme, round numbers, a sample week | Real content: a real day one from their answers, live content |
 
 ## Motion

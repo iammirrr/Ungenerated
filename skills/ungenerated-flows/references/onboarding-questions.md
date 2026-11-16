@@ -65,6 +65,10 @@
 - A paragraph under every question.
 - "Which of the following best describes your current workflow?" Write "How do you work?"
 - Asking for information the app could detect.
+- A rating ask or a "How's it going?" stars screen. A vendor reports onboarding rating prompts
+  rejected under 5.6.3, and 5.6.1 disallows custom review prompts; the system prompt comes later,
+  after a real win ([app-screens.md](app-screens.md); `ungenerated-audit-app-review` ›
+  rejections.md R50).
 
 ## Events
 

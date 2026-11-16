@@ -39,6 +39,9 @@ People read the heading, glance at one line, and tap. Write for that.
 - Three adjectives in a row. Exclamation marks. Emoji in UI copy.
 - "Simply", "just", "easily" before an instruction.
 - Fake social proof ("Join 10,000+ happy users") unless it is true and measured.
+- "Free" for anything but a real free trial or a feature that really costs nothing. A discount is
+  a price ("$79.99 for your first year"), never "2 months free"; a saving is never written bigger
+  than the price (`ungenerated-audit-app-review` › lessons 35; App Review 3.1.2).
 
 ## Leaving words
 

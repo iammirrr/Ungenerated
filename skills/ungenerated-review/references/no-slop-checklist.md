@@ -12,7 +12,8 @@ Tick each line for this screen, in light and dark.
 - [ ] Every number traces to the person's answers or says it is an example.
 - [ ] Motion: no pop, no swap, no bounce on content; leaving is faster than arriving.
 - [ ] Captured mid-motion and at rest; looked at the frames.
-- [ ] If money is involved: every price is visible, and Cancel is one tap away.
+- [ ] If money is involved: every price is visible, the amount billed is the biggest, "free" means
+      a real free trial, and the store's cancel sheet is one tap away.
 - [ ] No line runs through an icon: timelines are short links between the steps.
 - [ ] No lines drawn across content for effect (sweeps, scanners).
 - [ ] Nothing merges by swapping: a merge reads as one shape growing.

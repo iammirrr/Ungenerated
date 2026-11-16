@@ -35,9 +35,11 @@ what to do instead, is in [ai-tells.md](ai-tells.md).
 
 ## Leaving
 
-- Cancel is where people expect it and one tap away; never behind support or a chat.
+- Cancel is where people expect it, and the store's cancel sheet is one tap away from the
+  subscription screen and from every step; never behind support, a chat or a required answer.
 - No confirmshaming, guilt, countdowns or spin-the-wheel offers. One honest offer, matched to
-  the reason (`ungenerated-flows` › cancel-flow (references/cancel-flow.md)).
+  the reason, shown once and never in the way (`ungenerated-flows` › cancel-flow
+  (references/cancel-flow.md); App Review 5.6).
 
 ## Data
 
@@ -48,4 +50,5 @@ what to do instead, is in [ai-tells.md](ai-tells.md).
 
 - No feature carousel with dots as an opening.
 - No segmented bars at the top of story screens.
-- No login first. No paywall that hides prices.
+- No login first. No paywall that hides prices, or that makes a trial or a per-month figure louder
+  than the amount billed.

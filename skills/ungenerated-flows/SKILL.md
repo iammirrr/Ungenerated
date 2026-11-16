@@ -32,8 +32,8 @@ and counts, never the person's own words.
    4. Plan reveal: answers glide into the plan. [plan-reveal.md](references/plan-reveal.md)
    5. Sign-in, before the paywall. [account-signup.md](references/account-signup.md), [sign-in.md](references/sign-in.md)
    6. Consent, permissions and AI permission. [consent-and-permissions.md](references/consent-and-permissions.md), [ai-permission.md](references/ai-permission.md)
-   7. Paywall, then the one-time offer after close. [paywall.md](references/paywall.md), [one-time-offer.md](references/one-time-offer.md)
-   8. Setup and tour, on the real app screens. [setup-and-tour.md](references/setup-and-tour.md)
+   7. Paywall, then the one-time offer after a cancelled purchase sheet (never on close, and not in a first submission). [paywall.md](references/paywall.md), [one-time-offer.md](references/one-time-offer.md)
+   8. Setup and tour, on the real app screens: the personal setup before the account, work admin and the tour after the paywall. [setup-and-tour.md](references/setup-and-tour.md)
    9. The app's own screens, AI writing and AI usage, the feedback board. [app-screens.md](references/app-screens.md), [ai-writing.md](references/ai-writing.md), [ai-transparency.md](references/ai-transparency.md), [feedback-board.md](references/feedback-board.md)
    10. Cancel flow and account deletion. [cancel-flow.md](references/cancel-flow.md), [account-deletion.md](references/account-deletion.md)
 
@@ -54,12 +54,15 @@ and counts, never the person's own words.
 - Never promise in onboarding what the build can't do on the phone. Hide it until it works.
 - Never open on sign-in, and never put the paywall before sign-in: the purchase must belong to the
   account (log the payment SDK into the account id).
-- Never let closing the paywall into the app in production; never a free pass outside Debug.
-- Never a hard-coded price where the store's localised price exists; never a trial for someone
-  the store says can't have one.
+- Never let closing the paywall into the app in production, and never fire an offer when it is
+  closed (Apple rejected that under 5.6); never a free pass outside Debug.
+- Never a hard-coded price: the store's localised price, or an honest "prices didn't load"; the
+  amount billed is the biggest price on every purchase screen; never a trial for someone the
+  store says can't have one, or trial words on a plan without one.
 - Never an AI call before the app's own permission sheet says yes; swiping it away is no.
 - Never ask for context twice, let the AI write blind, or lose a word the person typed or said.
-- Never hide Cancel or "Keep my plan" on any cancel step; never mark "cancelled" from the phone.
+- Never put a required step between the subscription screen and the store's cancel sheet, or hide
+  the way to it or "Keep my plan" on any step; never mark "cancelled" from the phone.
 - Never a question screen that doesn't ask; never a persona label; never "Step 2 of 4".
 - Never let a drag control give its drag to the screen behind it (reported 18 times).
 - Never write native code for a screen that isn't approved on the board, and never ship the test
@@ -80,7 +83,7 @@ and counts, never the person's own words.
 | Asking for consent and system permissions | [consent-and-permissions.md](references/consent-and-permissions.md) |
 | Asking before words go to an AI provider | [ai-permission.md](references/ai-permission.md) |
 | Designing the paywall | [paywall.md](references/paywall.md) |
-| Adding an offer after the paywall is closed | [one-time-offer.md](references/one-time-offer.md) |
+| Adding an offer after someone cancels the store's purchase sheet | [one-time-offer.md](references/one-time-offer.md) |
 | Designing setup, the widget ask or a tour | [setup-and-tour.md](references/setup-and-tour.md) |
 | Designing the app's own screens and micro screens | [app-screens.md](references/app-screens.md) |
 | Building any AI writing feature | [ai-writing.md](references/ai-writing.md) |

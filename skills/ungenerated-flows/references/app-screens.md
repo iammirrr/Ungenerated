@@ -21,7 +21,8 @@
 8. **Loading** keeps the layout (skeletons shaped like the content), never a centred spinner.
 9. **Settings** in plain groups; destructive actions last and red.
 10. **The plan lives in Settings**, where people look: price, next charge, who bills it, a cheaper
-   way to pay, then Cancel as a plain row with its true consequence ([cancel-flow.md](cancel-flow.md)).
+   way to pay, then Manage in App Store (the platform's sheet, one tap) and Cancel as plain rows
+   with their true consequence ([cancel-flow.md](cancel-flow.md)).
 
 ## Patterns worth reusing
 
@@ -63,7 +64,14 @@ the app feels finished.
 - **The platform's own alert** for anything destructive, with the destructive word in red and a
   safer choice first ("Delete Side project?" → Cancel, Archive instead, Delete).
 - **Notifications** in the app's own words, each with a switch in Settings, and the important ones
-  answerable without opening the app (a reply field on the Lock Screen).
+  answerable without opening the app (a reply field on the Lock Screen). Anything promotional (a
+  "new this week" digest) is marketing: its own switch, off until the person turns it on
+  (Guideline 4.5.4; `ungenerated-audit-app-review` › lessons 36).
+- **The rating ask** is the system's own prompt (`requestReview`), called after a real win (a
+  finished piece of work), never in onboarding, never from a button, and never a stars screen of
+  your own first, even one that sends 4–5 stars on to Apple: "we will disallow custom review
+  prompts" (5.6.1; `ungenerated-audit-app-review` › checklist rows 81, 87, rejections.md R50). A
+  permanent "Rate the app" link to the product page with `action=write-review` is fine.
 - **An updates list** for what the person missed while away.
 
 ## Anti-patterns
