@@ -458,3 +458,21 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   a league, if there is one, lives on a profile-type screen off the main pages and never shows
   made-up people as real, which a pre-submission audit flagged as an App Review risk. "it's giving
   me XPs for writing" (Comma, Oct–Nov 2026)
+
+## Connecting the app to an AI assistant
+
+- **The connection looks like the app at every step, or it reads as a scam.** A working, standards-correct connector
+  still felt fake to its owner: a developer's free subdomain in the address bar, a bare sign-in page with the brand as
+  plain text, the auth server's random address on the identity provider's page, and a consent page written as a
+  security warning ("the app chose this name itself", "this address is a program on this device") for assistants the
+  app knows. Serve it from the app's own domain, in the app's look, name the assistant with its real icon (recognise
+  the known ones by their verified return address), and keep the warnings for unknown apps only. "ITS TREMENDOUSLY
+  WEIRD AND SCAMMY" (Comma, Nov 2026)
+- **In the app, the person picks their assistant by name, then taps Connect.** Icons alone were unclear; two named
+  choices (Claude, ChatGPT) under a phone that shows the app working inside the picked one, and one button that says
+  which ("Connect Claude"). "SELECT THE CLAUDE AND CHATGPT NOT THEIR ICON ITS VERY UNCLEAR" (Comma, Nov 2026)
+- **List the connector in the assistants' own directories before promising "one tap".** A listing gives the trusted
+  front door (the app's name, icon and a Connect button inside the assistant); the directories review the sign-in
+  pages, want a setup page, a privacy page, support and an icon, and need a reviewer login. Sign in with Apple can't
+  be shared with a reviewer, so a second provider (Google, with a dedicated reviewer account on a comped plan) is part
+  of the listing work. (Comma, Nov 2026)
