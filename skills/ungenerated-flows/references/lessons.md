@@ -353,6 +353,10 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   showing, let the screen fading out take no taps, and drop a second move within about 280 ms unless
   it is one intended double step; without this, a quick double tap moved two screens at once.
   (Comma, Oct 2026)
+- **A second tap on a row while it opens never opens it twice.** Every push goes through one function
+  that refuses the route already on top, so a fast double tap can't stack the same screen on itself.
+  Inside a choreographed screen, the tap that moves on plays the rest out fast before the next screen
+  starts (see ungenerated-motion, gestures). (Comma, Nov 2026)
 - **Port the font weight the browser drew, not the number in the CSS.** The browser snaps a weight
   to the cuts it loaded: 650 rendered as Bold and 900 fell to ExtraBold because only 400–800 were
   loaded, so the app uses those same static cuts. (Comma, Oct 2026)

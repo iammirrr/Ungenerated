@@ -51,6 +51,14 @@ of bug.
 - **Survive fast taps.** Anything that animates on a tap must survive taps faster than its animation:
   set every element's target at once, declaratively, and let one cancellable animation per element
   carry it. Never a chain of timers a second tap can strand halfway.
+- **Moving on never cancels what the screen still had to do.** A choreographed screen hides its own
+  layers with later beats (the card folds away, then is hidden; the page fades, then is removed). If
+  the tap that moves on cancels the screen's pending beats, those layers stay on, under the next
+  screen, at whatever pose they had: two screens drawn over each other. So the tap that moves on plays
+  the rest of the screen out first, every beat in its order, compressed into about a quarter second
+  (haptics quiet while it races), and only then starts the next screen. Taps while it moves on do
+  nothing. In debug builds, assert at each screen's start that the layers the screen before must
+  have hidden are gone.
 
 ## Sheets
 
@@ -65,5 +73,7 @@ Scripted tests drag in perfect straight lines; fingers don't. Before showing a g
 2. **A fast fling** both ways: it lands on a step, no overshoot and return.
 3. **A drag that leaves the control** and is released outside it: the drag ends cleanly.
 4. **A drag from the left edge** of the screen: the back swipe must not take it.
+5. **A tap storm** on every film, story and choreographed screen: tap as fast as you can, all the way
+   through, and look at screenshots taken during it. One screen's layers at a time, never two.
 5. **Rapid taps** on anything animated, then check the settled state.
 6. **On the real phone**, with a real finger, at the smallest size.

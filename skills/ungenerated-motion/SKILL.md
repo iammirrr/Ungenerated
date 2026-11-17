@@ -35,7 +35,8 @@ How an app moves, chosen with the owner, tuned until it feels physical and calm,
 ## Never
 
 - Never animate ordinary app screens in. "If it's not an achievement or a pop-up, I do not want it animated." The onboarding and story do move.
-- Never let a tap skip what is playing. It speeds it up, Continue appears at once, a second tap moves on.
+- Never let a tap skip what is playing. It speeds it up, Continue appears at once, a second tap moves on, and moving on
+  plays the rest out fast first, so nothing the screen tidies away is left under the next one.
 - Never let anything buzz: no element bouncing back and forth, no repeated bumps, no layout that shifts while something moves.
 - Never flip or mirror a flat drawing. It shows it is a cut-out; a change of state is a swap (old shrinks away, new pops in).
 - Never let the page move with a control's drag, and never pick the gesture by direction. A real finger's first points are noisy.

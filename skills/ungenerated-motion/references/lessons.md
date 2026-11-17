@@ -110,6 +110,13 @@ are examples only.
   (Comma, Nov 2026)
 - **A tap hurries an animation and never skips it.** "It should bring the animation to the end, but not
   skip it"; Continue appears at once, a second tap moves on. (Comma, Oct 2026)
+- **The tap that moves on plays the rest of the screen out first, fast; it never cancels its pending
+  beats.** The opening's second tap jumped to the next screen mid-hurry and dropped the old screen's
+  later beats, the ones that hide its card, its page and an app icon, so they stayed on under the
+  next screen: "IF I TAP TAP TAP TAP CRAZIY ... everything OVERLAPPSS AND EVERYTHING LOOKS SO ASS".
+  Now the rest plays in about 0.24 s in its order (no haptics while it races), then the next screen
+  starts; taps meanwhile are ignored; a debug assert checks each screen starts with the last one's
+  layers gone, and a tap-storm test runs it. (Comma, Nov 2026)
 - **Build hold-to-lift as a short long press (about 0.3 s, 8 pt of slack) sequenced before the drag
   and attached to the whole item as a simultaneous gesture.** Then a swipe still scrolls and only a
   hold lifts; switch it off on the line being typed, heard or rewritten, where a hold already means

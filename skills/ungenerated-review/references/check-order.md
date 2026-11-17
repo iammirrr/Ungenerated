@@ -20,6 +20,8 @@ The flow driven by real input, every path:
 - Every button, Later, Skip, the close button, Back, swiping a sheet away.
 - Real input that breaks things: fast double taps, taps faster than the animation, fast flings and
   diagonal drags on every drag control, typing with the keyboard up, a pause in dictation.
+- A tap storm: tap as fast as possible through every film, story and onboarding run, with screenshots
+  taken during it. Two screens' layers drawn at once, or the same screen pushed twice, fails.
 - A fresh install, and the smallest supported phone.
 - A bug reported twice gets a test that reproduces it with real input before it is called fixed.
 
