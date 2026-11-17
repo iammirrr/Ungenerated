@@ -201,3 +201,35 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
 71. **A series of posts mixes formats; the signature one goes on a few, not all.** The ruler-and-fix process went on
     the paywall and a few screens; the rest showed the opening built up from wireframes, flows of several screens and
     the character before and after. "I don't want like every screen to have that" (Comma, Nov 2026)
+
+## Uploading the listing
+
+72. **Upload the 6.3-inch iPhone set, not only the 6.9-inch one.** Apple's required iPhone size is the Dynamic Island
+    medium display (1206 × 2622 or 1179 × 2556); without it Apple uses scaled 6.5-inch screenshots (1284 × 2778 or
+    1242 × 2688), never the 6.9-inch set. A listing with only 6.9-inch screenshots was missing the required size; the
+    fix uploads both (API display types `APP_IPHONE_67` and `APP_IPHONE_61`). "At least one screenshot for iPhone with
+    Dynamic Island (medium display)" (developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications,
+    read 17 Nov 2026; Comma, Nov 2026)
+73. **Localizations are languages, not countries: English is en-US, en-GB, en-AU and en-CA, nothing else.** An ASO
+    tool proposed keyword fields for en-IN, en-SG and en-PH; Apple's API refuses them ("'en-IN' is not a valid
+    'locale'"), and those stores show one of the four. Check that a locale exists before writing its fields.
+    (Comma, Nov 2026)
+74. **Give each English localization its own keyword field, scored in its own country.** The US field scored 58–65 in
+    the UK, Australia and Canada; one fitted to their searches (planner, talking head, template) scored 76–77 there,
+    while the US field stayed best in the US. Name and subtitle stay the same everywhere. (Comma, Nov 2026)
+75. **Read the live fields back before submitting and compare them with the chosen listing.** The subtitle had been
+    changed in App Store Connect to a keyword string ("write viral videos ideas") that scored 58 against the chosen
+    one's 74; nobody noticed until the fields were read back through the API. (Comma, Nov 2026)
+76. **Every promise taken out of the app comes out of the screenshots too, and their numbers are read live.** A
+    screenshot still said "new every Saturday" after the app dropped its weekly promise (Guideline 2.3.1), with last
+    week's count; search the screenshot sources for every removed claim and read the count from the live catalogue.
+    (Comma, Nov 2026)
+77. **Spell for the locale.** The US description said "Practise" (the British verb); the US listing gets "Practice",
+    the UK, Australian and Canadian listings keep "Practise". (Comma, Nov 2026)
+78. **Shoot the picked set and show it side by side before uploading; an unpicked slot falls back to its first
+    version.** Offered a designed and a true-to-the-app version per slot, the owner took true-to-the-app in five of
+    eight; one slot had no pick and would have shipped its first version unseen. (Comma, Nov 2026)
+79. **Make store uploads idempotent and retried.** App Store Connect's upload API returns sporadic 500s and
+    timeouts: clear the set and upload in order, retrying only server errors, so a rerun never duplicates or reorders
+    screenshots. Creating a name and subtitle localization also creates that version's localization, so look it up
+    and update it instead of posting it again. (Comma, Nov 2026)

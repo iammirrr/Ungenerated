@@ -134,3 +134,9 @@ it came from. Comma's own look (its palette, its clapperboard character) appears
 42. **Count what is left to make from the files on disk, never from an earlier list.** Notes disagreed (67 left, or
     102) while most were already made; checking every folder took the list to 9, and a week later a job list still
     told the image model 33 were open when only 2 were. (Comma, Nov 2026)
+
+## Store pictures
+
+43. **A share or app row in a store screenshot draws only your own app's icon.** Other companies' app icons stay out
+    even as their original artwork: a share-sheet row with four messaging and notes apps held a screenshot back from
+    the listing (Guidelines 5.2.1 and 2.3.10), and the fix draws the app's own icon alone. (Comma, Nov 2026)
