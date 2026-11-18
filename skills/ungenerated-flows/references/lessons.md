@@ -217,6 +217,18 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   required answers before Apple's sheet as an App Review 5.6 risk (manipulative practices). This
   replaces the gated order in "Cancel goes all the way": the steps stay, beside the way out, never
   in front of it. (Comma, Nov 2026)
+- **The leaving flow is designed like the offer, not like settings.** Plain cards on paper for the cancel steps read as
+  an afterthought next to a vivid one-time offer. Every step gets the offer's full-screen sky, big serif type and the
+  mascot acting with intent, with a mood per step (calm for the plan, dusk for the questions, the offer's gold for the
+  stay offer with its price leading, a warm sunset for goodbye, a quiet one for deletion, which never sells), while
+  every rule above still holds: the store's sheet one tap away on every step, optional questions, terms under every
+  buy button. "MAKE LEAVING FLOW MORE ATTRACTIVE ... MORE LIKE ONE TIME OFFER" (Comma, Nov 2026)
+- **Prove account deletion on production, with a throwaway account, before every submission.** Code and a scheduled
+  job that "should" delete prove nothing: Comma's had never once run on production. The check: a confirmed test
+  user made with the admin API (never the owner's or the reviewer's), a real password session, a row saved under its
+  own permissions, the exact endpoint the app calls, a call with no session that must be refused, then the account
+  and every row gone (18-21 s) with the deletion record kept. List every table that holds a user id and doesn't
+  cascade from the account. "MAKE 100% SURE ACCOUNT DELTEION AND ALL THE STUFF IS WROKING" (Comma, Nov 2026)
 
 ## The app's own screens and AI writing
 
@@ -317,6 +329,22 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   reached the server read as a feature that didn't work. "I think Instagram sharing stuff is not
   working properly at the moment" (Comma, Oct 2026)
 
+- **Work lists are one bar of tabs that opens on what needs doing now.** A home that split work into a chip for drafts
+  and a two-tab bar for the rest read as two systems. One bar of three tabs (the ready-to-do stage first and where it
+  opens, then drafts, then done), each with its count (the drafts count red like a notification), and the main create
+  button in the centre of an empty tab's page, never pinned under the bar. "make it a 3 tab think ... tabs starts with
+  to film and write script button must be incenter" (Comma, Nov 2026)
+- **A picker for a person's own collections is a drop-down from the start.** Chips for series, folders or tags work for
+  three and break at thirty; a field-like drop-down (None, each one with its count, New…) holds any number. "WE MIGHT
+  HAVE ALOT OF SERIS OF CONTENTS" (Comma, Nov 2026)
+- **One way in for one job.** An older screen that started a script from a library item, beside the newer "write
+  script" flow, confused even the owner ("WTF IS THIS ?"). Every entry opens the same flow with its context filled in
+  (the chosen item shown at the top, its option first at the decision step), so there is one flow to learn and fix.
+  (Comma, Nov 2026)
+- **Settings keep only what a person needs.** Rows that repeat another screen (restore purchases when the subscription
+  page and the paywall have it), pages about concepts the product dropped, and anything for a feature this release
+  doesn't have read as junk. The setting for an onboarding answer reuses the onboarding's own screen, without the tab
+  bar. "REMOVE USELESS STUFF FROM SETTING" (Comma, Nov 2026)
 ## Porting to native
 
 - **Port UI and motion first, one section at a time; wire services last.** "For all the
@@ -462,6 +490,16 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   a league, if there is one, lives on a profile-type screen off the main pages and never shows
   made-up people as real, which a pre-submission audit flagged as an App Review risk. "it's giving
   me XPs for writing" (Comma, Oct–Nov 2026)
+- **Every day of a learning road is the practice itself, on the screen the store shows.** Quiz screens (multiple
+  choice, put-in-order, pick one) felt like homework next to the store screenshot of a person practising out loud.
+  Each day is one exercise on that same screen (the day's skill in one line, a topic, a timer, start), and finishing
+  it is the lesson; free practice stays one tap away and must fit the width (a chip cut off at the edge reads as a
+  bug). "NOT THESE MUTLIPLE QUESTION SHIT" (Comma, Nov 2026)
+- **Rewards are for milestones people are proud of.** Daily quests for small things (spot three, finish one, film
+  one) cheapen every reward. Achievements are real milestones in tiers (10, 25, 50, 100 scripts; 10, 25, 50 videos
+  filmed and posted; 30- and 100-day streaks), shown as a moment (the paywall's sky, the mascot presenting the
+  nearest one with its progress), and a stamp not earned yet is a "?" with no name, so there is something left to
+  discover. "PLEASE DONT GIVE AWARD ON SIMPLE THINGS ... MINI VERSION OF PAYWALL" (Comma, Nov 2026)
 
 ## Connecting the app to an AI assistant
 
