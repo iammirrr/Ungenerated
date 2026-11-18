@@ -233,3 +233,8 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
     timeouts: clear the set and upload in order, retrying only server errors, so a rerun never duplicates or reorders
     screenshots. Creating a name and subtitle localization also creates that version's localization, so look it up
     and update it instead of posting it again. (Comma, Nov 2026)
+80. **Launch without what only the owner can use, and switch it off in the release build itself.** An assistant
+    connector was live for the owner's account only, so the owner shipped 1.0 without it and moved it to an update.
+    Its setup step was already behind a server check; the release build now turns it off at compile time and the
+    review notes no longer mention it, so neither a reviewer nor a flipped server flag can reach a half-open feature.
+    (Comma, Nov 2026)
