@@ -119,6 +119,7 @@ real apps, and why.
 |---|---|
 | [`ungenerated-icons`](skills/ungenerated-icons/SKILL.md) | On-brand icons and the app icon, from a brief for Codex or ChatGPT. Real brands always original. |
 | [`ungenerated-store`](skills/ungenerated-store/SKILL.md) | ASO with RespectASO, screenshots, the preview trailer, header and search-result art. |
+| [`ungenerated-privacy-labels`](skills/ungenerated-privacy-labels/SKILL.md) | App Store Connect's App Privacy labels from every SDK's privacy manifest, filled in once. |
 
 ### Audits
 

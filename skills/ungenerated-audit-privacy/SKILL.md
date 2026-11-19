@@ -71,3 +71,4 @@ Result first, plain words. The App profile in five lines. Coverage ("31 of 31 tr
 | Going through the trap catalogue (Phase 1–3) | `references/traps.md` |
 | Checking Apple's privacy rules in its words: privacy manifests, every required-reason code, the SDK list, label data types and purposes, tracking and ATT, third-party AI, age assurance | `references/apple-privacy.md` |
 | Wanting the why behind each rule | `references/lessons.md` |
+| Filling in App Store Connect's App Privacy labels (the answer sheet from every SDK's manifest, then the clicks) | the `ungenerated-privacy-labels` skill |
