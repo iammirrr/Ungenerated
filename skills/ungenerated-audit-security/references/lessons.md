@@ -135,3 +135,23 @@ Lessons from building and launching Comma (iOS, Supabase backend), Flamely (Mac/
 **55. Audit what your host serves publicly, not just what the app uses.** The full original audio of 83 reels and their music stems sat public on the content host although the app never used them: the highest copyright risk in the system, open to anyone who guessed the URL pattern. Comma, Oct 2026.
 
 **56. On GitHub Free a private repo gets no deployment approvals and no environment secrets.** Required reviewers and wait timers on private repos need Enterprise, and environment secrets in private repos need a paid plan, so a deploy gate has to live elsewhere or be paid for. Comma, Oct 2026.
+
+## Hardening pass (Nov 2026)
+
+**57. A refused anonymous call writes nothing.** The pre-account AI preview logged a row for every refusal, so anyone could fill the database from outside just by being refused; refusals now answer and store nothing. Comma, Nov 2026.
+
+**58. Rate-limit anonymous callers by the address the edge reports, and an IPv6 caller by its /64.** The first hop of X-Forwarded-For is whatever the caller wrote; the CDN's own header (cf-connecting-ip) isn't, and one IPv6 home or phone network has millions of addresses to rotate through. Comma, Nov 2026.
+
+**59. Lock a client-written table to the columns the app actually sends, after reading every shipped build's payload.** Signed-in accounts could change any profile column (when they joined, their time zone, which shifted their weekly limits); every build from the first PATCHed the same six fields, so UPDATE is granted on exactly those and rows are created only by a server function. Comma, Nov 2026.
+
+**60. A per-person storage quota measures only rows that grow, and never counts a row that already exists.** The app re-sends every row as an upsert on each screen change; a quota that recounted the account per row would have made sync quadratic, so an existing id costs one primary-key lookup and only a growing row is measured (bytes as stored, after compression). Keep automatic history to the last few snapshots per item. Comma, Nov 2026.
+
+**61. Consent and sign-in forms accept only Sec-Fetch-Dest: document.** A script on the same origin sends `empty` and a hidden frame `iframe`, and a page can't set the header, so a compromised page on the same host can't approve a connection by script; old browsers that send nothing still pass. Node's fetch forces `sec-fetch-mode: cors`, so tests model a browser with the destination header. Comma, Nov 2026.
+
+**62. Don't switch the email provider off while anyone signs in with a password; refuse new email accounts at creation instead.** Store reviewers of an assistant connector sign in with a test password, so turning Email off would lock them out; a before-user-created hook refuses every new email or phone account and leaves existing logins alone. Comma, Nov 2026.
+
+**63. An agent skill's allowed-tools pre-approves tools; it doesn't restrict them.** It can't stop a command injected through untrusted content (a reel's transcript) from running; the protection is narrow, scoped credentials in that shell and never running it with permission prompts bypassed. Comma, Nov 2026.
+
+**64. A local preview server refuses foreign Host headers and every dotfile.** It listened only on 127.0.0.1 yet served `.env` and the key folder; any website could reach it by DNS rebinding while it ran. It now answers only to its own address and 404s any path segment starting with a dot or naming the keys folder. Comma, Nov 2026.
+
+**65. Nightly backups leave out refresh tokens and raw payment payloads, and keep the content you can't easily rebuild.** Whoever holds the backup bucket's key would otherwise hold every Sign in with Apple refresh token. Comma, Nov 2026.
