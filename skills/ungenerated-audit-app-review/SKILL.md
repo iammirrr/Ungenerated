@@ -36,6 +36,7 @@ Guidelines change several times a year. The numbers and wording in `references/c
 | Quoting Apple's exact words, page and date for a rule (guidelines, Schedule 2, offers, accounts, manifests, labels, ratings, listing, age ratings, after submitting) | `references/apple-docs.md` |
 | Looking up a rejection: what triggers it and how to fix it | `references/rejections.md` |
 | Writing the notes for App Store Connect | `references/review-notes.md` |
+| Doing the dashboard steps before submitting (server notifications, encryption, relay email, Apple notices, age rating, review contact, Google sign-in, the keys), by a computer-use agent | `references/dashboards.md` |
 | Wanting the why behind each rule | `references/lessons.md` |
 
 ## Works with
