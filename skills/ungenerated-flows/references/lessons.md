@@ -436,6 +436,11 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   for Claude a `customize/connectors?modal=add-custom-connector&connectorName=…&connectorUrl=…` link opens it filled in,
   undocumented), let the app icons themselves be the buttons, and say only the one step left there ("tap Add, then
   Connect"). Then check it where the person looks: install it on their machine before saying it works. (Comma, Nov 2026)
+- **Ask for a permission before the sheet closes, never after.** One tap that closed a sheet and opened a page on another
+  tab left that page to ask for the AI permission mid-transition; the permission sheet couldn't show, read as a no, and
+  the page said "I couldn't write it just now" to a new user who had done nothing wrong. Ask inside the sheet first (the
+  way every other AI step in it does), treat a run cancelled by navigation as no failure, and test the path through the
+  sheet on a fresh install, not only the page on its own. (Comma, Nov 2026)
 
 ## Voice and recording
 
