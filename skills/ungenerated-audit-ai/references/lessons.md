@@ -44,7 +44,7 @@ Lessons from building AI into Comma (an iOS app that helps people write short vi
 
 ## Consent
 
-**18. Consent before any text leaves the device, in the app's own sheet that says what goes where.** Swiping it away is no; the answer is saved at the tap (a delayed save lost it when the app closed); revoking keeps the app usable by hand. Comma, Nov 2026.
+**18. Consent before any text leaves the device, said where it is given.** In the onboarding, a line under the button that sends (who writes it, a Privacy link) makes that tap the consent: a permission sheet there "looks scammy". In the app, the app's own sheet says what goes where for anyone who hasn't said yes. Swiping it away is no; the answer is saved at the tap (a delayed save lost it when the app closed); revoking keeps the app usable by hand. Comma, Nov 2026.
 
 **19. On iOS, a sheet inside a sheet can't show the root's sheet;** present the consent sheet from both places, or the AI action silently does nothing. Comma, Nov 2026.
 
@@ -169,3 +169,9 @@ Lessons from building AI into Comma (an iOS app that helps people write short vi
   cost over the last weeks; then one whole item (questions + checklist + writing, about 0.3 cents on Haiku); then the
   heaviest use the limits allow (10 a day, about $0.90 a month) next to the server's hard ceiling per person and what a
   subscriber pays after the store's cut. (Comma, Nov 2026)
+- **An A/B of AI outputs that a person judges shows everything side by side.** Per case: the source they borrowed
+  (its picture, creator, what it is best for), every input they gave (their words, the questions and their answers),
+  what each version was sent, then every part of the source's original beside version A and version B, row by row,
+  and each output's cost, tokens and time; their pick saves on the page. A scoreboard alone, or the source's lines
+  hidden behind a toggle, left the owner unable to choose: "i cant decide with context given and reels selected ...
+  plus original script ... costs question list". (Comma, Nov 2026)

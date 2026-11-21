@@ -144,8 +144,11 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   signed out stayed anonymous and the webhook answered "no user". (Comma, Nov 2026)
 - **The success moment lands.** A tick, the character jumps once; a return says "Welcome back":
   "it's supposed to show a tick." (Comma, Nov 2026)
-- **AI permission is the app's own sheet,** never a system alert: who writes, what is sent where,
-  Allow or Keep writing by hand. "I want that pop-up to be nice." (Comma, Nov 2026)
+- **No AI permission sheet in the onboarding.** A sheet before the first result "looks scammy" to someone new. One
+  quiet line under the button that sends their words says who writes it, with a Privacy link ("Written by Claude
+  (Anthropic) from your angle · Privacy"), and that tap is the permission, saved before the next screen sends anything.
+  Inside the app, anyone who hasn't said yes gets the app's own sheet (never a system alert: who writes, what is sent
+  where, Allow or Keep writing by hand), and Settings turns it off. (Comma, Nov 2026)
 - **Save a consent answer at the tap.** A delay lost it when the app closed. Present it from the
   root and from inside sheets, because a sheet can't show the root's sheet. (Comma, Nov 2026)
 - **Ask each permission where it is first used,** unless the plan depends on it: a permissions
