@@ -69,3 +69,9 @@ Lessons from Comma (iOS, with a speech-following teleprompter), CutRoom (a Mac v
 ## Long text
 
 **26. A row's preview renders a bounded prefix of a long text, never the whole field.** A very long field laid out in full inside a compact row spilled over the controls beside it; the full words stay stored and open in the editor. Comma, Nov 2026.
+
+- **Move media off a provider's test address before launch, without a new build for old users.** Cloudflare's r2.dev
+  address is rate-limited and uncached. Attach your own domain to the same bucket (nothing is copied), rewrite the stored
+  URLs in the database in one transaction, republish the index file, and point the new build at the new domain. Old builds
+  keep reading the index from the old address, and the index they get now points every picture at the new domain.
+  (Comma, Nov 2026)

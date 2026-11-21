@@ -557,3 +557,19 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **End the opening on the promise, in the product's own medium.** Not a fill-in card with a dashed box: the kept word
   flies out of its book into the blank in a line of a book page and a highlighter marks it there, as the first scene
   marked it. "Any creative direction we can take here?" (Pip, Nov 2026)
+
+- **A question with one answer moves on by itself.** Tap an answer, a short beat (about a third of a second, longer when
+  the screen animates the answer, like a month filling) so the pick is seen, then the next question. Continue stays only
+  where several answers can be picked, or something is dragged or typed. A newer tap inside the beat restarts it; leaving
+  the screen cancels it, so one tap never moves two screens. "Click should automatically continue ... continue is for
+  continue thing" (Comma, Nov 2026)
+- **A template says what it's for, and the AI says when it doesn't fit.** When people borrow a structure (a reel, a
+  layout, a format) for their own idea, every template carries a one-line "best for" written from its structure, never its
+  subject ("three picks you'd recommend", "a step-by-step how-to"), shown on its page and in the borrow sheet. The AI that
+  fills it also returns a fit verdict (good, stretch, poor), one sentence on why, and a few words for what would fit
+  better; the app matches those words against every template's "best for" and offers the closest ones. A user picked the
+  most popular template for a recipe and got a list of three books with blanks: "How do we say that we recommend you to
+  use this reel or this one for this specific topic?" (Comma, Nov 2026)
+- **While the AI writes a whole page, the light runs round the page.** The same running edge used on a card in the
+  onboarding goes round the page's edge inside the app too, gone the moment the text is done or fails. Users notice when
+  the signal they learned disappears: "why did we remove ... this bar going around even in the scripts" (Comma, Nov 2026)

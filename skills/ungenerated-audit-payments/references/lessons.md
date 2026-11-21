@@ -140,3 +140,8 @@ fallback string. (Comma, Nov 2026)
 **52. A pending purchase (Ask to Buy, a parent's approval) is neither paid nor failed.** Say it is waiting for approval and unlock when the store confirms; the plan said exactly that, but the shipped purchase code had no pending state, so a purchase waiting on a parent showed as a closed sheet or as a failure that asks them to try again, inviting a second request. Comma, Nov 2026.
 
 **53. Mirror store webhooks in event order, move transfers, and treat unknown events as no change.** Store the event's own timestamp and ignore anything older than what's stored (a late renewal must not undo an expiry); a TRANSFER (restore purchases on another account) expires the old account and gives the subscription to the new one; an event type you don't list changes nothing instead of granting Pro; a billing problem stays Pro until the store's grace period ends. Keep sandbox purchases counting when the store's reviewers and your own testers buy with test money. Comma, Nov 2026.
+
+- **Prove the App Store server notifications arrive, don't trust a green tick.** Use the App Store Server API's "Request
+  a Test Notification" with the In-App Purchase key, then read its send attempts: SUCCESS on sandbox means Apple reaches
+  the configured address (RevenueCat or your own). Production answers 401 until the app is live, so check it after
+  release. (Comma, Nov 2026)

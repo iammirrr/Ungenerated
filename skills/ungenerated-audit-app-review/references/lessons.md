@@ -112,3 +112,9 @@ Lessons from preparing Comma (iOS), Flamely (Mac/Windows/iOS), Pip (iOS) and Cut
 
 **41. Keys are shown once: save them at creation.** The owner had two working Sentry tokens on the page, but Sentry never shows a token again, the copy on the Mac was corrupted, and the release waited on a new one. Save every key in the password manager the moment it's created, and test it with one real call before relying on it.
 
+- **Keep the permission before text goes to a third-party AI.** Guideline 5.1.2(i) (November 2025) requires disclosing
+  where personal data goes, third-party AI included, and getting explicit permission first. An owner asking "do we
+  really need this permission?" gets the rule: yes, one screen, once, with a way to keep working by hand. (Comma, Nov 2026)
+- **Apple's own sheets don't appear in screen recordings.** Sign in with Apple, the purchase sheet and Face ID are left
+  out of iOS screen recordings for privacy, so a test recording looks as if sign-in or payment never asked. Say so before
+  someone reports it as a bug. (Comma, Nov 2026)

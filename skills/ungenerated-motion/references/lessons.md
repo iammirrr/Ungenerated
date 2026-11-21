@@ -215,3 +215,12 @@ are examples only.
 - **A teaching film runs on a clock you can stop.** Make the film a pure function of its time, so pauses, a 2× hurry,
   a scene card that starts mid-film and the native port all share one timeline. Stop a millisecond before the next scene,
   or the pause shows the next scene's title. (Pip, Nov 2026)
+
+- **A tile that flips through frames never paints an empty box over a picture.** When frames are stacked and cross-faded,
+  a frame still downloading must be transparent, not a placeholder colour, so the frame underneath stays visible; only
+  the bottom frame gets a placeholder. Otherwise a tile that has shown its picture goes blank every time the next frame
+  isn't there yet, and the whole shelf looks broken and sluggish. (Comma, Nov 2026)
+- **Fetch pictures at launch, decode them when shown.** Download every thumbnail and avatar into the disk cache while the
+  user is still in the onboarding (a few at a time, newest first), but don't decode them: decoding hundreds fills memory,
+  iOS empties the in-memory cache, and tiles reload. Give the in-memory cache a cost ceiling so it drops the oldest
+  pictures first. "Load the thumbnails at the start so they don't look empty when we reach there" (Comma, Nov 2026)

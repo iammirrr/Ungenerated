@@ -147,3 +147,15 @@ Lessons from building AI into Comma (an iOS app that helps people write short vi
 **59. Test a new provider key with one real call before it replaces the old one in production.** An Anthropic key the owner sent started `sk-ant-usr-`: a user key with no workspace, refused on every call with "must include the anthropic-workspace-id header". A workspace key (`sk-ant-api03-`) needs no extra header. Checked with a free models call and one tiny message before touching the server's secret, the outage didn't get worse. Comma, Nov 2026.
 
 **60. A per-person AI limit checked before the call and recorded after it is no limit.** Parallel requests all passed the allowance check before any was logged; the check now runs again inside the same lock that reserves the money, counting calls still running as used, and gives a slot back only when the provider refused. Cap every free-text field the request can carry, so one request can't be padded to reserve a dollar of the day, and give the signed-out preview its own small slice of the daily budget. Comma, Nov 2026.
+
+- **Borrowing a structure must never borrow the source's facts.** A prompt that rewrites someone else's script for the
+  user needs explicit rules: nothing about the original author carries over (name, job, story, numbers, catchphrases);
+  never a placeholder for who the user is ([your name]) or for what a beat says ([Book title], [tip]); a bracket blank is
+  only for a number, link, handle or price; the script opens with a real hook from the user's material and ends with a
+  real ending even when the source ends on filler; a list with more items than the user has becomes parts of the user's
+  own material, never invented items. Add a self-check at the end of the prompt. Real failure: "Hi, I'm [your name]. I'm
+  a software engineer by day" (the source creator's job) and the source's last shrug copied word for word. (Comma, Nov 2026)
+- **A closeness slider has to produce visibly different output.** Write bands that read apart (80-100: edit the
+  original line, swap only topic and facts; 60-79: keep each line's build; 21-59: keep each beat's job and length; 0-20:
+  only the jobs) and remove any older instruction that contradicts the top band. Test the owner's exact failing case at
+  two settings before and after, then once more on production after deploying. (Comma, Nov 2026)
