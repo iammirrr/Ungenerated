@@ -573,3 +573,15 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **While the AI writes a whole page, the light runs round the page.** The same running edge used on a card in the
   onboarding goes round the page's edge inside the app too, gone the moment the text is done or fails. Users notice when
   the signal they learned disappears: "why did we remove ... this bar going around even in the scripts" (Comma, Nov 2026)
+
+- **No vague "Refine with AI" in a writing editor.** A button that rewrites a line or the whole script with no say in what
+  to change reads as random; the owner removed it. Writing help belongs where the person states what they want (a new
+  take from their notes, one line from what's around it). "It is very uncontextual what we need to refine" (Comma, Nov 2026)
+- **A page's actions are one row of equal tiles.** Original, Mark ready, Checklist, Notes: the same size, an icon over its
+  word, never a text link, a capsule and a list row side by side. And never reuse an icon that means another feature (a
+  checklist icon on the shot list made the owner look for the checklist there). "Really nice little icons, very aligned
+  icons" (Comma, Nov 2026)
+- **A list the AI made for them keeps its own door.** A checklist people liked in the writing flow must stay reachable
+  from the finished page, with its ticks; each thing to film names its kind of shot (talking head, B-roll, screen
+  recording, hands, voiceover, text on screen) and one detail that helps them film it. A shot list borrowed from a
+  reference shows the reference's own frame per shot. (Comma, Nov 2026)

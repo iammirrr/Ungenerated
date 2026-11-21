@@ -159,3 +159,13 @@ Lessons from building AI into Comma (an iOS app that helps people write short vi
   original line, swap only topic and facts; 60-79: keep each line's build; 21-59: keep each beat's job and length; 0-20:
   only the jobs) and remove any older instruction that contradicts the top band. Test the owner's exact failing case at
   two settings before and after, then once more on production after deploying. (Comma, Nov 2026)
+
+- **Send the model only what this job needs.** A writing request carries the template and what the person said for
+  this item: not their profile, not a voice card that isn't tested yet, and not the app's own suggestions or to-do lists
+  kept in the same notes (they read as facts). Filter on the server so every shipped build benefits at once; then stop
+  the app sending them too. It cut a request by about 6% and removed a source of invented facts. "To lower the context
+  ... you do not really need to send how you talk" (Comma, Nov 2026)
+- **Answer "what does a heavy user cost?" from the usage log, not estimates.** Per job: average tokens in and out and
+  cost over the last weeks; then one whole item (questions + checklist + writing, about 0.3 cents on Haiku); then the
+  heaviest use the limits allow (10 a day, about $0.90 a month) next to the server's hard ceiling per person and what a
+  subscriber pays after the store's cut. (Comma, Nov 2026)
