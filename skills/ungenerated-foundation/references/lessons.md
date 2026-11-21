@@ -278,3 +278,14 @@ exact looks are examples only; the rule is what transfers.
   tool, then build from his edit.** His edited picture carries what he can't describe, one step at a
   time, back and forth. "so I can edit them in the Photoshop ... and give it back to you"
   (Comma, Nov 2026)
+
+- **The owner's character is the only character.** When the owner has drawn or rigged one, use it everywhere and use it a
+  lot; never generate a stand-in, and once replaced the old one never comes back. "Use the character that I made ...
+  never use this ever again." (Pip, Nov 2026)
+- **3D props share the character's art style.** Books, shelves and objects rendered in 3D still take the character's
+  palette, soft shading and rounded shapes, across the whole app. "Can we make the books match the art style of the
+  character even if they are 3D?" (Pip, Nov 2026)
+- **Icons get redrawn in the character's style, from a list.** Keep every icon and picture on the board with the screens
+  it appears on, plus one style prompt to paste before each subject. (Pip, Nov 2026)
+- **Start from what's in the folder.** A design board already in the project is the design tool: update it to match the
+  app, never rebuild it from scratch. "This board was already in the folder, why didn't you do that?" (Pip, Nov 2026)

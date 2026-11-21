@@ -217,3 +217,11 @@ tracker; Pip; CutRoom, a video editor). Each one transfers to any app. Best firs
 - **Give every gesture-only action an accessibility action.** Hold-to-move and drop-to-delete
   can't be done with VoiceOver, so each movable item offers Move up, Move down and Delete as
   accessibility actions. (Comma, Nov 2026)
+
+- **Look at the first frame of every scene card.** A card cut from a longer film opened on the pause that ends the scene
+  before it: last scene's title and a Continue button. (Pip, Nov 2026)
+- **A removed screen takes its code with it.** Delete its helpers, its styles and its references in the order and the
+  flow, then load every screen on its own and confirm no errors; a half-shelved screen left the whole file unparseable.
+  (Pip, Nov 2026)
+- **Measure the board, not a feeling.** Long tasks while it loads and for three seconds after: still cards cost a burst
+  at load and nothing after; moving cards kept a quarter of the main thread busy. (Pip, Nov 2026)

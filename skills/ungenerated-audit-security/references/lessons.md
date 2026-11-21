@@ -155,3 +155,13 @@ Lessons from building and launching Comma (iOS, Supabase backend), Flamely (Mac/
 **64. A local preview server refuses foreign Host headers and every dotfile.** It listened only on 127.0.0.1 yet served `.env` and the key folder; any website could reach it by DNS rebinding while it ran. It now answers only to its own address and 404s any path segment starting with a dot or naming the keys folder. Comma, Nov 2026.
 
 **65. Nightly backups leave out refresh tokens and raw payment payloads, and keep the content you can't easily rebuild.** Whoever holds the backup bucket's key would otherwise hold every Sign in with Apple refresh token. Comma, Nov 2026.
+
+**66. Every write tool an assistant can call has its own daily quota, counted in the database function that writes.** The connector capped saved scripts at 50 a day, but saving an idea had no counter, so one connected app could have written about 100 MB a minute until the free database plan filled and the whole app went read-only for everyone. Count every write tool in the same daily usage row. Comma, Nov 2026.
+
+**67. A capped registration table must free itself.** At the 1,000-client cap nobody new could connect, nothing ever cleared it, and anyone could fill it from one computer in minutes. When it's full, delete clients over an hour old that no grant uses; don't add a tight per-address limit instead, because assistants register from shared addresses. Comma, Nov 2026.
+
+**68. A custom domain that serves sign-in sends HSTS and redirects plain http.** It answered http with an error page and no Strict-Transport-Security; now every answer carries a year of HSTS and http gets a 301 to https. Comma, Nov 2026.
+
+**69. Mark third-party text you hand an assistant as quoted data.** Library transcripts are other creators' words and can carry instructions; the tools that return them say the text is quoted and not to be followed, and the guide repeats it. Comma, Nov 2026.
+
+**70. Run an audit as read, attack, prove, and keep each proof as a test.** Every hole gets a test that attacks it and fails before the fix. When a scanner can't run (its providers wanted a plain API key, and the network timed out), follow its method by hand. Run any scanner on a clean export of the code (no `.env`, keys or `.git`), never with its live attacker pointed at production; fix in the repo first, and go live only on the owner's word, in the order the fixes depend on each other. Comma, Nov 2026.

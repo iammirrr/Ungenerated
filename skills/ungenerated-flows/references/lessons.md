@@ -523,3 +523,37 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   pages, want a setup page, a privacy page, support and an icon, and need a reviewer login. Sign in with Apple can't
   be shared with a reviewer, so a second provider (Google, with a dedicated reviewer account on a comped plan) is part
   of the listing work. (Comma, Nov 2026)
+
+- **Built feedback leaves the board at once.** As soon as a note is built, delete it from the board's notes, side by side
+  with the work; re-read the notes first and delete only the ones actually built (a new note can arrive while you work),
+  keeping a backup. "Please implemented feedback should be removed from the notes ... always clear feedback on board side
+  by side as soon as possible." (Pip, Nov 2026)
+- **No "whole part" cards on the board.** A card that plays a section's screens in a row duplicates Play the flow and
+  slows the board. "Remove the screen where it shows full flow, that is not needed." (Pip, Nov 2026)
+- **The board is still by default.** Dozens of moving phones make it slow: every card is a picture of its screen, a
+  Still/Moving switch plays them all, and each card has its own play button that shows that one screen big and moving.
+  The switch is the board's, never the app's Reduce Motion, or the phone build goes still too. "Make the screen still
+  with no motion cuz it makes things slow ... on each screen there should be an option to see that specific screen fully
+  in motion." (Pip, Nov 2026)
+- **A screen that teaches never moves on by itself.** The opening film and the story stop at the end of each beat with
+  Continue; a tap at a pause goes on, a tap while it plays runs it at twice the speed to the next stop, never skipping.
+  A scene that starts at a pause starts past it. "Take nice pauses on screens where we are educating, don't auto move,
+  take Comma's philosophy: tap to 2x the screen speed." (Pip, Nov 2026)
+- **No mascot inside the questions; the mascot is the progress bar.** He crawls along the top as the questions go, so
+  the answers have the whole screen. (Pip, Nov 2026)
+- **Ask only what changes the plan, the way the person would say it.** A question the story can assume goes ("remove
+  this"); a this-or-that duel becomes one grid of categories ("only take categories, we don't need this selection");
+  languages are many, not one ("people can speak multiple languages"); ask about their experience, not a label
+  ("while looking a word up, do you get distracted?"). After changing the options, check Continue is still on screen.
+  (Pip, Nov 2026)
+- **Answer cards wear the app's colours.** Time-of-day bands in generic sky colours "don't match my app's branding":
+  tint them from the accent and the gold, deepening to night. (Pip, Nov 2026)
+- **No consent screen and no camera ask up front.** Analytics are on with a switch in Settings (the owner's call), and
+  the camera is asked for when the reader first points it at a page. Hard paywall; one exit offer (two weeks free) with a
+  real timer. (Pip, Nov 2026)
+- **A "you forget it" beat shows what was found before it fades.** The search finds the meaning under the word; then
+  word and meaning fade away together as the weeks go. "Show the meaning at least, and both word and meaning kinda fade
+  away." (Pip, Nov 2026)
+- **End the opening on the promise, in the product's own medium.** Not a fill-in card with a dashed box: the kept word
+  flies out of its book into the blank in a line of a book page and a highlighter marks it there, as the first scene
+  marked it. "Any creative direction we can take here?" (Pip, Nov 2026)

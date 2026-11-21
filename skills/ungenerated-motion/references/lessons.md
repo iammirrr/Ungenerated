@@ -200,3 +200,18 @@ are examples only.
   On the web two animations on one property stack, so a delayed one waits its turn; a native engine
   that keeps one track per value replaces the running move at once, so a press with a delayed lift
   would lose the press. (Comma, Oct 2026)
+
+- **Check the character at its widest pose.** A crawl stretched the rig past its SVG box and cut it off; let the art
+  overflow its box (`overflow: visible`) and capture every pose, not only the idle one. "Crawl animation has this bug ...
+  character can be bigger." On a hero moment the character is bigger than feels safe. (Pip, Nov 2026)
+- **No shadow under the character.** The owner's art carries its own shading; a blob shadow under it reads as a sticker.
+  (Pip, Nov 2026)
+- **Time passing on a calendar: pages flip back over the binding.** Torn pages falling, swaying and turning in 3D "look
+  weird"; each page flips up and back behind the band, quicker as it goes, shading a little as it turns, and the day
+  under it is already the next. Reduce Motion: the day just changes. (Pip, Nov 2026)
+- **Forgetting is a fade piece by piece.** The word's letters and its meaning's words go last first, each blurring and
+  drifting up a few points, the meaning a little ahead of the word; the word comes back the other way when it's caught.
+  (Pip, Nov 2026)
+- **A teaching film runs on a clock you can stop.** Make the film a pure function of its time, so pauses, a 2× hurry,
+  a scene card that starts mid-film and the native port all share one timeline. Stop a millisecond before the next scene,
+  or the pause shows the next scene's title. (Pip, Nov 2026)
