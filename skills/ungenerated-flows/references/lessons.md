@@ -563,13 +563,13 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   where several answers can be picked, or something is dragged or typed. A newer tap inside the beat restarts it; leaving
   the screen cancels it, so one tap never moves two screens. "Click should automatically continue ... continue is for
   continue thing" (Comma, Nov 2026)
-- **A template says what it's for, and the AI says when it doesn't fit.** When people borrow a structure (a reel, a
-  layout, a format) for their own idea, every template carries a one-line "best for" written from its structure, never its
-  subject ("three picks you'd recommend", "a step-by-step how-to"), shown on its page and in the borrow sheet. The AI that
-  fills it also returns a fit verdict (good, stretch, poor), one sentence on why, and a few words for what would fit
-  better; the app matches those words against every template's "best for" and offers the closest ones. A user picked the
-  most popular template for a recipe and got a list of three books with blanks: "How do we say that we recommend you to
-  use this reel or this one for this specific topic?" (Comma, Nov 2026)
+- **Borrowing copies the format, never the source, and any idea fits any format.** Each template carries a one-line
+  "best for" written from its structure ("three picks you'd recommend"), shown on its page and in the borrow sheet, so
+  people choose well. But once they've chosen, the AI bends their idea into that format: a three-picks reel becomes three
+  picks inside their topic (their own thing first, real subject knowledge for the rest), and at high closeness the
+  source's hook pattern carries over ("3 Books That Will Permanently Alter Your Brain Chemistry" becomes "3 Doughs That
+  Will Permanently Change Your Bread"). Never tell them the format doesn't fit: a "this reel suits a different kind of
+  video" note read as a cop-out. "YEAH BUT ITS FORMAT COPYING NOT REEL" (Comma, Nov 2026)
 - **While the AI writes a whole page, the light runs round the page.** The same running edge used on a card in the
   onboarding goes round the page's edge inside the app too, gone the moment the text is done or fails. Users notice when
   the signal they learned disappears: "why did we remove ... this bar going around even in the scripts" (Comma, Nov 2026)
