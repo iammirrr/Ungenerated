@@ -585,3 +585,11 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   from the finished page, with its ticks; each thing to film names its kind of shot (talking head, B-roll, screen
   recording, hands, voiceover, text on screen) and one detail that helps them film it. A shot list borrowed from a
   reference shows the reference's own frame per shot. (Comma, Nov 2026)
+- **Deleting the app must sign people out.** iOS keeps Keychain items after an app is deleted, so a reinstall found the
+  old session and skipped the sign-in screen, which read as "it signed me in by itself". On the first launch of a new
+  install (UserDefaults empty, since a delete wipes them and an update keeps them), delete the stored session; keep
+  anything meant to survive a reinstall (an anti-abuse timer) under its own key. "It auto signs me in with Apple ID on my
+  phone, why?" (Comma, Nov 2026)
+- **A story screen moves on only from its button.** A tap anywhere may hurry the animation and bring Continue in, never
+  move on: taps meant to speed things up carried people past screens. "In story tapping on screen shouldn't auto
+  continue" (Comma, Nov 2026)
