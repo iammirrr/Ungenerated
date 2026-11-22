@@ -258,3 +258,8 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
     hook on the app's own paper (margin line, beat number, the spoken words highlighted), on the screenshots' field.
     Then "make it zoomed": a simple header can run a little past the safe strip, so say how far and have the owner
     check the iPhone crop in App Store Connect's Preview. (Comma, Nov 2026)
+86. **Fill every screenshot slot App Store Connect shows, even for an iPhone-only app.** It listed iPad 13" and
+    iPhone Duo beside the iPhone sizes, empty; the owner: "WHY NO SCREENSHOTS IN THE RESPECTIVE STUFF?". The
+    screenshot-set API takes them (`APP_IPAD_PRO_3GEN_129`, `APP_IPHONE_DUO`) where Asset Library placements refuse
+    iPad. Never retry a reservation POST blindly: a timed-out one may have landed, and sets filled up with 9–10
+    copies; read the set back, keep one of each, upload what's missing and set the order. (Comma, Nov 2026)
