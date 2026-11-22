@@ -150,6 +150,13 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 
 ## Sign-in, consent and AI permission
 
+- **A wait on someone else never looks frozen.** After Apple's or Google's sheet, while a purchase is confirmed and while a
+  restore runs, the screen fades under the app's own paper with a spinner and one line of what's happening ("Signing you
+  in…", "Getting Pro ready…"), then clears; a cover presented over the root shows its own. "Currently it stops there for a
+  few seconds, which looks bad." (Comma, Nov 2026)
+- **Sign-in buttons arrive together.** Never hold one back on a network check (is this provider on?): show it from the last
+  known answer and hide it only when the server says it's off. A button popping in late reads as broken. (Comma, Nov 2026)
+
 - **Sign in before the paywall, and log the payment SDK into the account id.** A purchase made
   signed out stayed anonymous and the webhook answered "no user". (Comma, Nov 2026)
 - **The success moment lands.** A tick, the character jumps once; a return says "Welcome back":
