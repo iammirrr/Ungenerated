@@ -175,3 +175,20 @@ Lessons from building AI into Comma (an iOS app that helps people write short vi
   and each output's cost, tokens and time; their pick saves on the page. A scoreboard alone, or the source's lines
   hidden behind a toggle, left the owner unable to choose: "i cant decide with context given and reels selected ...
   plus original script ... costs question list". (Comma, Nov 2026)
+- **Test AI writing through the app's own steps, with simulated people.** Each case is a person with a real idea who types a
+  brain dump, answers the app's questions the way people do (in full, in a few words, tapping a suggestion, skipping), then
+  gets the writing; an offline judge marks every output against one rubric (hook, uses what they said, substance, sounds
+  spoken, shape, length, made-up claims, blanks). Mirror the app's exact inputs, or the baseline lies: offering a picker
+  every template when the app only offers short ones made "today" look like it refused half the cases. (Comma, Nov 2026)
+- **One output to a length they pick beats several thin drafts.** Three drafts in one call starved each to about 60 spoken
+  words for a minute-long video; one script with a word target (about 2.5 words a second) landed on length 26 times out of 26.
+  (Comma, Nov 2026)
+- **"Never invent" alone makes thin writing.** Say what may be added (true general knowledge about the subject, said as
+  general; a question to the viewer; transitions) and what never may (anything about the person they didn't give: events,
+  feelings, times, numbers, quotes). Thin notes then become a full script without made-up details. (Comma, Nov 2026)
+- **The wait is the model's thinking: measure it before choosing.** Same model, same prompt: the default used about 2,500 of
+  3,300 output tokens on thinking (15 s); low effort took 5 s but overshot the length and made up twice as much. Keep the
+  better one and offer the faster one as a choice with its cost in quality. (Comma, Nov 2026)
+- **Copying a format word for word still has to make sense.** At a high "closeness", swapping only the topic words in another
+  creator's sentences produced nonsense on unrelated subjects; keep each sentence's frame and change whatever would make it
+  false or meaningless. (Comma, Nov 2026)

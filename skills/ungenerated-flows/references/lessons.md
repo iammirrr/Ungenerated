@@ -138,6 +138,16 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   into setup left the story on a default value; the copy says what that amount comes to, never "you
   told us". (Comma, Oct 2026)
 
+## Writing with AI
+
+- **Ask how first.** A writing flow opens on the ways (the AI writes it, in a template's format, write it myself, paste),
+  and "write it myself" goes from the name straight to a blank page, with no questions. "It's supposed to ask me at the
+  first." (Comma, Nov 2026)
+- **One result, to a length they pick.** Kind and length as chips on the last step, then one output; never several drafts to
+  choose between. (Comma, Nov 2026)
+- **Slow, optional AI work comes after the main result, in the background, made from it.** A checklist made from the finished
+  script fits it and costs no wait; asked before writing, it was a screen of waiting and a shorter list. (Comma, Nov 2026)
+
 ## Sign-in, consent and AI permission
 
 - **Sign in before the paywall, and log the payment SDK into the account id.** A purchase made
