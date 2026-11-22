@@ -1,5 +1,5 @@
 <!-- Part of ungenerated-store. Was the `app-store-assets` skill. -->
-> **When:** Make App Store and Play Store screenshots and the preview video from the design board - the real screens, one message per shot, honest captions, the right sizes. Use when preparing a store listing, screenshots, a preview video or a launch page from app designs.
+> **When:** Prepare a store listing, screenshots, a preview video, or Product Page Information artwork from app designs.
 
 # App Store assets
 
@@ -22,6 +22,11 @@ one movement, not the opening replayed.
 - 15–30 seconds, the opening's beats played in the app or on the board, no voice-over needed.
 - The first two seconds must make sense with the sound off.
 - Capture frames with the board's `tools/capture.mjs` at a high rate or record the screen; cut on beat changes.
+
+## Product Page Information
+
+- **Header** and **Search Results** each get their own upload-ready image in the full listing handoff. Use
+  [the creative assets workflow](banners.md) to compose, export, crop-check, and label the two files.
 
 ## Rules
 

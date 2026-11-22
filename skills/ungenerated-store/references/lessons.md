@@ -238,3 +238,13 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
     Its setup step was already behind a server check; the release build now turns it off at compile time and the
     review notes no longer mention it, so neither a reviewer nor a flipped server flag can reach a half-open feature.
     (Comma, Nov 2026)
+81. **The header and search pictures are part of the listing, in every language.** The owner found the two slots
+    empty ("WHERE ARE ASSETS FOR THESE TWO") and then only English filled ("COMPLETE THE LISTING FOR ALL"). Make both
+    with the screenshots, from the screenshots' own translated headlines, and upload every localization through the
+    API (`references/banners.md`). (Comma, Nov 2026)
+82. **The header sits right above the first screenshot, so it never repeats its example.** Same field, type and
+    phones, but another person's script and another reel; the search picture, which replaces the first three
+    screenshots in search, can carry the first screenshot's message. (Comma, Nov 2026)
+83. **A banner shows the app as it ships today.** A first attempt put a two-week-old screen in the search picture,
+    with a writing flow the app had since replaced, and a quote card pasted over the phone. Rebuild the phone from the
+    current app, check every label against the code, and keep pieces off the phone. (Comma, Nov 2026)
