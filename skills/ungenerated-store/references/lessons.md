@@ -248,3 +248,7 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
 83. **A banner shows the app as it ships today.** A first attempt put a two-week-old screen in the search picture,
     with a writing flow the app had since replaced, and a quote card pasted over the phone. Rebuild the phone from the
     current app, check every label against the code, and keep pieces off the phone. (Comma, Nov 2026)
+84. **The Search Results picture is optional; ask before making one.** The owner took it off ("search assets we dont
+    need ... REMOVE IT ACROSS THE STUFF"): without it, search shows the app's first screenshots, which were already
+    made to sell. Taking it off means every language, not just the one on screen, and its images out of the Asset
+    Library. Offer a few header directions side by side, labelled, with the live one marked. (Comma, Nov 2026)
