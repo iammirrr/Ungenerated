@@ -252,3 +252,8 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
     need ... REMOVE IT ACROSS THE STUFF"): without it, search shows the app's first screenshots, which were already
     made to sell. Taking it off means every language, not just the one on screen, and its images out of the Asset
     Library. Offer a few header directions side by side, labelled, with the live one marked. (Comma, Nov 2026)
+85. **The header is the line and one real piece, nothing else.** Four headers with phones, a reel, a wall of reels
+    and a teleprompter got "TOO MUCH GOING ON MAKE IT VERY SIMPLE"; the pick was the screenshots' headline beside one
+    hook on the app's own paper (margin line, beat number, the spoken words highlighted), on the screenshots' field.
+    Then "make it zoomed": a simple header can run a little past the safe strip, so say how far and have the owner
+    check the iPhone crop in App Store Connect's Preview. (Comma, Nov 2026)

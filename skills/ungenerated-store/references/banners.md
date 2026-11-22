@@ -88,6 +88,8 @@ ship in gets both. The owner, seeing only English filled: "I WANT YOU TO AT LEAS
 - **A long translation wraps, it doesn't shrink.** Fit each line on one line first; if that leaves the type under
   about 80% of the English size, let it wrap onto a third line at full size and shrink only until it fits the room.
   Never break a word, never let the boxed word split, and keep right-to-left languages right-to-left.
+- **Never break inside a word.** Wrapping uses `word-break: keep-all`, so Japanese and Chinese shrink instead of
+  splitting a word across lines ("書" / "く"), and a hyphenated word is held whole ("reel-" / "uri" in Romanian).
 - **Check the safe-area crop of every language on one sheet** before uploading: crop each PNG to the safe area and
   tile them; that is what an iPhone shows.
 
