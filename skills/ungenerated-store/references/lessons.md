@@ -242,9 +242,10 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
     empty ("WHERE ARE ASSETS FOR THESE TWO") and then only English filled ("COMPLETE THE LISTING FOR ALL"). Make both
     with the screenshots, from the screenshots' own translated headlines, and upload every localization through the
     API (`references/banners.md`). (Comma, Nov 2026)
-82. **The header sits right above the first screenshot, so it never repeats its example.** Same field, type and
-    phones, but another person's script and another reel; the search picture, which replaces the first three
-    screenshots in search, can carry the first screenshot's message. (Comma, Nov 2026)
+82. **The header's example is the app's own, even when the first screenshot shows it too.** To avoid repeating
+    screenshot 1, the header got an invented script (a bakery's "Nobody came to my bakery."); the owner: "WHAT IS NO
+    BODY CAME TO MY BAKERY MAKE IT ... ALIGN WITH APP". Use the line the app itself shows (its sample script), so the
+    header, the screenshots and the app tell one story. (Comma, Nov 2026)
 83. **A banner shows the app as it ships today.** A first attempt put a two-week-old screen in the search picture,
     with a writing flow the app had since replaced, and a quote card pasted over the phone. Rebuild the phone from the
     current app, check every label against the code, and keep pieces off the phone. (Comma, Nov 2026)
