@@ -145,3 +145,10 @@ fallback string. (Comma, Nov 2026)
   a Test Notification" with the In-App Purchase key, then read its send attempts: SUCCESS on sandbox means Apple reaches
   the configured address (RevenueCat or your own). Production answers 401 until the app is live, so check it after
   release. (Comma, Nov 2026)
+- **A free TestFlight purchase must not unlock the live app.** Subscriptions live on the account, not the build, so a
+  tester who buys for free on TestFlight and signs into the App Store build with the same account is Pro there too, until
+  the test subscription stops (TestFlight renews daily, 6 times) and again each time they re-buy. RevenueCat's
+  `entitlements.active` is `activeInAnyEnvironment`; gate on `activeInCurrentEnvironment` (sandbox purchases count only in
+  sandbox builds, real ones only in the App Store build). TestFlight and App Review keep working, because both run in the
+  sandbox. Keep TestFlight invite-only until the fix ships, and mirror the purchase's environment on the server too.
+  (Comma, Nov 2026)

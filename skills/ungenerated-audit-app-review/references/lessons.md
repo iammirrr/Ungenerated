@@ -118,3 +118,8 @@ Lessons from preparing Comma (iOS), Flamely (Mac/Windows/iOS), Pip (iOS) and Cut
 - **Apple's own sheets don't appear in screen recordings.** Sign in with Apple, the purchase sheet and Face ID are left
   out of iOS screen recordings for privacy, so a test recording looks as if sign-in or payment never asked. Say so before
   someone reports it as a bug. (Comma, Nov 2026)
+- **After attaching a build, read the version's build back from App Store Connect.** The upload tool picks the next free
+  build number, so the build you meant (the evening's) and the one attached (the afternoon's) can differ while your notes
+  say otherwise; Apple then approves the wrong one, with old paywall words. Check `appStoreVersions?include=build`
+  before Submit and again before Release. If an approved version holds the wrong build, either release it and ship a fix
+  update at once, or remove it from review, attach the right build and start review over. (Comma, Nov 2026)
