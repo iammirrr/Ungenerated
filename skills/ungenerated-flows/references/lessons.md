@@ -257,6 +257,11 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   how to write it. (Comma, Nov 2026)
 - **Context given once is never asked again, and the AI never writes blind.** "I already gave it a
   context and when I was borrowing the shape it was again asking me." (Comma, Nov 2026)
+- **A choice made on the way in is the way; never ask it again at the end.** Starting from a template
+  the person picked, the flow ended on "how do you want to write it?" with the template, "write it
+  myself" and "I already wrote it": "I literally selected a reel ... it is again asking me ... It
+  shouldn't ask, it's just directly should go into the writing mode." Skip the step, go straight to
+  the work. (Comma, Nov 2026)
 - **Dictation never loses words.** A pause wiped a whole brain dump in a shipped build. (Comma, Nov
   2026)
 - **Drafts come back whole, and every version is kept.** "If we wasted credits on that, yes it would
