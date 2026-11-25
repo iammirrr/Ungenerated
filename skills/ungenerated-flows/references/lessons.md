@@ -613,3 +613,14 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **A story screen moves on only from its button.** A tap anywhere may hurry the animation and bring Continue in, never
   move on: taps meant to speed things up carried people past screens. "In story tapping on screen shouldn't auto
   continue" (Comma, Nov 2026)
+- **Build the ways people tell you things before launch, not after.** From the first release: a one-tap rating under
+  every AI result (good, or needs work with reasons), a one-tap "why" when someone cancels, a feedback board linked
+  from Help, and every answer saved where the owner reads it each week. An app that launches without them ships blind:
+  the owner has subscribers and no idea what they think. "We're not taking enough feedback from users" (Comma, Nov 2026)
+- **Most cancels happen outside the app, so catch them there too.** Turning off renewal in iPhone Settings tells the app
+  nothing unless the subscription service's webhook does: store that, and on the person's next open ask why in one tap,
+  then show the one real offer. "If they cancel from the app store, there's no way for us to know ... I have no data
+  on that" (Comma, Nov 2026)
+- **Cancelling inside the app ends on a designed screen.** Pro until the date, what stops then, the character's sad mood
+  and a warm way back that opens the store's own sheet; never a bare "Subscribe again" button. "It doesn't really show
+  anything ... that's supposed to happen in a very nice way" (Comma, Nov 2026)

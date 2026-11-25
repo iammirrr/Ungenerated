@@ -152,3 +152,11 @@ fallback string. (Comma, Nov 2026)
   sandbox builds, real ones only in the App Store build). TestFlight and App Review keep working, because both run in the
   sandbox. Keep TestFlight invite-only until the fix ships, and mirror the purchase's environment on the server too.
   (Comma, Nov 2026)
+- **Every plan gets a short free trial, sized to what a trial day costs.** People judge an app in its trial, so a plan
+  with none (monthly, here) turns them away; an app whose AI spends money per use keeps it short (3 days) on every plan,
+  while an app with no running cost can give 7. The one-time discount offers stay discounts: the store allows one
+  introductory deal per plan, so a plan can't be a free trial and a discount at once. (Comma, Nov 2026)
+- **The owner's phone after launch: the App Store version replaces TestFlight, and buying there is real.** To test,
+  install from TestFlight (an orange dot by the app's name) and check the purchase sheet says sandbox before
+  confirming; otherwise it's real money. The owner of Comma bought his own subscription this way on launch day.
+  (Comma, Nov 2026)

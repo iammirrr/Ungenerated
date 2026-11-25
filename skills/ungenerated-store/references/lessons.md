@@ -263,3 +263,6 @@ screenshot and trailer lessons is in `references/screenshots-lessons.md` and `re
     screenshot-set API takes them (`APP_IPAD_PRO_3GEN_129`, `APP_IPHONE_DUO`) where Asset Library placements refuse
     iPad. Never retry a reservation POST blindly: a timed-out one may have landed, and sets filled up with 9–10
     copies; read the set back, keep one of each, upload what's missing and set the order. (Comma, Nov 2026)
+- **After launch, batch updates every couple of weeks.** Test fixes on TestFlight as they come, and send one update about
+  every two weeks rather than one a day: frequent tiny updates read as an unstable app and each one restarts review.
+  Release the first update with what testers proved, on a date set in advance. (Comma, Nov 2026)
