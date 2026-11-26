@@ -416,6 +416,12 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **Only what the app can really do.** "Just make sure you are putting things that are doable." A screen that needs a
   server or AI says so, with what it costs; until that exists the feature is off and invisible, never a dead button.
   (Pip, 26 Nov 2026)
+- **The paywall's world belongs to the paywall. One painted world a place.** Once one painted sky was loved it was used
+  on the paywall, the practice screens, the profile and the account page alike, and the paywall stopped being special:
+  "I'm loving this look but we need to lock in. And make the background different so it doesn't take spotlight from
+  paywall ... be creative with Codex for other screens". Lock the look in as a family: every place has its own painting
+  by the same hand (matte, soft, the same shapes) with its own time of day, palette and scene, and the paywall's is never
+  used anywhere else. Working screens stay plain. Write the list of worlds into the design language. (Pip, 27 Nov 2026)
 - **The profile is a button at the top right, not a tab.** Settings and the profile opened from
   the person's own round button; the tab bar keeps only the places of the job. (Pip, Nov 2026)
 

@@ -208,6 +208,14 @@ tracker; Pip; CutRoom, a video editor). Each one transfers to any app. Best firs
   screen on both: moving a library to live data silently swapped its picked tiles for another
   card (squashed tiles, one word per line, the New tag gone): "I LIKED THAT 1 reel format better"
   (Comma, Oct 2026)
+- **A script that starts a browser takes it down with it.** Screenshot runs were stopped by a timer that killed the script
+  and left its headless browser alive, each one still drawing a moving board. With several helpers taking pictures, 36 of
+  them piled up, the load average passed 190, helpers stalled and an hour was lost while the owner waited. The script
+  kills its browser on exit, on every stop signal and at its own time limit; a helper ends with the count of headless
+  browsers at zero; and when a machine slows, the process list is read before anything is blamed. (Pip, 27 Nov 2026)
+- **Resume a stalled helper, don't restart it.** A helper that stops mid-task keeps its context when it is messaged again;
+  a fresh one repeats an hour of reading. Tell it what happened, to check what was left half-done, and to carry on. (Pip,
+  27 Nov 2026)
 
 ## Accessibility
 

@@ -122,6 +122,13 @@ it came from. Comma's own look (its palette, its clapperboard character) appears
     flat spot where the character stands, and stays crisp and small (no glow, under about 40 KB); the sky gradient
     stays in code, one set serves every screen, and the code-drawn version stays as the fallback until the owner
     picks. "we can make them a lot more attractive using, like a codex image generation" (Comma, Nov 2026)
+- **Paint the ink, set the letters.** A postmark drawn in code looked thin on a painted ticket: "make stamp using codex a
+  little more nicer". The image model paints the rubber-stamp ink (uneven edge, heavier on one side, the wavy lines) as a
+  transparent picture with no letters or numbers and an empty band; the date is set over it in the app's own type, so it
+  stays true and sharp. The same split works for seals, tickets and certificates. (Pip, 27 Nov 2026)
+- **One painted world a place, three candidates each.** Ask for three paintings that differ from each other, look at each
+  on the real screen, keep the best and offer the second as a tab; never reuse the paywall's painting elsewhere. (Pip, 27
+  Nov 2026)
 
 ## Partners and the paywall
 
