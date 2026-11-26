@@ -289,3 +289,16 @@ exact looks are examples only; the rule is what transfers.
   it appears on, plus one style prompt to paste before each subject. (Pip, Nov 2026)
 - **Start from what's in the folder.** A design board already in the project is the design tool: update it to match the
   app, never rebuild it from scratch. "This board was already in the folder, why didn't you do that?" (Pip, Nov 2026)
+- **Write his decisions down the round he makes them, small ones too.** "Add all the knowledge and micro decisions I'm
+  making, saving these lessons": the name he uses for a place, a colour said in passing, what he loves, what he waves
+  away. The project's memory gets each with his words and the date; the skill gets the ones another app would meet. Ask
+  nothing twice. (Pip, 27 Nov 2026)
+- **He dictates: read for intent, keep his words.** Notes arrive spoken, with slips and no punctuation. Work out what he
+  means, then keep the exact words beside your reading wherever the note travels (a brief, the memory, the report), so a
+  wrong reading can be caught. (Pip, 27 Nov 2026)
+- **"Show me" means pictures of the real thing, now.** Mid-build, send a labelled sheet of real screenshots of the
+  screens that are true, and name the ones that are not ready and why. Never a description, never a screen whose picture
+  missed passed off as done. (Pip, 27 Nov 2026)
+- **Keep building while he reviews.** New notes on the board arrive while the app is being built: the board round and the
+  build run side by side, and a screen whose design just changed is ported again afterwards, said plainly. (Pip, 27 Nov
+  2026)

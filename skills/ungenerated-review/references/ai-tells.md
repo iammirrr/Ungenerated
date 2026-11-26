@@ -46,6 +46,13 @@ it and note why.
 | T47 | A screen with no way in | A feature drawn on its own with nothing that leads to it | Draw the door first: the button, the row or the moment that opens it |
 | T48 | Showing what happens by itself | Backup, sync and "saved to the cloud" screens and badges | Nothing: it is the service. Say it once, in Settings or the paywall |
 | T49 | The mascot at work | The character on a camera or working screen, or crawling across the top as a progress bar | Keep it for moments: the end, an empty state, the profile |
+| T50 | Screens hidden in tabs | One card with ten tabs that are really different screens (tap, drag, type, say, each failure) | A tab only for the same screen again; each different act a card of its own |
+| T51 | The unlabelled count | A round button showing only "4" | Say what it counts: "Review 4" |
+| T52 | Progress as a label | Chips reading New, Learning, Known on every item | Show it earned on the item: a material, a seal, short bars |
+| T53 | The flat stand-in | A plain rounded card standing for a ticket, a certificate or a membership | The made object: notches, a perforation, printed edges, a painted face |
+| T54 | The halo corner | A pale frame peeking out at the rounded corners of a picture on a dark ground | Clip art and frame to one shape; check the corners enlarged |
+| T55 | The shadow under words | Drop shadows behind words, stamps, chips or icons; a shadow that shimmers while its object moves | No shadow on small things; one still, pre-blurred contact shadow under an object, moved only by transform |
+| T56 | Close crosses on pages | An X at the top of a page that was pushed in | A back chevron at the top left; sheets keep their grabber |
 
 ## Copy
 

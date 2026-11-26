@@ -74,6 +74,11 @@ are examples only.
 - **Anything that animates on a tap survives taps faster than its animation.** "If I click every week
   and move promptly, it breaks; it shows grey stuff." Set targets declaratively; one cancellable
   animation per element. (Comma, Oct 2026)
+- **A shadow never moves on its own.** Tilting gift cards whose shadows shimmered: "shadows are jitter here from the cards
+  ... do deep audit and fix that". A blurred shadow redrawn every frame (box-shadow or filter: drop-shadow on something
+  that transforms, or animated itself) flickers. The object and its shadow are two layers; the shadow is still and
+  pre-blurred and moves only by transform and opacity; nothing that turns in 3D carries one. Prove it with pictures taken
+  along the motion. (Pip, 27 Nov 2026)
 
 ## State changes
 

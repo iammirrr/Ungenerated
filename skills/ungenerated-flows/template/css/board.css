@@ -144,6 +144,11 @@ body.has-player { overflow: hidden; }
   color: var(--b-ink);
   box-shadow: 0 0 0 1px var(--b-line);
 }
+/* The places as tabs (placeTabs in board.config.js): one shows its own rows alone. */
+.tabs.is-places { gap: 6px; }
+.tabs.is-places .tab { height: 36px; padding: 0 16px; font-size: 14.5px; font-weight: 600; color: var(--b-text); box-shadow: inset 0 0 0 1px var(--b-line); }
+.tabs.is-places .tab:hover { background: var(--b-raised); }
+.tabs.is-places .tab.is-on { background: var(--b-accent); color: #fff; box-shadow: none; }
 .counter {
   display: inline-flex;
   align-items: center;

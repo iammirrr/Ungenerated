@@ -1,6 +1,9 @@
 /* The board's configuration. The ungenerated-flows skill fills this in for your app.
  * sections: one row each, in the order of the flow. view: 'screens' (default), 'kit' or
- * 'transitions'. research: what you studied, keyed by section id; src is optional. */
+ * 'transitions'. research: what you studied, keyed by section id; src is optional.
+ * Once the app has places (a home, each tab, settings): set `placeTabs: 'All'`, give the first row of each place
+ * `place: 'Read'` and every further row of that place `under: '<that first row's id>'`. The places become tabs under the
+ * top bar; each shows its own rows alone, the first shows them all. `wrapRows: true` makes a row's cards wrap. */
 window.BOARD = {
   name: 'Your app',
   // mark: 'assets/app-icon.png',

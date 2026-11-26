@@ -41,6 +41,47 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   exactly tell you: okay, this one is not needed". Picks still work per tab; a cut screen is deleted
   from the board and the app the same round: "why the screen I cancelled are not deleted?" (Pip, Nov
   2026; Comma and Flamely, Oct 2026)
+- **A tab is the same screen again; a different act is its own card.** "Variations are tabs" was applied so hard that
+  the home screen's card carried seventeen tabs: tapping a word, dragging a phrase, a quote, typing, saying, choosing the
+  book, and every failure state. The owner could not see his main screen, asked "have you added the book quotations there?
+  I can't see it", and then: "arrange things better ... read have all the screen on reads". The test is whether he would
+  call it the same screen. Same layout with other data, a state, an edge case, a second design: a tab. Another thing the
+  person does, a sheet that opens, the next step of a flow: a card, beside the last, in the order met. More than about
+  five tabs on one card is a sign. (Pip, 27 Nov 2026)
+- **Arrange the board by the app's own places, and let each be seen alone.** The places (before the app, each tab of
+  the app, what opens from a corner button, settings, outside the app) are tabs under the top bar; a place shows its rows
+  alone with its branch of the map, and one tab still shows everything. Inside a place, rows are its flows (the home
+  screen's acts, an item in full, while they work, when it can't). Use the owner's word for a place: he said "settings
+  have setting" of a row we had named "You". (Pip, 27 Nov 2026)
+- **Feedback has to be one arrow from screen to screen.** A note window that opened on one screen and had to be closed to
+  reach the next: "I should be allowed to add feedback on various screens on the board". The window walks every screen of
+  the place, each tab a stop, the note kept as he moves. Check this before a review round, not after: what he cannot note
+  quickly, he will not note at all, and the round loses it. (Pip, 27 Nov 2026)
+- **Rows wrap; nothing lives off to the right.** A feature that sat twelfth in a sideways-scrolling row was taken for
+  deleted: "Where's the friend invitation? I think you removed that screen ... You removed a lot of the features". Every
+  card of a row shows without sideways scrolling, and what he loved or asked about last goes early in its row. (Pip, 26
+  Nov 2026)
+- **A redo starts from the version he liked, not from yours.** A second pass at the shelf changed things he had not named
+  and came back worse: "why this looks worse done by you than done by Opus? ... I didn't say that". Take the loved version
+  as the base, change only what the note names, and put old and new side by side yourself before showing. (Pip, 26 Nov
+  2026)
+- **"Love it" is a lock.** A note that says he loves a thing and names one fault ("LOVE IT ... just the corner looks a
+  bit off") means the fault is the whole job. The loved thing is not restyled, moved or simplified on the way. (Pip, 27
+  Nov 2026)
+- **A note on one card is a rule for the whole app.** "Remove my comment but it's universal": sixty-three notes, each
+  written on one card, each meant everywhere. For every note: fix that card, find every other screen the rule touches,
+  write the rule down (the project's memory, and this skill when it is general), then clear the note. (Pip, 26 Nov 2026)
+- **Save his small decisions the round he makes them.** "Add all the knowledge and micro decisions I'm making": a word
+  he uses for a place, a colour said in passing ("starting color of book can be simple black and white btw"), a thing he
+  loves, a feature he waves away. Each goes into the project's memory with his words and the date, and into this skill
+  when another app would meet it. A decision that lives only in a chat gets made twice, and the second time he is angry.
+  (Pip, 27 Nov 2026)
+- **Hand a helper his exact words, then your reading, separately.** He dictates, so notes arrive with slips ("deep duet"
+  for a deep audit). A brief that carries only the reading hides a misreading; one that carries both lets the helper, and
+  later him, see where it went wrong. (Pip, 27 Nov 2026)
+- **Screen ids are a contract once anything else holds them.** Rearranging rows, places and tabs never renames a
+  screen: the notes store, links, the native port and its tests all hold the id. Rearrange by a placement list (one line
+  a card: its row, then the screens that are its tabs), not by editing the screens. (Pip, 27 Nov 2026)
 - **Put a map of what opens what at the top of the board.** A tree for each place (home, each tab, settings, outside the app):
   every screen once, under the screen that opens it, with how a person gets there (tap, drag, top right), and a tap on any line
   jumps to its card. Screens drawn with no place got "where does this fucking fit? Why are you putting screens out of
@@ -308,6 +349,73 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   Nov 2026)
 - **Real items only, everywhere.** Made-up books on a board that has real covers: "you are using
   artificial ... books. Bro, you need to stop doing that." (Pip, Nov 2026)
+- **Show what is earned on the thing itself, never as a label.** Chips saying New, Learning and Known went: "we're
+  supposed to be showing like a golden bar ... then we just gave that word a little bit more golden". An item answered
+  right five times turns gold (a gold frame and a small seal), and five short bars show the way there. One material means
+  earned across the app: a known word, a finished book, the paid plan. (Pip, 26 Nov 2026)
+- **Practice is a button on the home screen, not a tab, and it starts at once.** "I want this on the top right of the
+  main reading screen." No landing page between the button and the first card: "so many filler screens". (Pip, 26 Nov
+  2026)
+- **A button with a number says what the number counts.** A round button showing only "4" got "what does this mean?":
+  it became a pill reading "Review 4". (Pip, 26 Nov 2026)
+- **No close crosses on pages.** "Remove the cross." A page opened from a button has a back chevron at the top left; a
+  sheet keeps its grabber. (Pip, 26 Nov 2026)
+- **One icon family across the whole app.** Line icons in boxes beside illustrated ones: "icons are supposed to be
+  consistent throughout the app ... I told you to, but you didn't". Only the system-like controls (the camera's, the tab
+  bar) may differ. A missing picture is made in the family's style, never borrowed. (Pip, 26 Nov 2026)
+- **One verb for one act.** Keep, everywhere, for a word, a phrase and a quote; never Save in one place and Add in
+  another. (Pip, 26 Nov 2026)
+- **What costs money per use appears on ask.** A translation under every meaning costs a call each time and crowds the
+  card: one small "In Spanish" button, used when wanted. (Pip, 26 Nov 2026)
+- **Notes go where people have thoughts.** Words get no notes; a quote gets a thought, typed or spoken into the
+  microphone ("one of the most amazing feature"). (Pip, 26 Nov 2026)
+- **Every item shows where it came from.** A word with no book beside it: "how do you know which book this came
+  from?" The source's real cover sits on every word, in lists and on its own page. (Pip, 26 Nov 2026)
+- **A long list is a carousel that turns over, not a wall.** A hundred items in rows with filters above ("remove all
+  the weird shit") became one drifting carousel; an item turns over to show its meaning, and a second tap opens it in
+  full. (Pip, 26 Nov 2026)
+- **A place holds one kind of thing.** The shelf holds books and nothing else: the book being read on top, a shelf of
+  finished ones. Words and practice live in Review; collections were cut. (Pip, 26 Nov 2026)
+- **Things given, earned or kept are drawn as made objects.** The gift ticket (round notches at the centre of its sides,
+  a perforation, a face painted by the image model, a gold seal) was "single most amazing screen ... exactly what I mean
+  by using Claude to your advantage". A plain white membership card on the welcome screen, seen after it, was "a bit
+  simple ... I liked that centre sides can have holes". Build the object once and use it on every screen that shows one,
+  so a second, plainer cousin never appears. (Pip, 27 Nov 2026)
+- **A gift shows two people.** On the gift ticket he asked for the app icon to go and the mascot to come with a buddy
+  "with like hat or something in different colour": the giver and the friend. A gift is small and two-sided: a free week
+  (never a month), and the giver gets one too. (Pip, 27 Nov 2026)
+- **No shadow behind words or small objects, and no shadow that moves.** "No shadow on these words"; then of tilting
+  cards, "shadows are jitter here from the cards ... do deep audit and fix that". An object may have one soft contact
+  shadow as a separate, still, pre-blurred layer that only transforms; never animate box-shadow or filter, and never put
+  a shadow on an element that turns in 3D. (Pip, 27 Nov 2026)
+- **Check the corners enlarged.** A pale frame showing at the rounded corner of a painted card on a dark ground: "corner
+  looks a bit off ... whitish". Clip the art and its frame to one shape and look at each corner at four times its size
+  before showing. (Pip, 27 Nov 2026)
+- **Before the person's content arrives, the object is plain.** The book waiting for its cover photo: "starting color of
+  book can be simple black and white". A stand-in object is neutral and takes colour only from their real content, so
+  the real thing landing is the moment. (Pip, 27 Nov 2026)
+- **A recap is a keepsake: one proud fact a page.** Of the year book: "MAKE THIS 10000x BETTER ... I LOVE IT ... read
+  days one can be a lot better". The cover carried it; an inside page that read like a list of numbers let it down. Each
+  page must be worth sharing alone: one number set big, one made picture that carries it, real things only. (Pip, 27 Nov
+  2026)
+- **An explore feature is a place to play, not a diagram.** A map of words drawn as a small chart was rejected: full
+  screen, things that grow as the person adds to them, zoom out to see all of it, small puzzles, and no AI needed. (Pip,
+  26 Nov 2026)
+- **Use the surfaces the person already looks at.** The quiz on the Lock Screen and in the Dynamic Island was loved
+  before anything inside the app was: practice comes to them. (Pip, 26 Nov 2026)
+- **Use the character more, at real moments.** "Pip is not very much used in the app itself. So I want to use that":
+  beside the books being read, behind the reader's name on the profile, at the end of practice, when a book is finished,
+  on a gift. Still never on the working screen or as a progress bar. (Pip, 26 Nov 2026)
+- **Features go in to be tasted, so build them to come out.** "Most of the things we are going to add in the app for the
+  sake of adding them. And then, once I get a taste of it, I'll tell you which things are not very good." Each sits
+  behind its own switch with one way in; cutting one removes its screens, code and map line in the same change. (Pip, 26
+  Nov 2026)
+- **Cut what sounds clever and nobody would open.** Listening to a list of words ("no one wants that"), a deck of hard
+  words ("we did not really need it"), a classics collection ("not for Pip"), an admin switches screen ("what is
+  this?"). Ask of each idea who opens it, when, and what they came to do. (Pip, 26 Nov 2026)
+- **Only what the app can really do.** "Just make sure you are putting things that are doable." A screen that needs a
+  server or AI says so, with what it costs; until that exists the feature is off and invisible, never a dead button.
+  (Pip, 26 Nov 2026)
 - **The profile is a button at the top right, not a tab.** Settings and the profile opened from
   the person's own round button; the tab bar keeps only the places of the job. (Pip, Nov 2026)
 

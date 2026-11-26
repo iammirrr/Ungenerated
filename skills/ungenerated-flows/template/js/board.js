@@ -350,7 +350,8 @@
   // ------------------------------------------------------------------ layout
 
   let main, tabs;
-  const VIEW_KEY = LS + ':view';
+  const VIEW_KEY = LS + ':view', PLACE_KEY = LS + ':place';
+  let place = (() => { try { return localStorage.getItem(PLACE_KEY) || ''; } catch { return ''; } })();
   let view = (() => { try { return localStorage.getItem(VIEW_KEY) || CFG.startView || 'screens'; } catch { return 'screens'; } })();
 
   const makeRow = (label, screens, hero = true) => {
@@ -426,12 +427,12 @@
         const grid = h('div.kit-grid');
         cardsOf(screens).forEach((u) => { const c = buildCard(u.lead, u.tabs); c.el.classList.add('is-tile'); grid.append(c.el); io.observe(c.el); });
         const [head, about] = sectionHead(sec, screens, [replayButton(screens)]);
-        main.append(h('section.sec', { id: 'sec-' + sec.id, 'data-view': v }, head, about, grid));
+        main.append(h('section.sec', { id: 'sec-' + sec.id, 'data-view': v, 'data-place': sec.under || sec.id }, head, about, grid));
         return;
       }
       const row = makeRow(sec.title, screens, v === 'screens');
       const [head, about] = sectionHead(sec, screens, [replayButton(screens), ...row.arrows]);
-      main.append(h('section.sec', { id: 'sec-' + sec.id, 'data-view': v }, head, about, row.rowEl));
+      main.append(h('section.sec', { id: 'sec-' + sec.id, 'data-view': v, 'data-place': sec.under || sec.id }, head, about, row.rowEl));
     });
 
     // Research: every reference, grouped by the section it informed. What we took is the intent,
@@ -449,7 +450,7 @@
           return fig;
         })))) : h('p.empty', 'No research yet. The app-research skill fills this view.')));
     const secIo = new IntersectionObserver((entries) => entries.forEach((e) => {
-      if (!e.isIntersecting) return;
+      if (!e.isIntersecting || (CFG.placeTabs && view !== 'research')) return;
       const id = e.target.id.replace(/^(sec|res)-/, '');
       tabs.querySelectorAll('.tab').forEach((t) => t.classList.toggle('is-on', t.dataset.sec === id));
     }), { rootMargin: '-45% 0px -50% 0px' });
@@ -461,18 +462,30 @@
 
   const applyView = () => {
     document.querySelectorAll('.view').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.view === view)));
-    main.querySelectorAll('.sec').forEach((s) => (s.hidden = s.dataset.view !== view));
     tabs.replaceChildren();
+    // A row with `under: '<row id>'` belongs to that row's place and has no tab of its own; `place:` is the tab's name.
     const links = view === 'research'
       ? [...main.querySelectorAll('.research-group')].map((g) => [g.id.slice(4), g.querySelector('h3').textContent, g])
-      : SECTIONS.filter((s) => viewOf(s) === view).map((s) => [s.id, s.title, document.getElementById('sec-' + s.id)]).filter(([, , t]) => t);
+      : SECTIONS.filter((s) => viewOf(s) === view && !s.under).map((s) => [s.id, s.place || s.title, document.getElementById('sec-' + s.id)]).filter(([, , t]) => t);
+    // CFG.placeTabs (its value names the first tab, or true for "All"): the places are tabs, not jumps. A place shows its own rows
+    // alone, so the owner sees all of one place at once; the first tab shows every place.
+    const asTabs = !!CFG.placeTabs && view !== 'research' && links.length > 1;
+    const pl = asTabs && links.some(([id]) => id === place) ? place : '';
+    main.dataset.place = pl;
+    main.querySelectorAll('.sec').forEach((s) => (s.hidden = s.dataset.view !== view || !!(pl && s.dataset.place && s.dataset.place !== pl)));
+    if (asTabs) links.unshift(['', CFG.placeTabs === true ? 'All' : CFG.placeTabs, null]);
     links.forEach(([id, title, target]) => {
-      const b = h('button.tab', { type: 'button', 'data-sec': id }, title);
-      b.addEventListener('click', () => target.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      const b = h('button.tab', { type: 'button', 'data-sec': id }, String(title).replace(/\*/g, ''));
+      if (asTabs) { b.classList.toggle('is-on', id === pl); b.addEventListener('click', () => setPlace(id)); }
+      else b.addEventListener('click', () => target.scrollIntoView({ behavior: 'smooth', block: 'start' }));
       tabs.append(b);
     });
+    tabs.classList.toggle('is-places', asTabs);
     tabs.hidden = links.length < 2;
+    if (CFG.onPlace) { try { CFG.onPlace(pl, view); } catch (e) { console.error(e); } }
   };
+  /** Show one place alone ('' shows them all). */
+  const setPlace = (id) => { place = id || ''; try { localStorage.setItem(PLACE_KEY, place); } catch {} applyView(); window.scrollTo({ top: 0 }); };
   const setView = (v) => { view = v; try { localStorage.setItem(VIEW_KEY, v); } catch {} applyView(); window.scrollTo({ top: 0 }); };
 
   const refreshAll = () => {
@@ -537,8 +550,18 @@
     area.value = (note && note.text) || '';
     const saveBtn = h('button.play', { type: 'button' }, 'Save note');
     const clearBtn = h('button.ghost', { type: 'button' }, 'Clear');
-    const m = modal(h('div.note', h('h3', `${numberOf(id)} · ${s.name}`), area, h('div.note-actions', clearBtn, saveBtn)));
-    saveBtn.addEventListener('click', async () => { const text = area.value.trim(); if (text) await save('notes', id, { text }); else await remove('notes', id); refreshAll(); m.close(); });
+    // Notes on many screens in one sitting: an arrow keeps this note and opens the next screen's (the board's order, among the
+    // cards showing now), with its card brought into view. The owner must never have to close the sheet to note the next screen.
+    const shown = order.filter((x) => { const c = tabCard.get(x); return c && c.el.offsetParent !== null; });
+    const at = shown.indexOf(id);
+    const keep = async () => { const text = area.value.trim(); if (text) await save('notes', id, { text }); else if (state.notes[id]) await remove('notes', id); refreshAll(); };
+    const step = async (d) => { const to = shown[at + d]; if (!to) return; await keep(); m.close(); const c = tabCard.get(to); if (c) { c.select(to, { user: true }); c.el.scrollIntoView({ block: 'center', inline: 'center' }); } openNote(to); };
+    const prevBtn = h('button.ghost', { type: 'button', disabled: at <= 0 }, '← Previous');
+    const nextBtn = h('button.ghost', { type: 'button', disabled: at < 0 || at >= shown.length - 1 }, 'Next →');
+    prevBtn.addEventListener('click', () => step(-1));
+    nextBtn.addEventListener('click', () => step(1));
+    const m = modal(h('div.note', h('h3', `${numberOf(id)} · ${s.name}`), area, h('div.note-actions', prevBtn, nextBtn, h('span', { style: { flex: '1' } }), clearBtn, saveBtn)));
+    saveBtn.addEventListener('click', async () => { await keep(); m.close(); });
     clearBtn.addEventListener('click', async () => { await remove('notes', id); refreshAll(); m.close(); });
     setTimeout(() => area.focus(), 50);
   };
@@ -627,5 +650,5 @@
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
-  F.board = { openPlayer, state, cards, tabCard };
+  F.board = { openPlayer, state, cards, tabCard, setPlace };
 })();

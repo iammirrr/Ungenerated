@@ -16,7 +16,8 @@ can no longer read.
 | Level | Is | Holds |
 |---|---|---|
 | Tab at the top | A part of the work | The whole app (journey order, in the app today and not yet, per place), Later (features set aside), Kit, Language, Character |
-| Row | A place or a flow | Its screens in the order a person meets them |
+| Place tab, under the top bar | A place of the app (before the app, each tab of the app, what opens from a corner button, settings, outside the app) | That place's rows alone, with its branch of the map; the first place tab shows every place |
+| Row | One flow or group inside a place (the home screen's acts, an item in full, while they work, when it can't) | Its screens in the order a person meets them |
 | Card | One screen | One live phone |
 | Tabs on top of the card | That screen's versions, states, use cases and edge cases | Default, empty, offline, error, returning, the other designs to pick from |
 
@@ -25,6 +26,19 @@ can no longer read.
   2026: "if you are creating variations, you do not want to create more screens. Instead, you want
   to put at the top of the tabs so I can see within the screen. So it's not very bloated ... so I
   can exactly tell you: okay, this one is not needed, this one is needed".
+- **A tab is the same screen again. A different act is its own card.** The test: would the owner
+  call it "the same screen"? The same layout with other data, another state, an edge case or a
+  second design to pick from is a tab. A different thing the person does (tap an item, drag across
+  a line, type it, say it), a sheet that opens, or the next step of a flow is a card of its own,
+  beside the last, in the order met. Applying "variations are tabs" too hard put seventeen screens
+  of Pip's home behind the tabs of one card; the owner could no longer see his main screen, could
+  not find a feature he had asked for ("have you added the book quotations there? I can't see it")
+  and asked for it back: "read have all the screen on reads". More than about five tabs on a card
+  means it is hiding screens: split it. (Pip, 27 Nov 2026)
+- **The places are tabs.** One long page of everything made the owner scroll past the whole
+  onboarding to reach Settings. `placeTabs` in board.config.js turns the app's places into tabs
+  under the top bar: "Read has all the screens of Read, Settings has settings". Name a place the
+  way the owner says it. A link to a card on another place's tab switches to that tab first.
 - **An idea is one card.** A feature not in the app yet is one card; its screens and states are its
   tabs.
 - **Set-aside features get the Later tab,** never rows mixed into the app's own places.
@@ -86,6 +100,13 @@ F.def({
 - Variations, states and edge cases are tabs on one card (the levels, above), never extra cards or rows.
 - Every card's intent says where the screen is reached from: "where do I come from to this screen?"
   is the first question the owner asks of a feature.
+- **Anything he can see, he can note, and the next screen is one arrow away.** Note is on every
+  card and every tab; the note window steps to the previous and next screen without closing (each
+  tab is a stop, the note is kept as he moves, a dot marks every card and tab that has one). A
+  window that noted one screen and then had to be closed got "I should be allowed to add feedback
+  on various screens on the board".
+- Rows wrap (`wrapRows`): no card lives off to the right. A feature that was twelfth in a sideways
+  row was taken for deleted.
 - Theme switch (Auto, Light, Dark) and Play the flow in the top bar. Nothing else up there.
 
 ## Publish it
