@@ -160,3 +160,8 @@ fallback string. (Comma, Nov 2026)
   install from TestFlight (an orange dot by the app's name) and check the purchase sheet says sandbox before
   confirming; otherwise it's real money. The owner of Comma bought his own subscription this way on launch day.
   (Comma, Nov 2026)
+- **TestFlight must honour the tester's real subscription.** Counting only entitlements from the current environment keeps
+  free sandbox purchases out of the store build, but it also hides a real App Store subscription (and a promotional
+  grant) on TestFlight, so the owner who paid sees the paywall in his own test build. Count every active entitlement on
+  TestFlight and App Review; count only production ones, promotional grants included, in the store build. "In the test
+  the same user [should] get their subscription" (Comma, Nov 2026)

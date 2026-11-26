@@ -869,3 +869,29 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **Cancelling inside the app ends on a designed screen.** Pro until the date, what stops then, the character's sad mood
   and a warm way back that opens the store's own sheet; never a bare "Subscribe again" button. "It doesn't really show
   anything ... that's supposed to happen in a very nice way" (Comma, Nov 2026)
+- **An assistant connector is paid per call, not at the door.** Anyone can sign in and connect, a free trial included;
+  every tool call checks for an active subscription and, without one, answers with what the subscription gives and where
+  to get it. No free taste until the owner knows how people use it. "We put check on the ... call itself: without active
+  subscription you can't use this" (Comma, Nov 2026)
+- **A connection ends with what it gives.** Each use renews it; it ends after a stretch unused (60 days), when the
+  subscription ends, or on disconnect, never on a fixed date while it's in use. A connection that keeps going while giving
+  nothing is pointless. (Comma, Nov 2026)
+- **The person's own assistant spends its own usage.** Inside ChatGPT, Claude or Codex, the writing, the research (deep
+  research, visuals) and the planning run on the person's assistant and its limits; the app's server only serves its data
+  and saves. Requests that cost the app (a breakdown, a render) count against the same daily limit as in the app.
+  (Comma, Nov 2026)
+- **The connector knows the whole path.** From a saved script it can find the reel it borrowed, what was filmed, and go on
+  to editing that same video, always on the person's own topic; editing help shows the reference's own frames and speaks
+  to the editors people use, including the ones with no API (step by step). (Comma, Nov 2026)
+- **What people film never vanishes.** Keep each take's record with the data that syncs (when, how long, how far it got,
+  the photo library's id), save the clip to their photo library too, and when the file is gone show the take as gone
+  instead of dropping it. Deleting and reinstalling the app must bring every take back. "If I delete app and reopen or
+  delete video, [it] doesn't show [anything]" (Comma, Nov 2026)
+- **The top of a library is fresh and theirs.** Lead with what's new, weighted to the format this person makes most (their
+  onboarding answer, then what they've written and filmed), never the same most-prolific creators on every visit.
+  (Comma, Nov 2026)
+- **The writer reads the format from what they typed.** They say "talking head": write a talking head, don't ask. Ask only
+  what the input can't tell. With no context at all, write something creative and strong: an empty request is a call for
+  creativity, never for a placeholder. (Comma, Nov 2026)
+- **A result the system won't keep still has a way forward.** Kind words about why it isn't in the shared library, plus
+  "do it anyway" for that one person. (Comma, Nov 2026)

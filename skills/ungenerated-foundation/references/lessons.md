@@ -302,3 +302,10 @@ exact looks are examples only; the rule is what transfers.
 - **Keep building while he reviews.** New notes on the board arrive while the app is being built: the board round and the
   build run side by side, and a screen whose design just changed is ported again afterwards, said plainly. (Pip, 27 Nov
   2026)
+- **A plan line the owner can't follow has failed.** Say what changes for a person, with an example, never server words
+  (logs, bot checks, sync, versions). Two technical lines came back "didn't get it" and "I don't understand". (Comma, Nov 2026)
+- **Every limit gets its scale answer.** When a number comes up (a cap, a quota, a plan), say what happens at ten times
+  today's users and what raising it takes. "What if we do have like 5k users at some point?" (Comma, Nov 2026)
+- **A cookbook for each command the owner will use.** What to type, what happens behind it step by step, what comes back
+  and where it lands, what it costs and whose usage it spends. "Give me cook book for each so I understand and know what
+  is happening" (Comma, Nov 2026)
