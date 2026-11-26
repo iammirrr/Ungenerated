@@ -197,6 +197,12 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   leave the audio silent, and a recorder that asks for speech recognition with the microphone fails
   for anyone who says no to transcripts. (Comma, Oct–Nov 2026)
 
+- **The AI permission travels with the person, not with one screen.** A yes given inside onboarding's try-it is lost
+  when someone signs in with an existing account (skipping it), reinstalls or signs out, and the writing screen then
+  stops them mid-idea to ask. Put the disclosure line under every AI button ("Written by Claude (Anthropic) · Privacy")
+  and let the tap be the yes, the way the approved onboarding does; never reset it on sign-out. "It shouldn't ask that
+  ... You can add a little disclaimer at the bottom" (Comma, Nov 2026)
+
 ## Paywall and the offer
 
 - **Hard paywall.** "Currently if I cancel, it just let me in the app, which is pretty bad."
@@ -415,6 +421,27 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   page and the paywall have it), pages about concepts the product dropped, and anything for a feature this release
   doesn't have read as junk. The setting for an onboarding answer reuses the onboarding's own screen, without the tab
   bar. "REMOVE USELESS STUFF FROM SETTING" (Comma, Nov 2026)
+- **Say a weak result kindly, and turn it toward the person.** "Not an outlier" or "0.6x their average, so it didn't
+  stand out" reads as a verdict on what they liked. Say it didn't take off for that creator and the format can still work
+  for them. "We need to politely tell them" (Comma, Nov 2026)
+- **When work someone asked for is done, the next open says so.** A sheet with what finished, each one a tap away, the
+  push opening the same place, and the data it points to refreshed first; never make them go and check a list. "I do not
+  get that pop-up when open the app ... We did that for you" (Comma, Nov 2026)
+- **Nothing the person made or paid for disappears on Back or "another way".** A pasted draft survives Back; a second AI
+  version sits beside the first, never in its place. "Is the data safe? ... it doesn't mean that you delete the one that
+  he spent credit on" (Comma, Nov 2026)
+- **An AI that writes on its own learns from many examples and copies none.** With no example chosen, write one strong
+  original draft in the format the person picked, drawing on the structure of several examples, and say which format it
+  used. Three drafts that each follow one creator read as copying. "It should learn from them ... it should not copy
+  them" (Comma, Nov 2026)
+- **A checklist is two short lists.** Claims to check before saying them, and what to get right on the day. Anything
+  generic or long goes. "Checklist is supposed to be a really nice shorts list" (Comma, Nov 2026)
+- **A stage changes when the person says so, and everything opens from every stage.** The first take makes a script
+  Filming; Filmed waits for their Done; a filmed or posted item still opens to read it or film again. "It's not filmed
+  until I mark it done ... I can't even open it" (Comma, Nov 2026)
+- **Every take shows its frame.** A list of recordings without thumbnails can't be told apart. (Comma, Nov 2026)
+- **A picker of kinds fits one screen.** Story, opinion, how-to: aligned rows, a few words each, the app's own icons, no
+  scrolling. (Comma, Nov 2026)
 ## Porting to native
 
 - **Port UI and motion first, one section at a time; wire services last.** "For all the
@@ -593,6 +620,33 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   pages, want a setup page, a privacy page, support and an icon, and need a reviewer login. Sign in with Apple can't
   be shared with a reviewer, so a second provider (Google, with a dedicated reviewer account on a comped plan) is part
   of the listing work. (Comma, Nov 2026)
+
+- **Approved is not published, and publishing opens the door to strangers.** An assistant directory's approval waits
+  for the owner's Publish. Before pressing it, walk the path a stranger takes from the listing: no account yet, no
+  subscription, a different sign-in than on their phone. If any of those ends on "not available yet", the listing turns
+  away the people it brought. "We got MCP approved on ChatGPT" (Comma, Nov 2026)
+- **Two accounts meet only on the app's own sign-in page; never match them by email.** The assistant's account (any
+  email) and the app's account (a hidden Apple address, a Google one) are joined by the connector's sign-in alone. Show
+  whose account it is before Allow (the name, what it holds, how they signed in), warn when it is brand new and empty
+  ("is this the account on your phone?"), and offer "use a different account": a person who signs in another way lands
+  in a second, empty account. "My account on the Comma could be potentially Apple login, but the authentication of the
+  ChatGPT is different accounts" (Comma, Nov 2026)
+- **A connection lasts while it's used.** A fixed 30-day grant quietly disconnects everyone each month; renew it on use
+  and end it only after a stretch without use. (Comma, Nov 2026)
+- **The connector's address is permanent; the website can move.** The server's URL is inside every token, the sign-in
+  server's identity and every directory listing, and a redirect can't carry a sign-in to a new host, so moving it makes
+  everyone reconnect and needs a new listing. Give it a hostname you will keep before strangers connect; the marketing
+  site can change domain any time, with redirects for the pages old app builds still open. "Later down the road, I want
+  to have its own website" (Comma, Nov 2026)
+- **What changes often lives in what the server returns.** Writing rules, formats and limits served by a guide tool can
+  change any day; tool names and descriptions are rescanned by the directories; the listing's links, logo and skills go
+  back to review. Keep the reviewed parts stable and the behaviour in data. (Comma, Nov 2026)
+- **New tools go to a second server first.** Changes to a listed server go live after the directories' automatic scans,
+  so try them on a staging copy added beside it (a custom MCP server in ChatGPT, a custom connector in Claude). "I want to
+  start testing them before I ship it" (Comma, Nov 2026)
+- **Offer fixed client identities, or registrations pile up.** With dynamic registration only, an assistant can register
+  a new client on every fresh connection and a storage cap fills on launch day. Advertise Client ID Metadata Documents for
+  the big assistants and keep dynamic registration as the fallback. (Comma, Nov 2026)
 
 - **Built feedback leaves the board at once.** As soon as a note is built, delete it from the board's notes, side by side
   with the work; re-read the notes first and delete only the ones actually built (a new note can arrive while you work),

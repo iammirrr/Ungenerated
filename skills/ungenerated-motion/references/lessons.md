@@ -224,3 +224,6 @@ are examples only.
   user is still in the onboarding (a few at a time, newest first), but don't decode them: decoding hundreds fills memory,
   iOS empties the in-memory cache, and tiles reload. Give the in-memory cache a cost ceiling so it drops the oldest
   pictures first. "Load the thumbnails at the start so they don't look empty when we reach there" (Comma, Nov 2026)
+- **While AI works, everything else steps back.** The glow on the writing is the only thing moving; the other choices
+  fade back until it's done. "Others options should fade here ... it needs to show that, okay, it's writing" (Comma,
+  Nov 2026)
