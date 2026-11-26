@@ -120,3 +120,23 @@ example is `examples/IMAGE-PROMPTS.md` at the root of this repository (seven set
   height, about 90% down"), so poses swap in place. Poses come from the owner's own drawing, moved about its joints;
   never redesign the character.
 - **No text, letters, logos, watermarks, borders or frames** in any picture.
+
+## Running Codex from Claude
+
+When the owner's Mac has the ChatGPT desktop app, its Codex CLI is already signed in and can make the pictures without
+the owner pasting anything:
+
+```sh
+CODEX=/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex   # not on PATH; `codex features list` shows image_generation
+$CODEX exec -C <project>/graphics -s workspace-write -c model_reasoning_effort="medium" \
+  -i <character sheet> <props sheet> <one approved icon> -- \
+  "Make exactly one picture with your image generation tool, then save it. The attached images are style references only.
+   Prompt for the picture (use it word for word): <style paragraph> Subject: <subject>.
+   Output: a 1024 x 1024 PNG with a real transparent background, saved at <path>. Do not create, edit or delete any other file."
+```
+
+- One picture per run; three runs in parallel is fine. Each takes about two minutes and uses the owner's ChatGPT plan.
+- Originals go to a sources folder; the app's copies are resized (icons to the size the app reads, scenes to 2× their
+  largest use) and placed by name, never over an approved file.
+- Look before placing: size and alpha with `sips`, then a contact sheet on light and dark beside the approved set; redo
+  weak ones by name.

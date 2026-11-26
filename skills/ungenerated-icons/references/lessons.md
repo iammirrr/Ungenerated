@@ -86,6 +86,13 @@ it came from. Comma's own look (its palette, its clapperboard character) appears
     the script replace each placeholder on the board and in the app at once. (Comma, Nov 2026)
 30. **Redo weak icons by name, with the reason.** Regenerating a whole set to fix two loses the ones already approved.
     (Comma, Nov 2026)
+32. **When the owner has the ChatGPT app, Claude runs Codex itself.** The app bundles a signed-in Codex CLI with image
+    generation on: `/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex exec -C <art dir> -s workspace-write -i
+    <refs…> -- "<style prompt + subject + output path, true alpha>"`, one picture a run, three runs in parallel, about two
+    minutes each. The `--` matters: `-i` takes several files and swallows the prompt. Check every file's size and alpha
+    (`sips -g hasAlpha`), lay them on a contact sheet on light and dark beside the approved set, and only then put them in
+    their rows. "CAN YOU USE CODEX CLI FROM WITHIN AND CREATE THE ASSETS HERE": thirteen icons and a gift card's art came
+    back usable in one pass. (Pip, Nov 2026)
 31. **Claude makes the banners; the icons go to the image model as written drafts.** "BANNER SHOULD BE MADE BY CLAUDE
     ICON SHOULD BE WRITTEN DRAFTS TO CODEX". (Comma, Nov 2026)
 

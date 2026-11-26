@@ -5,9 +5,10 @@ description: On-brand icons and the app icon for any mobile app, made by an imag
 
 # Icons: a brief for the image model, real brands kept real
 
-Claude can't make images. This skill finds every icon the app needs, writes the brief, and sends the owner to Codex
-(or ChatGPT) to make them; inside Codex, it makes them directly. Then it brings them in by name and checks them where
-they show.
+Claude can't draw images itself. This skill finds every icon the app needs and writes the brief. Then, when the owner's
+Mac has the ChatGPT app, Claude runs the Codex CLI bundled inside it and has Codex make every picture
+(`references/brief-template.md` › Running Codex from Claude). Otherwise it sends the owner to Codex or ChatGPT; inside
+Codex, it makes them directly. Then it brings them in by name and checks them where they show.
 
 ## Steps
 
