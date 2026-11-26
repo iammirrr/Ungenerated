@@ -40,6 +40,12 @@ it and note why.
 | T22 | Coloured state rows | Rows tinted blue, orange or green to mean a status | Neutral rows and a state icon that reads at a glance |
 | T23 | Big-text cards | A card that is only one big line of text | Text on the ground, or a real visual that explains |
 | T24 | The landing template | Marquees, logo walls, pins, a feature carousel with dots | Plain pages; before and after side by side; parts shown alone |
+| T44 | Variations as more cards | A row of near-identical phones: the same screen offline, empty, returning, a second design | One card; its versions, states and edge cases as tabs on top of it |
+| T45 | The floating toast | A dark pill at the bottom saying what just happened ("Saved", "Copied", "Shelf is back") | Show the change in place; a pop-up card only for an announcement |
+| T46 | Settings scattered | Cancel, delete, notifications or feedback as screens of their own outside Settings | Rows in Settings, reached from the profile |
+| T47 | A screen with no way in | A feature drawn on its own with nothing that leads to it | Draw the door first: the button, the row or the moment that opens it |
+| T48 | Showing what happens by itself | Backup, sync and "saved to the cloud" screens and badges | Nothing: it is the service. Say it once, in Settings or the paywall |
+| T49 | The mascot at work | The character on a camera or working screen, or crawling across the top as a progress bar | Keep it for moments: the end, an empty state, the profile |
 
 ## Copy
 

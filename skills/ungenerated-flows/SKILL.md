@@ -65,6 +65,9 @@ and counts, never the person's own words.
   the way to it or "Keep my plan" on any step; never mark "cancelled" from the phone.
 - Never a question screen that doesn't ask; never a persona label; never "Step 2 of 4".
 - Never let a drag control give its drag to the screen behind it (reported 18 times).
+- Never a variation as another card, row or tab of the board: a screen's versions, states and
+  edge cases are tabs on its one card; an idea is one card; set-aside features go to Later; anything
+  settings-like is a row under Settings (design-board.md › the levels).
 - Never write native code for a screen that isn't approved on the board, and never ship the test
   bar in a build anyone else uses.
 - Never leave a cut screen in the code, or a board note unapplied in the app.

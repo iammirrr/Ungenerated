@@ -59,8 +59,11 @@ the app feels finished.
   line of input (a note). A grab handle, a title, the content, one main action.
 - **Cards that rise from the bottom** for a question or a nudge in the middle of work (a check-in,
   "Time for a break?", "Ready when you are."), above the tab bar, never covering the main control.
-- **Toasts** for what just happened, in under three seconds, one at a time, with Undo when it can
-  be undone ("Switched to Admin", "Break started", "Note saved").
+- **No toasts for what just happened.** Show it in place: the item moves to where it went, a count
+  rolls, a row slides out, the switched thing changes where the person is looking. Undo of something
+  destructive happens where it was (the row shrinks to a thin "Removed · Undo" line). An
+  announcement (What's new, a limit reached) is a **pop-up card** in the middle. Owners called the
+  floating pill "absolutely disgusting" (Pip, Nov 2026; lessons).
 - **The platform's own alert** for anything destructive, with the destructive word in red and a
   safer choice first ("Delete Side project?" → Cancel, Archive instead, Delete).
 - **Notifications** in the app's own words, each with a switch in Settings, and the important ones

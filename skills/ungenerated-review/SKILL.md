@@ -45,6 +45,9 @@ accessible, and proven to work on the real thing.
 - Never let a tell through because it is small: small text, a sparkle, a shadow behind an icon are
   each enough to read as generated.
 - Never use headless virtual time for motion frames; it freezes animations mid-way.
+- Never show a round as more cards than screens: versions, states and edge cases are tabs on the
+  screen's one card (T44), and the owner gets a link to the whole board at that row, never to one
+  card alone.
 
 ## Read when
 

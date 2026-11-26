@@ -343,6 +343,74 @@ body.has-player { overflow: hidden; }
 .card[hidden] {
   display: none;
 }
+/* A screen's versions, states and edge cases: tabs on top of its one card, never more cards. One line; when they run past the card
+ * it fades at the edge and scrolls. A row with any tabbed card keeps its phones level. */
+.card-tabs {
+  display: flex;
+  gap: 4px;
+  height: 28px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.card-tabs::-webkit-scrollbar {
+  display: none;
+}
+.card-tabs.is-over {
+  -webkit-mask-image: linear-gradient(to right, #000 82%, transparent);
+  mask-image: linear-gradient(to right, #000 82%, transparent);
+}
+.row-scroll.has-tabs .card:not(.has-tabs) .card-bar {
+  margin-bottom: 36px;
+}
+.card-tab {
+  position: relative;
+  flex: none;
+  height: 26px;
+  margin-top: 1px;
+  padding: 0 10px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--b-line);
+  color: var(--b-muted);
+  font: 500 12px/26px inherit;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+.card-tab:hover {
+  color: var(--b-ink);
+}
+.card-tab[aria-selected="true"] {
+  background: var(--b-ink);
+  box-shadow: none;
+  color: var(--b-bg);
+}
+.card-tab.is-picked {
+  padding-left: 20px;
+}
+.card-tab.is-picked::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--b-accent);
+}
+.card-tab.has-note::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--b-accent);
+}
 .card-bar {
   position: relative;
   display: flex;

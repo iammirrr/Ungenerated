@@ -33,9 +33,22 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   Comma, Oct 2026)
 - **Each part of the journey is its own section.** "There is no separate section for account,
   plan, paywall, setup; you basically combined those." (Comma, Oct 2026)
-- **Variations are a switch on one card, picked by letter.** The owner chose "C for the main",
-  "combine E and D". A cut screen is deleted from the board and the app the same round: "why the
-  screen I cancelled are not deleted?" (Comma and Flamely, Oct 2026)
+- **Variations are tabs on one card, never more cards.** A screen's versions, states, use cases and
+  edge cases sit as tabs on top of its one card; an idea not built yet is one card with its screens
+  as tabs; features set aside go to a Later tab. Two days of "go crazy with variations" buried the
+  app under near-identical phones: "you created a lot of boards ... this kind of like fucks up 80%
+  of the things", then "put at the top of the tabs so I can see within the screen ... so I can
+  exactly tell you: okay, this one is not needed". Picks still work per tab; a cut screen is deleted
+  from the board and the app the same round: "why the screen I cancelled are not deleted?" (Pip, Nov
+  2026; Comma and Flamely, Oct 2026)
+- **Show changes on the board, never as a proposal in chat.** A written list of problems and a plan
+  ending in a question got "please always do things on the board, don't make more complications";
+  a link to one card alone got "give me the whole board, otherwise we will never understand
+  anything". Redraw in place, open the whole board at that row, say in two lines where to look. (Pip,
+  Nov 2026)
+- **Keep what the owner pointed at.** Asked to improve a look he liked, flattening it into rows with
+  text beside it read as "looks shit": open the picture he pointed at and keep that object whole;
+  fix the screen around it. (Pip, Nov 2026)
 - **The board is the spec, and notes are the open list.** Every note reaches the native app in the
   same round and is cleared only when it's true on the phone: "I hope you applied the comment to
   actual application as well." (Comma, Oct 2026)
@@ -213,6 +226,18 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 
 ## Cancel, deletion, feedback
 
+- **Everything about the account lives in Settings, nowhere else.** Cancel, delete, the plan,
+  notifications and the feedback board as their own places on the board read as "so much mental
+  fatigue ... put all this thing in settings". Model Settings one to one on an app that already
+  works (account, manage subscription, restore, sign out, delete). (Pip, Nov 2026)
+- **A cancel flow collects why.** "the cancel flow is just so fast that we did not really collect
+  any data": ask the reason (with "I'm just trying it out" among them), ask people who cancelled
+  outside the app the same question when they next open it, and make the offer its own paywall.
+  (Pip and Comma, Nov 2026)
+- **Limit posting on an in-app feedback board.** "People can post 10 ideas ... that would be
+  disaster": one open idea per person, similar ideas shown before posting so they vote instead,
+  reached from Settings › About › Help us improve; the same board on the web. (Pip, Nov 2026)
+
 - **Cancel goes all the way, with "Keep my plan" at every step.** What they made → why → one
   follow-up → one real offer → the store's own sheet → goodbye with dates: "MAKE THE FULL CANCEL
   FLOW A LOT MORE IN-DEPTH." (Comma, Nov 2026)
@@ -251,6 +276,26 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   cascade from the account. "MAKE 100% SURE ACCOUNT DELTEION AND ALL THE STUFF IS WROKING" (Comma, Nov 2026)
 
 ## The app's own screens and AI writing
+
+- **No toasts for what just happened.** "I hate the toast across the app. That toast looks
+  absolutely disgusting." Show the change in place (the item moves where it went, a count rolls, a
+  row slides out); an announcement such as What's new is a pop-up card ("sometimes the pop-ups are a
+  lot better"); undo of something destructive happens where it was. This replaces toasts in
+  app-screens.md. (Pip, Nov 2026)
+- **No screen for what happens by itself.** Backups, saved covers and two phones syncing are the
+  service people pay for, not features to show: "this will happen autonomously ... that is why we
+  are taking money from them." (Pip, Nov 2026)
+- **Every feature has a way in.** A feature drawn with no door ("where do I come from to this
+  screen? ... we have to have a systemized way of doing things") cannot be judged. Draw where it is
+  reached from first. (Pip, Nov 2026)
+- **The character is never on a working screen or a progress bar inside the app.** "in the reading
+  screen, never show Pip"; a worm crawling across the top of review screens was "the worst way to
+  represent that". It belongs to moments: the end of a session, an empty state, the profile. (Pip,
+  Nov 2026)
+- **Real items only, everywhere.** Made-up books on a board that has real covers: "you are using
+  artificial ... books. Bro, you need to stop doing that." (Pip, Nov 2026)
+- **The profile is a button at the top right, not a tab.** Settings and the profile opened from
+  the person's own round button; the tab bar keeps only the places of the job. (Pip, Nov 2026)
 
 - **Creating never starts on a blank page.** "If we click on write script, it should never start
   from like a blank page, that is what we are eliminating." Gather their material first, then ask

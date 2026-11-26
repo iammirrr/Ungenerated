@@ -181,25 +181,72 @@
     el.classList.add('is-on');
   };
 
-  const buildCard = (screen) => {
+  // One card per screen. A screen's versions, states, use cases and edge cases are tabs on top of its one card, never more cards (a
+  // reviewer cannot judge a row of near-identical phones). A screen with `tabOf: '<id>'` is a tab of that screen's card; screens of a
+  // row that share a Pick `group` are tabs of one card. `tab`: the tab's label (else the part of the name after its first " · ").
+  // → [{ lead, tabs }] in row order.
+  const cardsOf = (screens) => {
+    const units = [], unitOf = new Map(), later = [];
+    screens.forEach((s) => {
+      if (s.tabOf && s.tabOf !== s.id && screens.some((x) => x.id === s.tabOf)) return later.push(s);
+      const u = s.group && units.find((x) => x.group === s.group);
+      if (u) { u.tabs.push(s); unitOf.set(s.id, u); return; }
+      const n = { lead: s, tabs: [s], group: s.group || null };
+      units.push(n);
+      unitOf.set(s.id, n);
+    });
+    // A tab of a tab is a tab of the same card.
+    for (let guard = later.length * later.length + 1; later.length && guard > 0; guard--) {
+      const s = later.shift(), u = unitOf.get(s.tabOf);
+      if (u) { u.tabs.push(s); unitOf.set(s.id, u); } else later.push(s);
+    }
+    later.forEach((s) => { const n = { lead: s, tabs: [s], group: s.group || null }; units.push(n); unitOf.set(s.id, n); });
+    return units;
+  };
+  const tabLabel = (s) => s.tab || (String(s.name).includes(' · ') ? String(s.name).split(' · ').slice(1).join(' · ') : s.name).replace(/^./, (x) => x.toUpperCase());
+  /** Every tab's id → its card (a card is in `cards` under its first tab's id only). */
+  const tabCard = new Map();
+
+  const buildCard = (screen, tabs = [screen]) => {
     const fit = h('div.stage-fit');
     const stage = h('div.stage', fit);
     const hap = h('span.card-haptic', { 'aria-live': 'polite' });
     const tool = (icon, label, cls = '') => h('button.tbtn' + cls, { type: 'button', title: label, 'aria-label': label }, F.icon(icon, { size: 15 }));
     const replayBtn = tool('rotate-ccw', 'Replay');
     const noteBtn = tool('message-square-text', 'Note', '.is-note');
-    const pickBtn = screen.group ? tool('award', 'Pick this variation', '.is-pick') : null;
+    const pickBtn = tabs.some((s) => s.group) ? tool('award', 'Pick this variation', '.is-pick') : null;
     const infoBtn = tool('info', 'What this screen is for', '.is-info');
     const noteText = h('p.card-note');
     const badge = h('span.card-badge');
-    const info = h('div.card-info', h('strong', screen.name), h('p', screen.intent || ''), noteText);
-    const el = h('article.card', { id: 's-' + screen.id },
+    const infoName = h('strong', screen.name), infoText = h('p', screen.intent || '');
+    const info = h('div.card-info', infoName, infoText, noteText);
+    const title = h('strong', { title: screen.name }, screen.name);
+    const tabBtns = tabs.length > 1 ? tabs.map((s) => h('button.card-tab', { type: 'button', role: 'tab', 'data-id': s.id, 'aria-selected': String(s === screen), title: s.name }, tabLabel(s))) : [];
+    const el = h('article.card' + (tabBtns.length ? '.has-tabs' : ''), { id: 's-' + screen.id },
       h('div.card-bar', h('span.card-n', numberOf(screen.id)), h('div.card-tools', replayBtn, noteBtn, pickBtn, infoBtn), hap),
+      tabBtns.length ? h('div.card-tabs', { role: 'tablist', 'aria-label': 'Versions and states of this screen' }, tabBtns) : null,
       h('div.stage-wrap', stage, info),
-      h('div.card-title', h('strong', { title: screen.name }, screen.name), badge));
-    const c = { el, stage: fit, screen, ctx: null, visible: false, hap, noteText, noteBtn, pickBtn, badge };
+      h('div.card-title', title, badge));
+    const c = { el, stage: fit, screen, tabs, tabBtns, ctx: null, visible: false, hap, noteText, noteBtn, pickBtn, badge };
+    /** Show one of the card's tabs (o.user: the reviewer chose it, so their Pick no longer moves the card). */
+    c.select = (id, o = {}) => {
+      const s = tabs.find((x) => x.id === id);
+      if (!s) return;
+      if (o.user) c.chosen = true;
+      if (s === c.screen) return;
+      c.screen = s;
+      title.textContent = s.name;
+      title.title = s.name;
+      infoName.textContent = s.name;
+      infoText.textContent = s.intent || '';
+      tabBtns.forEach((b) => b.setAttribute('aria-selected', String(b.dataset.id === id)));
+      refreshCard(c);
+      if (c.visible) mountCard(c); else c.mounted = false;
+    };
+    tabBtns.forEach((b) => b.addEventListener('click', () => c.select(b.dataset.id, { user: true })));
+    if (tabBtns.length) { const strip = tabBtns[0].parentNode; new ResizeObserver(() => strip.classList.toggle('is-over', strip.scrollWidth > strip.clientWidth + 1)).observe(strip); }
     replayBtn.addEventListener('click', () => mountCard(c));
-    noteBtn.addEventListener('click', () => openNote(screen.id));
+    noteBtn.addEventListener('click', () => openNote(c.screen.id));
     infoBtn.addEventListener('click', () => {
       const on = !el.classList.contains('is-info');
       document.querySelectorAll('.card.is-info').forEach((x) => x.classList.remove('is-info'));
@@ -207,12 +254,33 @@
     });
     info.addEventListener('click', () => el.classList.remove('is-info'));
     pickBtn && pickBtn.addEventListener('click', () => {
-      const picked = state.picks[screen.group] && state.picks[screen.group].choice === screen.id;
-      (picked ? remove('picks', screen.group) : save('picks', screen.group, { choice: screen.id })).then(refreshAll);
+      const g = c.screen.group;
+      if (!g) return;
+      const picked = state.picks[g] && state.picks[g].choice === c.screen.id;
+      (picked ? remove('picks', g) : save('picks', g, { choice: c.screen.id })).then(refreshAll);
       refreshAll();
     });
     cards.set(screen.id, c);
+    tabs.forEach((s) => tabCard.set(s.id, c));
     return c;
+  };
+  /** A card's note, pick and badge, for the tab it shows; a dot on every tab that has a note, a mark on the picked one. */
+  const refreshCard = (c) => {
+    const note = state.notes[c.screen.id];
+    c.noteText.textContent = note && note.text ? note.text : '';
+    c.noteText.hidden = !(note && note.text);
+    c.noteBtn.classList.toggle('has-note', !!(note && note.text));
+    const g = c.screen.group;
+    const picked = !!g && !!state.picks[g] && state.picks[g].choice === c.screen.id;
+    c.el.classList.toggle('is-picked', picked);
+    c.badge.textContent = picked ? 'Picked' : c.screen.flowDefault ? 'Default' : '';
+    c.badge.hidden = !(picked || c.screen.flowDefault);
+    if (c.pickBtn) { c.pickBtn.hidden = !g; c.pickBtn.setAttribute('aria-pressed', String(picked)); }
+    c.tabBtns.forEach((b) => {
+      const s = c.tabs.find((x) => x.id === b.dataset.id);
+      b.classList.toggle('has-note', !!(state.notes[s.id] && state.notes[s.id].text));
+      b.classList.toggle('is-picked', !!s.group && !!state.picks[s.group] && state.picks[s.group].choice === s.id);
+    });
   };
 
   /** A whole-part card plays its section's screens in order with their real transitions, then loops. */
@@ -271,8 +339,13 @@
 
   const makeRow = (label, screens, hero = true) => {
     const rowEl = h('div.row-scroll', { tabindex: 0, 'aria-label': label + ' previews. Use left and right arrows to browse.' });
-    screens.forEach((s, i) => {
-      const c = buildCard(s);
+    cardsOf(screens).forEach((u, i) => {
+      const s = u.lead;
+      // A card opens on the version its maker marked as the default (the reviewer's Pick, once loaded, moves it there).
+      const first = u.tabs.find((x) => x.flowDefault) || s;
+      const c = buildCard(s, u.tabs);
+      if (first !== s) c.select(first.id);
+      if (u.tabs.length > 1) rowEl.classList.add('has-tabs');
       if (hero && i === 0 && s.seq) c.el.classList.add('is-hero');
       rowEl.append(c.el);
       io.observe(c.el);
@@ -335,7 +408,7 @@
       if (v === 'kit') {
         // The kit: live tiles in a grid.
         const grid = h('div.kit-grid');
-        screens.forEach((s) => { const c = buildCard(s); c.el.classList.add('is-tile'); grid.append(c.el); io.observe(c.el); });
+        cardsOf(screens).forEach((u) => { const c = buildCard(u.lead, u.tabs); c.el.classList.add('is-tile'); grid.append(c.el); io.observe(c.el); });
         const [head, about] = sectionHead(sec, screens, [replayButton(screens)]);
         main.append(h('section.sec', { id: 'sec-' + sec.id, 'data-view': v }, head, about, grid));
         return;
@@ -388,15 +461,10 @@
 
   const refreshAll = () => {
     cards.forEach((c) => {
-      const note = state.notes[c.screen.id];
-      c.noteText.textContent = note && note.text ? note.text : '';
-      c.noteText.hidden = !(note && note.text);
-      c.noteBtn.classList.toggle('has-note', !!(note && note.text));
-      const picked = c.screen.group && state.picks[c.screen.group] && state.picks[c.screen.group].choice === c.screen.id;
-      c.el.classList.toggle('is-picked', !!picked);
-      c.badge.textContent = picked ? 'Picked' : c.screen.flowDefault ? 'Default' : '';
-      c.badge.hidden = !(picked || c.screen.flowDefault);
-      if (c.pickBtn) c.pickBtn.setAttribute('aria-pressed', String(!!picked));
+      // Until the reviewer chooses a tab, a card shows their Pick.
+      const pick = !c.chosen && c.tabs.find((s) => s.group && state.picks[s.group] && state.picks[s.group].choice === s.id);
+      if (pick) c.select(pick.id);
+      refreshCard(c);
     });
     const ls = document.querySelector('.lead-store');
     if (ls) ls.textContent = state.store === 'server' ? 'Design board · saved in the repo' : state.store === 'board' ? 'Design board · saved for everyone' : 'Design board · saved in this browser';
@@ -543,5 +611,5 @@
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
-  F.board = { openPlayer, state };
+  F.board = { openPlayer, state, cards, tabCard };
 })();

@@ -7,6 +7,30 @@ The board is where an app is designed and reviewed before it is built. Every scr
 390 × 844 phone that plays its motion; the reviewer picks variations and leaves notes on the
 screens themselves; "Play the flow" walks the whole journey full screen.
 
+## The levels (never make more than the level needs)
+
+A board has four levels, and each thing lives at exactly one. Going up a level for something that
+belongs lower is how a board bloats into "10 different screens of the same thing" that the owner
+can no longer read.
+
+| Level | Is | Holds |
+|---|---|---|
+| Tab at the top | A part of the work | The whole app (journey order, in the app today and not yet, per place), Later (features set aside), Kit, Language, Character |
+| Row | A place or a flow | Its screens in the order a person meets them |
+| Card | One screen | One live phone |
+| Tabs on top of the card | That screen's versions, states, use cases and edge cases | Default, empty, offline, error, returning, the other designs to pick from |
+
+- **A variation is a tab, never a card.** Connection drops, an empty state, a returning reader, a
+  second design: tabs on the one card (`tabOf`, or a shared Pick `group`). The owner, Pip, 26 Nov
+  2026: "if you are creating variations, you do not want to create more screens. Instead, you want
+  to put at the top of the tabs so I can see within the screen. So it's not very bloated ... so I
+  can exactly tell you: okay, this one is not needed, this one is needed".
+- **An idea is one card.** A feature not in the app yet is one card; its screens and states are its
+  tabs.
+- **Set-aside features get the Later tab,** never rows mixed into the app's own places.
+- **Nothing settings-like gets a place of its own** (cancel, delete, notifications, feedback): they
+  are rows under Settings, because that is where the person finds them.
+
 ## Start one
 
 1. Copy `template/` from this skill (`ungenerated-flows/template/`) into the project, for example `design/board/`.
@@ -26,7 +50,9 @@ F.def({
   flow: true,            // part of Play the flow
   enter: 'step',         // how it is entered: cut, dissolve, step, layer, carry, cover
   progress: 0.3,         // the question bar
-  group: 'goal-style',   // variations share a group; the reviewer Picks one
+  group: 'goal-style',   // variations share a group: tabs on one card; the reviewer Picks one
+  // tabOf: 'q-goal',     // a state or edge case of another screen: a tab on that screen's card
+  // tab: 'Empty',        // the tab's label, 1–3 words (else the part of the name after " · ")
   intent: 'One sentence: what this screen is for.',
   build(ctx) {
     const { body } = F.frame(ctx);
@@ -50,10 +76,13 @@ F.def({
 ## The board's layout (keep it)
 
 - Views in the order of the work: **Research · Kit · Screens · Transitions**.
-- Each card: a small tool bar (number, Replay, Note, Pick, ⓘ), the phone, one line with its name.
-  The description and the note sit behind ⓘ, over the phone. Nothing else around the card.
+- Each card: a small tool bar (number, Replay, Note, Pick, ⓘ), its tabs when it has versions or
+  states (one line, a dot on a tab with a note, a mark on the picked one), the phone, one line with
+  its name. The description and the note sit behind ⓘ, over the phone. Nothing else around the card.
 - The first card of a row is the whole part, outlined, the same size as the rest.
-- Variations are a Pick group, not extra rows.
+- Variations, states and edge cases are tabs on one card (the levels, above), never extra cards or rows.
+- Every card's intent says where the screen is reached from: "where do I come from to this screen?"
+  is the first question the owner asks of a feature.
 - Theme switch (Auto, Light, Dark) and Play the flow in the top bar. Nothing else up there.
 
 ## Publish it
