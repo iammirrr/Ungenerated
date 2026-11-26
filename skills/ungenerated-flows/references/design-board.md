@@ -30,6 +30,9 @@ can no longer read.
 - **Set-aside features get the Later tab,** never rows mixed into the app's own places.
 - **Nothing settings-like gets a place of its own** (cancel, delete, notifications, feedback): they
   are rows under Settings, because that is where the person finds them.
+- **A map of what opens what sits at the top of the app's tab:** one tree a place, every screen once
+  under the screen that opens it, each line a link to its card. A screen that is not on the map has
+  no place in the app, so it is not drawn.
 
 ## Start one
 

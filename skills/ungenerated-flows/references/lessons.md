@@ -41,6 +41,14 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   exactly tell you: okay, this one is not needed". Picks still work per tab; a cut screen is deleted
   from the board and the app the same round: "why the screen I cancelled are not deleted?" (Pip, Nov
   2026; Comma and Flamely, Oct 2026)
+- **Put a map of what opens what at the top of the board.** A tree for each place (home, each tab, settings, outside the app):
+  every screen once, under the screen that opens it, with how a person gets there (tap, drag, top right), and a tap on any line
+  jumps to its card. Screens drawn with no place got "where does this fucking fit? Why are you putting screens out of
+  nowhere?" and a cancel flow's offers got "where are these offers coming from ... we probably have to make a full map of all
+  the screens". Draw the map first, then only screens that are on it. (Pip, Nov 2026)
+- **Once the owner has said what goes in, drop the idea bands and answer buttons.** Rows marked "in the app / not yet" with four
+  verdict buttons under each idea were right while he was choosing and noise the moment he had chosen: one row a place, what is
+  in goes at its place, what is set aside goes to Later. (Pip, Nov 2026)
 - **Show changes on the board, never as a proposal in chat.** A written list of problems and a plan
   ending in a question got "please always do things on the board, don't make more complications";
   a link to one card alone got "give me the whole board, otherwise we will never understand
