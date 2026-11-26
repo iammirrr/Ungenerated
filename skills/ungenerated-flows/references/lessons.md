@@ -631,13 +631,30 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   ("is this the account on your phone?"), and offer "use a different account": a person who signs in another way lands
   in a second, empty account. "My account on the Comma could be potentially Apple login, but the authentication of the
   ChatGPT is different accounts" (Comma, Nov 2026)
-- **A connection lasts while it's used.** A fixed 30-day grant quietly disconnects everyone each month; renew it on use
-  and end it only after a stretch without use. (Comma, Nov 2026)
+- **The connector's sign-in says whose sign-in it is before any button.** Someone installing a plugin in an assistant
+  expects one "authorize" step; a bare "Continue with Apple" under "Connect <assistant>", with the account explained only
+  in small print, reads as a strange second login. Open on "Sign in to your <app>" and "Use the same sign-in as the
+  <app> app on your phone", then the same ways in as the app (Apple and Google, never just one). "It asked me to
+  continue with Apple. What ... was that supposed to mean?" (Comma, Nov 2026)
+- **A connection lasts while it's used.** A fixed 30-day grant quietly disconnects everyone each month; renew it on every
+  use and end it only when the person disconnects, deletes the account, or leaves it unused for a long stretch (90 days).
+  Check the subscription on each call instead of ending the connection. "Connection should never die after 29 days"
+  (Comma, Nov 2026)
 - **The connector's address is permanent; the website can move.** The server's URL is inside every token, the sign-in
   server's identity and every directory listing, and a redirect can't carry a sign-in to a new host, so moving it makes
   everyone reconnect and needs a new listing. Give it a hostname you will keep before strangers connect; the marketing
   site can change domain any time, with redirects for the pages old app builds still open. "Later down the road, I want
   to have its own website" (Comma, Nov 2026)
+- **If the connector must move, both addresses answer.** One server serves the old and the new address (one sign-in
+  issuer per address, the same accounts and data behind both); the listings point to the new one; the old address is
+  never switched off, so nobody connected is cut off; people move when they next connect, and the old listing is
+  unpublished once it's empty. "You need to think of a migrating plan later down the road" (Comma, Nov 2026)
+- **List everything the connector does, in the words people ask, and what it does beside partners' connectors.** People
+  connect for a list of jobs (make, research, edit, save, find), not for "tools". A partner's connector in the same chat
+  can carry out the app's plan (an editor's connector doing the cuts the app describes), but check what each partner
+  really exposes before promising it: Instagram's API posts reels for business accounts and edits nothing; video editors
+  (Descript, Kapwing, invideo) are the ones that edit. "If the Instagram MCP server is connected, it can also edit
+  videos" (Comma, Nov 2026)
 - **What changes often lives in what the server returns.** Writing rules, formats and limits served by a guide tool can
   change any day; tool names and descriptions are rescanned by the directories; the listing's links, logo and skills go
   back to review. Keep the reviewed parts stable and the behaviour in data. (Comma, Nov 2026)
@@ -646,7 +663,9 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   start testing them before I ship it" (Comma, Nov 2026)
 - **Offer fixed client identities, or registrations pile up.** With dynamic registration only, an assistant can register
   a new client on every fresh connection and a storage cap fills on launch day. Advertise Client ID Metadata Documents for
-  the big assistants and keep dynamic registration as the fallback. (Comma, Nov 2026)
+  the big assistants and keep dynamic registration as the fallback. Explain the cap in people's terms ("1,000 apps
+  connected at the same time") and say it's your code's number, not the host's plan: "I'll upgrade the hosting by then"
+  wouldn't lift it. (Comma, Nov 2026)
 
 - **Built feedback leaves the board at once.** As soon as a note is built, delete it from the board's notes, side by side
   with the work; re-read the notes first and delete only the ones actually built (a new note can arrive while you work),
