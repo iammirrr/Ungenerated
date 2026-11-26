@@ -206,6 +206,22 @@
   const tabLabel = (s) => s.tab || (String(s.name).includes(' · ') ? String(s.name).split(' · ').slice(1).join(' · ') : s.name).replace(/^./, (x) => x.toUpperCase());
   /** Every tab's id → its card (a card is in `cards` under its first tab's id only). */
   const tabCard = new Map();
+  // Every tab shows (they wrap); a row keeps its phones level by giving every card the tallest card's tab room. The room is set on
+  // the next frame, never inside the observer's callback (changing the strips' size while it reports them is a ResizeObserver loop).
+  const tabRows = new Set();
+  let tabsFrame = 0;
+  const tabsRO = new ResizeObserver((entries) => {
+    entries.forEach((e) => { const row = e.target.closest('.row-scroll, .kit-grid'); if (row) tabRows.add(row); });
+    if (tabsFrame) return;
+    tabsFrame = requestAnimationFrame(() => {
+      tabsFrame = 0;
+      tabRows.forEach((row) => {
+        const need = Math.max(0, ...[...row.querySelectorAll('.card-tabs')].map((t) => { const last = t.lastElementChild; return last ? last.offsetTop + last.offsetHeight - t.firstElementChild.offsetTop : 0; }));
+        if (need && row.style.getPropertyValue('--tabs-h') !== need + 'px') row.style.setProperty('--tabs-h', need + 'px');
+      });
+      tabRows.clear();
+    });
+  });
 
   const buildCard = (screen, tabs = [screen]) => {
     const fit = h('div.stage-fit');
@@ -244,7 +260,7 @@
       if (c.visible) mountCard(c); else c.mounted = false;
     };
     tabBtns.forEach((b) => b.addEventListener('click', () => c.select(b.dataset.id, { user: true })));
-    if (tabBtns.length) { const strip = tabBtns[0].parentNode; new ResizeObserver(() => strip.classList.toggle('is-over', strip.scrollWidth > strip.clientWidth + 1)).observe(strip); }
+    if (tabBtns.length) tabsRO.observe(tabBtns[0].parentNode);
     replayBtn.addEventListener('click', () => mountCard(c));
     noteBtn.addEventListener('click', () => openNote(c.screen.id));
     infoBtn.addEventListener('click', () => {
