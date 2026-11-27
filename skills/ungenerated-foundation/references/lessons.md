@@ -309,3 +309,13 @@ exact looks are examples only; the rule is what transfers.
 - **A cookbook for each command the owner will use.** What to type, what happens behind it step by step, what comes back
   and where it lands, what it costs and whose usage it spends. "Give me cook book for each so I understand and know what
   is happening" (Comma, Nov 2026)
+- **A plan page shows only what's left.** In this order: what waits for the owner's word, what you're unsure about,
+  what isn't done (marked plainly), and a short Done list at the bottom saying what to try in the newest build. Finished
+  items leave the working list; before writing "being fixed", check the code. "This document is way too much to go
+  through" (Comma, Nov 2026)
+- **Name a screen by the path to it.** In anything the owner reads, write the taps that reach it (the tab, the button,
+  the page), never your own nickname for the screen. "Which screen are we talking about here?" (Comma, Nov 2026)
+- **A new test build goes to the owner first.** Keep testers in a group that doesn't receive builds automatically, on
+  the last build that was theirs; a new build reaches them only when the owner says. "For now not for everybody, for
+  now only for me" (Comma, Nov 2026)
+

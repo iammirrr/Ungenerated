@@ -895,3 +895,27 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   creativity, never for a placeholder. (Comma, Nov 2026)
 - **A result the system won't keep still has a way forward.** Kind words about why it isn't in the shared library, plus
   "do it anyway" for that one person. (Comma, Nov 2026)
+- **Picking a thing is the choice.** When someone starts from one specific item (a template, a reel, a preset), nothing
+  afterwards asks which way they want to make it, and no "or do it another way" links sit under it. Ask about their idea
+  if you must, then go straight to the result. "He's literally selected ... It should not ask" (Comma, Nov 2026)
+- **Say it when their request is done.** Work the app did for them while they were away is announced on the next open,
+  as a banner that opens the result, and the notification's tap opens the same place. Never make them go and check a
+  list. "I do not get that pop-up when open the app ... We did that for you" (Comma, Nov 2026)
+- **A finished thing never reads as empty.** A row that says "ready" has its content before it shows a count or opens:
+  fetch first, and until then say it's ready without a number. Never "0 items" or "missing" for something that exists.
+  "A new breakdown can never show zero" (Comma, Nov 2026)
+- **A no is said kindly, in the app's own words.** When the product turns down what someone asked for, never show the
+  internal label or its numbers ("not an outlier", "0.6x the average") and never a raw error. Say what it means for
+  them and what still works. "Kind words, please add kind words, that is really important" (Comma, Nov 2026)
+- **What they made still shows when its file is gone.** After a reinstall or a deleted video, the record stays in the
+  list with its picture and a plain "not on this phone", never an empty screen that reads as nothing made. Bringing the
+  list back across installs means saving the records with the account, not only the files. (Comma, Nov 2026)
+- **An important optional step comes after the paywall, and comes back once.** If they skip it, put it in front of them
+  one more time on a later day, on a quiet first screen, then leave it in settings. Never a third time by itself.
+  "If they didn't accept that, we probably have to show this again" (Comma, Nov 2026)
+- **Back returns to where they came from.** A screen opened from a sheet goes back to that sheet, with what they typed
+  kept, not to the list underneath with the sheet gone. (Comma, Nov 2026)
+- **A cancel offer charges at once.** An offer made to someone who is cancelling takes the discounted payment
+  immediately, never a free stretch: some people cancel only to collect offers. "If we are giving them offer, we are
+  taking money immediately" (Comma, Nov 2026)
+
