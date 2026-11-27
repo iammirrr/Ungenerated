@@ -177,6 +177,18 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   for its small text, not its purpose). "another thing that we failed to market is the manual script
   writer" (Comma, Oct–Nov 2026)
 
+- **A first take offers every way to use the script.** Film it, record a voiceover, just read it out loud (nothing
+  recorded) or skip for now, with the whole script in view; a step that opens straight onto the camera's alert is where
+  people left. "they should be able to see the script but probably just skip it ... if they want to do voice overall
+  scripts, so there's no option for them" (Comma, Nov 2026)
+- **Nothing asks for a permission on arrival; each way asks for its own, right before it's needed.** The camera only for
+  filming, the microphone only for a voiceover or the first tap on a mic, each with one line of why before the system's
+  alert; after a refusal that button reads "Turn on the camera" (or the microphone) and opens Settings. (Comma, Nov 2026)
+- **Starters with blanks, not a blank box.** Where the person gives their own angle, offer three starters from their
+  topic with blanks for what only they know ("The bug that ate my [how long], and the one line that fixed it"); one tap
+  puts a starter in the box and lights the next step, and a tap on a blank selects it so typing replaces it. An empty box
+  with an "example" button was where people left. (Comma, Nov 2026)
+
 ## Opening, story and plan
 
 - **The opening is the crux.** A short film that shows the dream outcome and plays itself, with no
@@ -562,6 +574,10 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   Filming; Filmed waits for their Done; a filmed or posted item still opens to read it or film again. "It's not filmed
   until I mark it done ... I can't even open it" (Comma, Nov 2026)
 - **Every take shows its frame.** A list of recordings without thumbnails can't be told apart. (Comma, Nov 2026)
+- **A take that isn't a video still looks like a take, and every action on it works.** A voiceover gets its own tile
+  (what it is and its length), never a dark empty frame; Photos takes only pictures and video, so an audio take saves
+  through the share sheet or Files and isn't offered Save to Photos. A button that silently does nothing is a bug.
+  (Comma, Nov 2026)
 - **A picker of kinds fits one screen.** Story, opinion, how-to: aligned rows, a few words each, the app's own icons, no
   scrolling. (Comma, Nov 2026)
 ## Porting to native

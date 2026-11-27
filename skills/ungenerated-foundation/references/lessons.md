@@ -318,4 +318,9 @@ exact looks are examples only; the rule is what transfers.
 - **A new test build goes to the owner first.** Keep testers in a group that doesn't receive builds automatically, on
   the last build that was theirs; a new build reaches them only when the owner says. "For now not for everybody, for
   now only for me" (Comma, Nov 2026)
-
+- **When the owner turns down new screens, move the substance into the screens they already have.** Shown a second
+  version of a flow beside today's, the owner answered "NOT BIG FAN OF NEW SCREEN PLEASE DO ALL ON BOARD AS WELL IN THE
+  APP AND SHOW ME ONCE DONE": keep today's layouts, carry what the new version solved into them (here: the reason always
+  sent, asked wherever they cancel, honest dates on the offer, once per person), do it on the board and in the app in
+  the same round, decide the small questions yourself, and show the finished thing, not another set of options.
+  (Comma, Nov 2026)

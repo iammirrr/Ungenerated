@@ -174,3 +174,6 @@ fallback string. (Comma, Nov 2026)
   cancel page needs Apple's Retention Messaging API (by request), which can't ask why. Put the day and the amount in the
   offer's terms ("$79.99 in one payment on 30 Nov, when your free days end"). Why: the owner asked that an offer "take
   money immediately". (Comma, Nov 2026)
+- **Tap tests that read the store's sandbox pin the plan they expect.** A shared simulator can hold a test plan bought
+  by an earlier run or another session, so a test of the free-days wording read a paid plan and failed. Fake the plan's
+  state with a Debug-only launch switch (trial, active, cancelled) in every test that depends on it. (Comma, Nov 2026)
