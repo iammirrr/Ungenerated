@@ -165,3 +165,12 @@ fallback string. (Comma, Nov 2026)
   grant) on TestFlight, so the owner who paid sees the paywall in his own test build. Count every active entitlement on
   TestFlight and App Review; count only production ones, promotional grants included, in the store build. "In the test
   the same user [should] get their subscription" (Comma, Nov 2026)
+- **A stay offer on the plan they're on can't bill before their next billing event.** On iOS a promotional offer for
+  someone already subscribed starts at the next renewal, or when the free trial ends; the store won't charge it sooner.
+  Money today takes a plan switch: an upgrade, or a switch to a plan of the same length and level, starts and bills at
+  once (an upgrade refunds the unused part of the old plan), so it charges only someone who has already paid; during a
+  free trial, test it in the sandbox first, as a switch there isn't reliably billed at once. Win-back offers are only for
+  subscriptions that have already ended, and the store shows them itself. A message or an offer on the store's own
+  cancel page needs Apple's Retention Messaging API (by request), which can't ask why. Put the day and the amount in the
+  offer's terms ("$79.99 in one payment on 30 Nov, when your free days end"). Why: the owner asked that an offer "take
+  money immediately". (Comma, Nov 2026)

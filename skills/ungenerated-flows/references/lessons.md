@@ -915,7 +915,12 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   "If they didn't accept that, we probably have to show this again" (Comma, Nov 2026)
 - **Back returns to where they came from.** A screen opened from a sheet goes back to that sheet, with what they typed
   kept, not to the list underneath with the sheet gone. (Comma, Nov 2026)
-- **A cancel offer charges at once.** An offer made to someone who is cancelling takes the discounted payment
-  immediately, never a free stretch: some people cancel only to collect offers. "If we are giving them offer, we are
-  taking money immediately" (Comma, Nov 2026)
+- **A cancel offer leaves nothing free, and its terms name the day the money is taken.** Some people cancel only to
+  collect offers: "If we are giving them offer, we are taking money immediately". On iOS the store can't bill an offer on
+  the plan they're on before their next billing event (the renewal, or the end of the free trial), so the honest form is
+  one payment for the whole offer on the date the offer names, shown once per person; billing today takes a plan switch
+  and only charges someone who has already paid (the payments audit's lessons have the rules). (Comma, Nov 2026)
+- **The reason is kept whatever they do next.** Send the answer the moment it's picked, before and apart from any offer,
+  and ask the same question wherever they cancelled: in the app, or once on the next open after a cancel in the store or
+  the phone's settings, with a way to say not now. "be able to see their feedback regardless" (Comma, Nov 2026)
 
