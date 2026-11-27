@@ -939,4 +939,12 @@ disagreed, the newer one is here and the condition is said. Best first within ea
 - **The reason is kept whatever they do next.** Send the answer the moment it's picked, before and apart from any offer,
   and ask the same question wherever they cancelled: in the app, or once on the next open after a cancel in the store or
   the phone's settings, with a way to say not now. "be able to see their feedback regardless" (Comma, Nov 2026)
-
+- **Each assistant's button lands on the app's own listing, never the directory or the assistant's home.** A button that
+  opened the whole plugin directory, and one that opened an assistant's phone app where adding a connector is still in
+  beta, sent the owner back eight times in two minutes with nothing connected: "if I click on it, it's supposed to take me
+  [there]". Link the listing itself (a plugin page link opens the assistant's phone app on its page); one directory that
+  serves two assistants is one choice ("why the fuck the Codex and ChatGPT is different"), with the second's install as a
+  detail after it; where adding only works on a computer, say so before they leave and hand the link over (share sheet and
+  Copy link); say "connected" only once the account really lists a new connection, checked when they come back; and keep
+  one place in Settings to see, disconnect and add assistants. Prove it end to end with a scripted sign-in on a test
+  account, then once with the owner's own. (Comma, Nov 2026)
