@@ -455,6 +455,13 @@ disagreed, the newer one is here and the condition is said. Best first within ea
   uses a credit. (Comma, Nov 2026)
 - **Show AI limits exactly, from the server's own numbers.** "IN SETTINGS ALSO WE NEED AI
   TRANSPARENCY A LOT. SHOW EXACTLY WHAT IS LEFT." (Comma, Nov 2026)
+- **The owner's and testers' limits are lifted from the server, never in a build.** A daily cap that
+  suits customers gets in the way of the people testing: keep a list of account ids in server config,
+  have the one function that enforces the cap skip it for those accounts and the limits call report it,
+  and have the app ask instead of counting to its own hard-coded number. Then nobody ships a special
+  build, the list changes without an update, and everyone else keeps the cap. Prove it on the live
+  server inside a transaction you roll back. "from server makes me and my tester have unlimited limit
+  ... only me and my testers" (Comma, Nov 2026)
 - **Don't give an early stage its own tab.** "The ideas should not have its own screen because I
   have to go to the ideas and then I have to put into the scripts." An unwritten idea is a draft.
   (Comma, Nov 2026)
