@@ -216,6 +216,16 @@ tracker; Pip; CutRoom, a video editor). Each one transfers to any app. Best firs
 - **Resume a stalled helper, don't restart it.** A helper that stops mid-task keeps its context when it is messaged again;
   a fresh one repeats an hour of reading. Tell it what happened, to check what was left half-done, and to carry on. (Pip,
   27 Nov 2026)
+- **After redrawing one card, look at its neighbours in the same file.** A redrawn year book reused a class name for its
+  full-page back cover; the profile, built in the same file, had a small icon with that name, and the cover landed on its
+  settings rows. The error sweep showed nothing, because nothing threw. The owner found it first: "WTF is this shit". A
+  redraw ends with a picture of every other card that shares the file or the stylesheet, at rest and scrolled; new class
+  names carry the card's own prefix. (Pip, 27 Nov 2026)
+- **A full disk takes the caches with it.** When the disk filled, the build folder and the headless browser in
+  ~/Library/Caches vanished, and an error sweep "passed" a moment before its browser was gone. Tools the work depends on
+  live outside the caches folder, scripts fail loudly when their browser is missing, and one runaway log (4 GB from a
+  finished helper) is worth finding before it finds you: check free space when anything behaves strangely. (Pip, 27 Nov
+  2026)
 
 ## Accessibility
 
